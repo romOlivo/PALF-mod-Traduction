@@ -1,0 +1,5 @@
+label lunch010603:
+
+call lunchscenequeue()
+
+jump PickTable

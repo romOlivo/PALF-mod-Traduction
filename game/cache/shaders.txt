@@ -1,0 +1,47 @@
+renpy.ftl
+renpy.geometry renpy.matrixcolor renpy.solid
+renpy.matrixcolor feniks.linear_gradient renpy.texture renpy.texture
+feniks.radial_gradient renpy.texture renpy.texture
+renpy.geometry renpy.texture
+renpy.matrixcolor renpy.texture
+renpy.texture
+renpy.alpha renpy.texture
+renpy.alpha renpy.texture renpy.texture
+feniks.linear_gradient renpy.texture renpy.texture
+renpy.matrixcolor renpy.alpha renpy.texture
+renpy.matrixcolor renpy.matrixcolor renpy.texture
+renpy.dissolve renpy.dissolve
+renpy.matrixcolor feniks.radial_gradient renpy.texture renpy.texture
+feniks.radial_gradient renpy.geometry renpy.matrixcolor renpy.texture
+renpy.matrixcolor renpy.matrixcolor renpy.matrixcolor renpy.texture
+renpy.blur renpy.geometry renpy.matrixcolor
+renpy.dissolve renpy.geometry renpy.matrixcolor
+feniks.radial_gradient renpy.geometry renpy.texture
+feniks.angle_gradient renpy.geometry renpy.matrixcolor renpy.texture
+renpy.geometry renpy.matrixcolor renpy.texture
+renpy.alpha renpy.geometry renpy.texture
+renpy.matrixcolor renpy.dissolve renpy.dissolve
+renpy.alpha renpy.dissolve renpy.geometry
+feniks.linear_gradient renpy.geometry renpy.matrixcolor renpy.texture
+feniks.outline renpy.geometry renpy.texture
+renpy.texture renpy.texture
+feniks.angle_gradient renpy.texture renpy.texture
+renpy.alpha renpy.matrixcolor renpy.matrixcolor renpy.texture
+renpy.texture -renpy.texture renpy.blur renpy.texture -renpy.texture renpy.blur
+renpy.geometry renpy.solid
+renpy.matrixcolor renpy.solid
+renpy.solid
+renpy.alpha renpy.matrixcolor renpy.texture
+renpy.alpha renpy.geometry renpy.matrixcolor renpy.texture
+feniks.linear_gradient renpy.geometry renpy.texture
+renpy.alpha renpy.solid
+renpy.matrixcolor feniks.angle_gradient renpy.texture renpy.texture
+renpy.dissolve renpy.geometry
+renpy.imagedissolve renpy.imagedissolve
+feniks.outline renpy.texture renpy.texture
+renpy.blur renpy.geometry
+renpy.matrixcolor renpy.matrixcolor renpy.texture -renpy.texture renpy.blur renpy.texture -renpy.texture renpy.blur
+renpy.alpha renpy.dissolve renpy.dissolve
+feniks.angle_gradient renpy.geometry renpy.texture
+renpy.alpha renpy.geometry renpy.solid
+renpy.geometry renpy.imagedissolve
