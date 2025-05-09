@@ -4046,7 +4046,7 @@ screen movedata(move, vertoffset = 0):
         xalign 0.5
         ypos (.07 + vertoffset)
         if (uifuckery < 1):
-            text move.Name xminimum 550 xalign 0.5 yalign (.05 + vertoffset * 1.1) size 100
+            text str(move.Name) xminimum 550 xalign 0.5 yalign (.05 + vertoffset * 1.1) size 100
             vbox:
                 xalign 0.5
                 ypos .37
