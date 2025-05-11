@@ -961,6 +961,9 @@ init python:
         names = {
             LANG_ENG: move_name,
         }
+        category = {
+            LANG_ENG: movedex[i][3],
+        }
         descriptions = {
             LANG_ENG: movedex[i][9],
         }
@@ -972,7 +975,11 @@ init python:
                     info = translations[language][move_name]
                     names[language] = info[0]
                     descriptions[language] = info[1]
+                if category[LANG_ENG] in category_translation[language]:
+                    category[language] = category_translation[language][category[LANG_ENG]]
         # Change names
         movedex[i][1] = EvolvedString(names)
+        # Change category
+        movedex[i][3] = EvolvedString(category)
         # Change descriptions
         movedex[i][9] = EvolvedString(descriptions)
