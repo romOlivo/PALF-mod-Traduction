@@ -5,16 +5,16 @@ label prologue:
     scene blank2
     $ RealignTextbox()
 
-    TempCharacter("DISCLAIMER") "This game is a fanwork with no connection to any official Pokémon product." 
-    TempCharacter("CONTENT WARNING") "The story contains elements of mature topics such as abuse, assault, murder, and crippling poverty. Adults, children, and animals may suffer the aforementioned. This game contains flashing lights and loud sounds." 
-    TempCharacter("DISCLAIMER") "This game is not to be played by individuals underneath the age of majority of their home country. Regardless of age, player discretion is advised."
+    TempCharacter("[prologue_scene_text[0]]") "[prologue_scene_text[1]]" 
+    TempCharacter("[prologue_scene_text[2]]") "[prologue_scene_text[3]]" 
+    TempCharacter("[prologue_scene_text[4]]") "[prologue_scene_text[5]]"
 
     menu: 
-        ">I understand":
-            narrator "Lovely. Enjoy, then."
+        "[prologue_scene_text[6]]":
+            narrator "[prologue_scene_text[7]]"
 
-        ">I am not old enough to play this game":
-            narrator "Very well. I hope you return when you are older."
+        "[prologue_scene_text[8]]":
+            narrator "[prologue_scene_text[9]]"
 
             $ MainMenu(confirm=False)()
 
@@ -30,106 +30,107 @@ label prologue:
 
     show oak with dis
 
-    oak @talkingmouth "Hello there!{w=0.5} Welcome to the world of Pokémon!"
-    oak @happy "My name is Oak. People call me the Pokémon Professor!"
-    oak @talkingmouth "This world is inhabited by creatures called Pokémon!{w=0.5} For some people, Pokémon are pets. Others use them for battling."
-    oak @closedbrow talkingmouth "As for myself... I study Pokémon as a profession."
-    oak @happy "But first, tell me a little about yourself."
+    oak @talkingmouth "[prologue_scene_text[10]]"
+    oak @happy "[prologue_scene_text[11]]"
+    oak @talkingmouth "[prologue_scene_text[12]]"
+    oak @closedbrow talkingmouth "[prologue_scene_text[13]]"
+    oak @happy "[prologue_scene_text[14]]"
     red "[ellipses]"
-    oak @confusedbrow talkingmouth "Let's begin with your name.{w=0.5} What is it?"
+
+    oak @confusedbrow talkingmouth "[prologue_scene_text[15]]"
 
     label firstname:
-        $ first_name = renpy.input("{color=#e70000}What's your FIRST name? (Press Enter for the default){/color}", length=12, exclude="{}[[]%<>",)
+        $ first_name = renpy.input("[prologue_scene_text[16]]", length=12, exclude="{}[[]%<>",)
         $ first_name = first_name.strip()
 
         if first_name == "":
             $ first_name = "Red"
 
-        oak @talkingmouth "Right! So your first name is [first_name]."
+        oak @talkingmouth "[prologue_scene_text[17]][first_name][prologue_scene_text[18]]"
 
         menu:
-            "That's me.":
-                red @happy "That's me."
+            "[prologue_scene_text[19]]":
+                red @happy "[prologue_scene_text[20]]"
                 pass
 
-            "I stuttered.":
-                red @sadeyes sadeyebrows talkingmouth "I stuttered."
-                oak @surprised "Oh? Then, what {i}is{/i} your first name?"
+            "[prologue_scene_text[21]]":
+                red @sadeyes sadeyebrows talkingmouth "[prologue_scene_text[22]]"
+                oak @surprised "[prologue_scene_text[23]]"
                 jump firstname
 
-    oak @talkingmouth "Well, then, what's your last name?"
+    oak @talkingmouth "[prologue_scene_text[24]]"
 
     label lastname:
-        $ last_name = renpy.input("{color=#e70000}What's your LAST name? (Press Enter for the default){/color}", length=20, exclude="{}[[]%<>",)
+        $ last_name = renpy.input("[prologue_scene_text[25]]", length=20, exclude="{}[[]%<>",)
         $ last_name = last_name.strip()
 
         if last_name == "":
             $ last_name = "Sugimori"
 
-        oak @happy "Right! So your last name is [last_name]."
+        oak @happy "[prologue_scene_text[26]][last_name][prologue_scene_text[27]]"
 
         menu:
-            "Sure is.":
-                red @happy "Sure is."
+            "[prologue_scene_text[28]]":
+                red @happy "[prologue_scene_text[29]]"
                 pass
 
-            "Let me try that again.":
-                red @sadeyes sadeyebrows talkingmouth "Let me try that again."
-                oak @surprised "Eh? Alright, then."
+            "[prologue_scene_text[30]]":
+                red @sadeyes sadeyebrows talkingmouth "[prologue_scene_text[31]]"
+                oak @surprised "[prologue_scene_text[32]]"
                 jump lastname
 
-    oak @happy "Right! So your name is [first_name] [last_name]."
-    oak @surprised sweat "Ah! I remember now. {w=0.5}{nw}" 
-    extend @happy sweat "You're the trainer of this Pikachu."
+    oak @happy "[prologue_scene_text[33]][first_name][prologue_scene_text[34]][last_name][prologue_scene_text[35]]"
+    oak @surprised sweat "[prologue_scene_text[36]]" 
+    extend @happy sweat "[prologue_scene_text[37]]"
 
     $ renpy.music.play("Audio/Pokemon/pikachu_norm1.ogg", channel="altcry")
 
     pikachu neutral_2 "Pi-KA-chu!"
 
-    oak @happy "He's quite fond of you.{w=0.5}{nw}"
-    oak @sadeyes sadeyebrows talkingmouth "He's quite fond of you.{fast} Erm, what was his name again?"
+    oak @happy "[prologue_scene_text[38]]"
+    oak @sadeyes sadeyebrows talkingmouth "[prologue_scene_text[39]]"
 
     label pikaname:
-        $ pika_name = renpy.input("{color=#e70000}What is your Pikachu's nickname?{/color}", length=12, exclude="{}[[]%<>",)
+        $ pika_name = renpy.input("[prologue_scene_text[40]]", length=12, exclude="{}[[]%<>",)
         $ pika_name = pika_name.strip()
         
         if pika_name == "" or pika_name == "pikachu":
             $ pika_name = "Pikachu"
 
-        oak @talkingmouth "You named him [pika_name]?"
+        oak @talkingmouth "[prologue_scene_text[41]][pika_name][prologue_scene_text[42]]"
 
         menu:
-            "The one and only.":
-                red @happybrow talkingmouth "The one and only."
+            "[prologue_scene_text[43]]":
+                red @happybrow talkingmouth "[prologue_scene_text[44]]"
                 pass
 
-            "What kind of name is that?":
-                red @angrybrow talking2mouth "What kind of name is that?"
-                oak @surprised "Eh? Okay, what did you {i}actually{/i} name him, then?"
+            "[prologue_scene_text[45]]":
+                red @angrybrow talking2mouth "[prologue_scene_text[46]]"
+                oak @surprised "[prologue_scene_text[47]]"
                 jump pikaname
 
-    oak @happy "That's right! I remember now!{w=0.5} His name is [pika_name]!"
+    oak @happy "[prologue_scene_text[48]][pika_name][prologue_scene_text[49]]"
 
-    oak @talkingmouth "Now, one more thing. This is a story about many young adults your age. And your age group, well..."
-    oak @sadbrow talkingmouth sweat "To be more direct, people will swear. However, you may choose that to be censored."
-    oak @closedbrow talkingmouth "You can change this any time you want, incidentally, in the pause menu you access by right-clicking."
+    oak @talkingmouth "[prologue_scene_text[50]]"
+    oak @sadbrow talkingmouth sweat "[prologue_scene_text[51]]"
+    oak @closedbrow talkingmouth "[prologue_scene_text[52]]"
 
-    oak @talkingmouth "In any case, would you like expletives to be censored in this story for now? {color=#ff0000}(This feature is not {i}100%%{/i} functional.){/color}"
+    oak @talkingmouth "[prologue_scene_text[53]]"
 
     menu:
-        "**** no.":
+        "[prologue_scene_text[54]]":
             $ profanity = True
-            red @angry "Fuck no."
+            red @angry "[prologue_scene_text[55]]"
 
-        "Yes, please.":
-            red @sadbrow happymouth "Yes, please."
+        "[prologue_scene_text[56]]":
+            red @sadbrow happymouth "[prologue_scene_text[57]]"
 
-    oak @happy "Very well."
+    oak @happy "[prologue_scene_text[58]]"
     
-    oak @talkingmouth "[first_name]!{w=0.5} Your very own Pokémon legend is about to unfold!"
+    oak @talkingmouth "[prologue_scene_text[59]][first_name][prologue_scene_text[60]]"
 
-    oak @angrybrow talkingmouth "A world of dreams and adventures with Pokémon awaits!"
-    oak happy "Now it's time to wake up! Wake up!"
+    oak @angrybrow talkingmouth "[prologue_scene_text[61]]"
+    oak happy "[prologue_scene_text[62]]"
 
     hide oak with dis
 
@@ -139,7 +140,7 @@ label prologue:
         alpha 0.85
         ease 2.0 alpha 1.0
         
-    oak "Pikachuuuu~!"
+    oak "[prologue_scene_text[63]]"
     
     show pallet:
         alpha 0.75
@@ -153,7 +154,7 @@ label prologue:
         alpha 1.0
     $ PlaySound("Body Roll.ogg")
     
-    red casual hatless @surprised "GAH!"
+    red casual hatless @surprised "[prologue_scene_text[64]]"
 
     $ renpy.music.queue("Audio/Music/Pallet Town A.ogg", channel='music', loop=True, fadein=1.0, tight=None)
     $ renpy.pause(1.25, hard=True)
@@ -162,30 +163,30 @@ label prologue:
     hide blank2
     hide blank
     
-    red sadeyebrows closedeyes talking2mouth "{cps=*0.1}Unghh..."
+    red sadeyebrows closedeyes talking2mouth "[prologue_scene_text[65]]"
 
-    red angrybrow happymouth "Phew! Almost slept in!"
+    red angrybrow happymouth "[prologue_scene_text[66]]"
 
     pause 1.5
     
     $ renpy.music.play("Audio/Pokemon/pikachu_question.ogg", channel="altcry", loop=None)
     pikachu neutral_4 "Pi-ka?"
 
-    red -sadeyebrows -closedeyes -talking2mouth "What's up, [pika_name]?"
+    red -sadeyebrows -closedeyes -talking2mouth "[prologue_scene_text[67]][pika_name][prologue_scene_text[68]]"
 
     $ renpy.music.play("Audio/Pokemon/pikachu_norm2.ogg", channel="altcry", loop=None)
     pikachu neutral_2b "Piiii-ka!"
 
-    red -angrybrow -happymouth @happy "Time to rise and shine!"
+    red -angrybrow -happymouth @happy "[prologue_scene_text[69]]"
 
     $ renpy.music.play("Audio/Pokemon/pikachu_sad.ogg", channel="altcry", loop=None)
     pikachu bashful "Piiii{w=0.5}{nw}"
-    extend bashful_2 "kaaaa."
+    extend bashful_2 "[prologue_scene_text[70]]"
 
-    red talkingmouth "Hey, that's a good thing, buddy! A future Champion's Pokémon {i}should{/i} get up early in the morning, and go to bed late!"
+    red talkingmouth "[prologue_scene_text[71]]"
 
-    red talking2mouth angrybrow "Like they say; Late to bed and early to rise makes you... {w=0.5}uh...{w=0.5} {nw}"
-    red -angrybrow happy "Like they say; Late to bed and early to rise makes you... uh...{fast} tired! All the time!"
+    red talking2mouth angrybrow "[prologue_scene_text[72]]"
+    red -angrybrow happy "[prologue_scene_text[73]]"
 
     $ renpy.music.play("Audio/Pokemon/pikachu_excite4.ogg", channel="altcry", loop=None)
     pikachu neutral_2b "Piii-kaaaa!"
@@ -193,27 +194,27 @@ label prologue:
     show mom:
         xpos 1.5
 
-    mom "Did I just hear my darling baby say the word 'tired'?"
+    mom "[prologue_scene_text[74]]"
 
     show mom at moveinleft
 
     pause 1.0
 
-    red frownmouth angryeyes confusedeyebrows @talking2mouth "Oh, hey, Mom! Welcome to my bedroom. Yes, please, come in, make yourself at home!"
+    red frownmouth angryeyes confusedeyebrows @talking2mouth "[prologue_scene_text[75]]"
 
-    mom @angry "As long as you're living under my roof, I certainly will!"
+    mom @angry "[prologue_scene_text[76]]"
 
-    red closedeyes -confusedeyebrows happymouth "...Fair."
+    red closedeyes -confusedeyebrows happymouth "[prologue_scene_text[77]]"
 
-    mom @happymouth "Anyway, I heard you said the word 'tired!' I didn't know you even knew that word, sweetie!"
+    mom @happymouth "[prologue_scene_text[78]]"
 
-    red surprised "Mom! What are you saying?"
+    red surprised "[prologue_scene_text[79]]"
 
-    mom @happy "...Well, when you have more energy than your Pikachu, a mother can sometimes be led to think her son doesn't sleep!"
+    mom @happy "[prologue_scene_text[80]]"
 
-    red -surprisedbrow -frownmouth -surprised @happy sweat "Hey, there's no time to sleep if I want to be a Champion some day."
+    red -surprisedbrow -frownmouth -surprised @happy sweat "[prologue_scene_text[81]]"
 
-    mom sadeyebrows sadeyes @talkingmouth "I wonder if [pika_name] agrees with you?"
+    mom sadeyebrows sadeyes @talkingmouth "[prologue_scene_text[82]][pika_name][prologue_scene_text[83]]"
 
     pause 1.0
 
@@ -223,32 +224,32 @@ label prologue:
 
     pause 1.0
 
-    red @closedeyes talking2mouth "...Well, when I'm Champion, I'll have more Pokémon than just [pika_name]."
-    red @angrybrow happymouth "Anyway! We're burning daylight! Come on, [pika_name], let's go for a run before the sun gets too high!"
+    red @closedeyes talking2mouth "[prologue_scene_text[84]][pika_name][prologue_scene_text[85]]"
+    red @angrybrow happymouth "[prologue_scene_text[86]][pika_name][prologue_scene_text[87]]"
 
-    mom @surprised "Wait! God, slow down for half a second, won't you?! I have some really, really big news!"
+    mom @surprised "[prologue_scene_text[88]]"
 
-    red -angrybrow -happymouth @talkingmouth "I'm putting on my running shoes right now, but go ahead."
+    red -angrybrow -happymouth @talkingmouth "[prologue_scene_text[89]]"
 
-    mom sadeyes sadeyebrows @talkingmouth "...Wouldn't you like to guess?"
+    mom sadeyes sadeyebrows @talkingmouth "[prologue_scene_text[90]]"
 
     menu:
-        "You're going to start charging me rent?":
+        "[prologue_scene_text[91]]":
             show mom -sadeyes -sadeyebrows with dis
 
-            red happy "You're going to start charging me rent?"
+            red happy "[prologue_scene_text[92]]"
 
-            mom @sadeyes sadeyebrows happymouth "Aw, sweetheart, I wouldn't dream of it. You'll always be welcome home, sweetie."
+            mom @sadeyes sadeyebrows happymouth "[prologue_scene_text[93]]"
 
-            red -happy @talkingmouth "Oh, I know that, Mom. But, really, I wouldn't mind working to contribute to the household as well."
+            red -happy @talkingmouth "[prologue_scene_text[94]]"
             
-            red @closedeyes sadeyebrows talking2mouth "{size=30}Or at least get a bigger bed...{/size}"
+            red @closedeyes sadeyebrows talking2mouth "[prologue_scene_text[95]]"
             
-            mom @talkingmouth "Sweetheart, you don't need to think about something like that yet. You just graduated high school! You've got plenty of time to work. You should be enjoying your young years."
+            mom @talkingmouth "[prologue_scene_text[96]]"
             
-            mom @happy "Besides, this news is going to interfere with any working plans you might have had!"
+            mom @happy "[prologue_scene_text[97]]"
            
-            red @confused "Huh?"
+            red @confused "[prologue_scene_text[98]]"
 
             show mom happy:
                 zoom 1.0 ypos 1.0
@@ -256,37 +257,37 @@ label prologue:
             
             pause 0.75
             
-            mom "Oh, my darling baby boy... I'm so proud...!"
+            mom "[prologue_scene_text[99]]"
 
-            red @closedeyes lightblush talking2mouth "Pinching my cheeks, Mom? I'm eighteen, you know..."
+            red @closedeyes lightblush talking2mouth "[prologue_scene_text[100]]"
 
             show mom -happy sadeyes sadeyebrows:
                 zoom 1.25 ypos 1.25
                 ease 0.75 zoom 1.0 ypos 1.0
             
-            mom @sadbrow talkingmouth "Oh, I know... and it happened far too soon for my heart."
+            mom @sadbrow talkingmouth "[prologue_scene_text[101]]"
             
-            mom @happy "But enough about my happiest memories.{w=0.5} You got into Kobukan Academy!"
+            mom @happy "[prologue_scene_text[102]]"
             
-        "Is it another Skitty video?":
+        "[prologue_scene_text[103]]":
             show mom surprisedbrow frownmouth with dis
 
-            red @playfulbrow sweat talkingmouth "Is it another Skitty video?"
+            red @playfulbrow sweat talkingmouth "[prologue_scene_text[104]]"
 
-            mom angrybrow frownmouth -surprisedbrow -frownmouth -surprised @surprised "What?{w=0.25} No!{w=0.5} [first_name], this is a much bigger deal than that!"
+            mom angrybrow frownmouth -surprisedbrow -frownmouth -surprised @surprised "[prologue_scene_text[105]][first_name][prologue_scene_text[106]]"
             
-            red -angrybrow happymouth "So what, is it a Lillipup?"
+            red -angrybrow happymouth "[prologue_scene_text[107]]"
             
-            mom @angry "You've got some nerve!{w=0.5} I don't remember raising such a lippy son!"
+            mom @angry "[prologue_scene_text[108]]"
                       
-            mom -angrybrow -frownmouth @happy "But no, that's not it, either. Sweetheart, you got accepted into Kobukan Academy!"
+            mom -angrybrow -frownmouth @happy "[prologue_scene_text[109]]"
         
-        "I'm going for my run.":
+        "[prologue_scene_text[110]]":
             show mom -sadeyes -sadeyebrows with dis
 
-            red @sadeyebrows closedeyes talkingmouth sweat "Hey, it's Friday.{w=0.5} If you don't mind, I'll be taking advantage of my day off and-"
+            red @sadeyebrows closedeyes talkingmouth sweat "[prologue_scene_text[111]]"
             
-            mom @happy "Nice try, honey."
+            mom @happy "[prologue_scene_text[112]]"
 
             show mom happy:
                 zoom 1.0 ypos 1.0
@@ -294,59 +295,59 @@ label prologue:
             
             pause 0.75
             
-            mom "Oh, my darling baby boy... I'm so proud...!"
+            mom "[prologue_scene_text[113]]"
 
-            red @closedeyes lightblush talking2mouth "Pinching my cheeks, Mom? I'm eighteen, you know..."
+            red @closedeyes lightblush talking2mouth "[prologue_scene_text[114]]"
 
             show mom -happy sadeyes sadeyebrows:
                 zoom 1.25 ypos 1.25
                 ease 0.75 zoom 1.0 ypos 1.0
             
-            mom @sadbrow talkingmouth "Oh, I know... and it happened far too soon for my heart."
+            mom @sadbrow talkingmouth "[prologue_scene_text[115]]"
             
-            mom @happy "But enough about my happiest memories.{w=0.5} You got into Kobukan Academy!"
+            mom @happy "[prologue_scene_text[116]]"
 
     stop music fadeout 2.0    
 
     pause 2.0
 
-    red angrybrow sadmouth "...No, I didn't."
+    red angrybrow sadmouth "[prologue_scene_text[117]]"
 
     $ renpy.music.queue("Audio/Music/Littleroot_Start.ogg", channel='music', loop=False, fadein=1.0, tight=None)
     $ renpy.music.queue("Audio/Music/Littleroot_Loop.ogg", channel='music', loop=True, fadein=0.0, tight=None)
 
-    mom sadeyebrows frownmouth @surprised "...What?"
+    mom sadeyebrows frownmouth @surprised "[prologue_scene_text[118]]"
 
-    red -angrybrow closedeyes sadeyebrows "I couldn't have, Mom. The application fee alone was $10,000."
+    red -angrybrow closedeyes sadeyebrows "[prologue_scene_text[119]]"
 
-    red sadeyes "Besides, my grades are in the bottom tenth percentile for Kobukan. And my extracurriculars are nonexistent. What's there to do in Pallet Town besides hang out with Sam?"
+    red sadeyes "[prologue_scene_text[120]]"
 
-    red @talkingmouth "...I couldn't even apply, Mom. I wrote three letters to them asking for a fee waiver. I only got a response on my third letter, and they just said to stop pestering them."
+    red @talkingmouth "[prologue_scene_text[121]]"
 
-    mom @angry "Sweetheart! We could have afforded the application fee!"
+    mom @angry "[prologue_scene_text[122]]"
 
-    red sad "Not for my odds. I used one of those online calculators, you know? They said my chance of getting in was too low to be computed."
+    red sad "[prologue_scene_text[123]]"
 
-    red sadeyebrows closedeyes happymouth "Which has to be some kind of record, at least."
+    red sadeyebrows closedeyes happymouth "[prologue_scene_text[124]]"
 
-    mom @sad "Oh... sweetheart, I'm sorry. I know that getting into Kobukan was always a dream of yours."
+    mom @sad "[prologue_scene_text[125]]"
 
-    red happy "Hey, that was just the most direct path to becoming Champion. I'll figure out another!"
+    red happy "[prologue_scene_text[126]]"
 
     pause 1.0
 
     stop music fadeout 1.0
 
-    red confused "Er... why did you think I got into Kobukan, though?"
+    red confused "[prologue_scene_text[127]]"
 
     $ renpy.music.queue("Audio/Music/Pallet Town A.ogg", channel='music', loop=True, fadein=1.0, tight=None)
 
-    mom happy "Oh, it's just because we received a letter that says 'Kobukan Academy Acceptance Letter' on the envelope."
+    mom happy "[prologue_scene_text[128]]"
 
-    red -confused closedeyes talking2mouth "Huh. That's very misleading.{w=1.0}{nw}"
-    red neutraleyes talking2mouth "Huh. That's very misleading. {fast}Can I see it?"
+    red -confused closedeyes talking2mouth "[prologue_scene_text[129]]"
+    red neutraleyes talking2mouth "[prologue_scene_text[130]]"
 
-    mom -happy @talkingmouth "Sure thing, sweetie."
+    mom -happy @talkingmouth "[prologue_scene_text[131]]"
 
     show letter at itemhover
 
@@ -356,24 +357,25 @@ label prologue:
     
     $ PlaySound("item_get.ogg")
 
-    red @confused "Oh, yeah, it says it right there.{w=0.5} Huh.{w=0.5} That's...{w=0.5} weird."
-    red @sad2eyes angryeyebrows talking2mouth "Oh, I bet I know what happened. This was probably meant to go to {i}him{/i}, wasn't it?"
+    red @confused "[prologue_scene_text[132]]"
+    red @sad2eyes angryeyebrows talking2mouth "[prologue_scene_text[133]]"
 
-    mom sadeyes sadeyebrows @talkingmouth "Maybe. But perhaps you should just read it?"
+    mom sadeyes sadeyebrows @talkingmouth "[prologue_scene_text[134]]"
 
-    red happy "I'm not going to read his mail, Mom. That's, like, a major crime."
+    red happy "[prologue_scene_text[135]]"
 
-    mom @angry "Well, I've already read it. And you don't want me to go to prison alone, do you?"
+    mom @angry "[prologue_scene_text[136]]"
 
-    red closedeyes @talkingmouth "And that's how the [last_name] crime family got started..."
+    red closedeyes @talkingmouth "[prologue_scene_text[137]][last_name][prologue_scene_text[138]]"
 
     show letter at itemhide
     show mom:
         ease 1.0 xcenter 0.5
 
-    red -happy -closedeyes @talkingmouth "Alright, let's see what this thing says."
+    red -happy -closedeyes @talkingmouth "[prologue_scene_text[139]]"
 
     red @thinking "[ellipses]"
+
     show mom -sadeyebrows -sadeyes with dis
 
     show red:
@@ -383,32 +385,36 @@ label prologue:
 
     red @surprisedeyes frownmouth "[ellipses]"
 
+
     show mom happyeyes happyeyebrows with dis
 
     red @surprisedeyes frownmouth "[ellipses]"
+
 
     show mom happy with dis
 
     red @surprised "[ellipses]"
 
+
     pause 1.0
 
-    red @surprised "Oh my god, Mom."
+    red @surprised "[prologue_scene_text[140]]"
 
-    mom @talkingmouth "Well, sweetheart? Was this, perhaps, a letter meant for our charming neighbor?"
+    mom @talkingmouth "[prologue_scene_text[141]]"
 
-    mom @playfulbrow talkingmouth blush "Or was it, as I said, proof that good things happen to good people?"
+    mom @playfulbrow talkingmouth blush "[prologue_scene_text[142]]"
 
-    red @surprisedeyes confusedeyebrows talking2mouth "...How?"
+    red @surprisedeyes confusedeyebrows talking2mouth "[prologue_scene_text[143]]"
 
-    mom @closedbrow talking2mouth "I...{w=0.5} really don't know, actually. I never doubted that you'd get in, but if you didn't even apply, I'm not sure if my motherly belief was {i}that{/i} powerful."
+    mom @closedbrow talking2mouth "[prologue_scene_text[144]]"
 
     red @surprised "[ellipses]"
+
 
     $ renpy.music.play("Audio/Pokemon/pikachu_confused.ogg", channel="altcry", loop=None)
     pikachu neutral_4 "Piiika?"
 
-    red @surprised "...I have no idea, [pika_name]. I just have no idea."
+    red @surprised "[prologue_scene_text[145]][pika_name][prologue_scene_text[146]]"
 
     show mom happybrow neutralmouth
     hide image "CG/Acceptance Letter.webp"
@@ -417,9 +423,9 @@ label prologue:
 
     pause 1.0
 
-    red hatless casual @happy "But I'm not going to lead this gift horse to water!"
+    red hatless casual @happy "[prologue_scene_text[147]]"
 
-    mom sadeyes sadeyebrows @talkingmouth "I don't think that's {i}exactly{/i} how the phrase goes..."
+    mom sadeyes sadeyebrows @talkingmouth "[prologue_scene_text[148]]"
 
     stop music fadeout 2.0
     show blank2 with splitfade
@@ -440,35 +446,36 @@ label prologue:
     
     pause 1.0
 
-    redmind angrybrow frownmouth "The Kanto Airfield terminal in Viridian City...{w=0.5} and a one-way ticket to the Kobukan region."
-    red -angrybrow closedeyes @talkingmouth sweat"I can't believe it's been an entire month, and we still have absolutely no idea how I got into Kobukan."
-    red -closedeyes @confused "We definitely emailed the school {i}several{/i} times to make sure this wasn't a mistake, right?"
+    redmind angrybrow frownmouth "[prologue_scene_text[149]]"
+    red -angrybrow closedeyes @talkingmouth sweat"[prologue_scene_text[150]]"
+    red -closedeyes @confused "[prologue_scene_text[151]]"
     
     show mom with dis
 
-    mom @talkingmouth "Of course, sweetie. Both of us did."
+    mom @talkingmouth "[prologue_scene_text[152]]"
 
-    red @closedbrow talking2mouth "So there's two big questions, now. {w=0.5}How did I get in? {w=0.5}{nw}"
-    extend @closedbrow sweat talkingmouth "And how are we going to pay for this?"
+    red @closedbrow talking2mouth "[prologue_scene_text[153]]"
+    extend @closedbrow sweat talkingmouth "[prologue_scene_text[154]]"
     
-    mom @angry "That should be the last thing you're worrying about, sweetheart. {w=0.5}{nw}"
-    extend @happy "We'll figure something out, don't worry!"
+    mom @angry "[prologue_scene_text[155]]"
+    extend @happy "[prologue_scene_text[156]]"
 
     red @thinking "[ellipses]"
-    red @sadeyes sadeyebrows talkingmouth "I believe you, Mom.{w=0.5} We'll figure something out."
-    red @happy "And, hey, worst-case scenario, I get six months of free tuition before they realize we can't pay, kick me out, and sue us for the tuition!"
-    mom @angryeyes angryeyebrows happymouth blush "Don't even joke about that!"
+
+    red @sadeyes sadeyebrows talkingmouth "[prologue_scene_text[157]]"
+    red @happy "[prologue_scene_text[158]]"
+    mom @angryeyes angryeyebrows happymouth blush "[prologue_scene_text[159]]"
     
     pause 2.0
 
-    mom @sadeyebrows sadeyes talkingmouth "This is as far as I can take you, [first_name]."
+    mom @sadeyebrows sadeyes talkingmouth "[prologue_scene_text[160]][first_name][prologue_scene_text[161]]"
     
-    red @talkingmouth "I'm eighteen. I'll be fine."
+    red @talkingmouth "[prologue_scene_text[162]]"
     
-    mom @happy "I know you will."
-    mom @sadbrow talkingmouth "A goodbye hug from my beloved Champion?"
+    mom @happy "[prologue_scene_text[163]]"
+    mom @sadbrow talkingmouth "[prologue_scene_text[164]]"
     
-    red @sad2eyes sadeyebrows lightblush talkingmouth "Man... I'm going to have to work really hard to not let all the people at Kobukan realize that I'm such a huge mama's boy."
+    red @sad2eyes sadeyebrows lightblush talkingmouth "[prologue_scene_text[165]]"
 
     show mom happyeyes sadeyebrows -happymouth blush:
         zoom 1.0 ypos 1.0
@@ -480,25 +487,25 @@ label prologue:
         zoom 1.25 ypos 1.25
         ease 0.75 zoom 1.0 ypos 1.0
     
-    red @talkingmouth sadbrow "I love you, Mom."
-    mom tears sadbrow @talkingmouth "I love you too, sweetheart."
+    red @talkingmouth sadbrow "[prologue_scene_text[166]]"
+    mom tears sadbrow @talkingmouth "[prologue_scene_text[167]]"
     
     $ renpy.music.play("Audio/Pokemon/pikachu_sad.ogg", channel="altcry", loop=None)
     pikachu sad_2 "Piiiikaaaa."
 
-    mom sadeyes sadeyebrows @talkingmouth "Looks like [pika_name] loves you as well."
+    mom sadeyes sadeyebrows @talkingmouth "[prologue_scene_text[168]][pika_name][prologue_scene_text[169]]"
     
-    red @happy "Hey, buddy, don't look so sad!{w=0.5} I'll send for you as soon as I'm allowed to. I'm just not allowed to bring any of my personal Pokémon with me right away."
-    red @talkingmouth "Keep Mom company for me in the meantime, will ya? Here, I'll give you one of [first_name]'s famous headpats to tide you over 'til then."
+    red @happy "[prologue_scene_text[170]]"
+    red @talkingmouth "[prologue_scene_text[171]][first_name][prologue_scene_text[172]]"
     
     $ renpy.music.play("Audio/Pokemon/pikachu_sad2.ogg", channel="altcry", loop=None)
     pikachu @sad "Pika... piiiikaaaa."
     
     show mom -sadeyebrows -sad -talkingmouth with dis
 
-    red @talkingmouth "I'm off, Mom."
+    red @talkingmouth "[prologue_scene_text[173]]"
     
-    mom @talkingmouth "Have a safe trip!{w=0.5} Take care now!"
+    mom @talkingmouth "[prologue_scene_text[174]]"
 
     show mom surprised:
         xpos 0.5
@@ -508,15 +515,15 @@ label prologue:
         xalign 1.0 yalign 1.0
         ease 8.0 xalign 0.0
         
-    mom "Oh! And make sure you do your laundry!{w=0.5} And go to bed {gradualsize=34-16}earlier so you don't end up falling asleep so much! And eat full meals, not just energy bars...!{/gradualsize}"
+    mom "[prologue_scene_text[175]]"
 
     pause 1.0
 
-    redmind sadeyes sadeyebrows "Poor mom. She's already got empty-nest syndrome."
+    redmind sadeyes sadeyebrows "[prologue_scene_text[176]]"
 
     pause 1.0
 
-    redmind sad "Oh man, [pika_name] looks real sad. He'll just have to be strong until I can get him sent to the academy."
+    redmind sad "[prologue_scene_text[177]][pika_name][prologue_scene_text[178]]"
 
     stop music fadeout 2.0
     pause 2.5
@@ -537,22 +544,22 @@ label prologue:
     $ renpy.music.play("Audio/Pokemon/pikachu_sad2.ogg", channel="altcry", loop=None)
     pikachu sad_2 "Pika... piiiikaaaa."
         
-    mom -tears @talkingmouth "Oh, don't worry [pika_name], you'll be with him before you know it! {w=0.5}{nw}"
-    extend angryeyes angryeyebrows @talkingmouth "Though it'd be a lot easier to put you on the plane if you'd just stay in your ball..."
+    mom -tears @talkingmouth "[prologue_scene_text[179]][pika_name][prologue_scene_text[180]]"
+    extend angryeyes angryeyebrows @talkingmouth "[prologue_scene_text[181]]"
     
     $ renpy.music.play("Audio/Pokemon/pikachu_sad.ogg", channel="altcry", loop=None)
     pikachu sad "Piiiikaaaa."
 
-    mom -angryeyes -angryeyebrows -talkingmouth @happy "Oh, I know how you feel, I really do.{w=0.5} But it's best not to dwell on these sorts of things."
-    mom happyeyes talkingmouth -tears @talkingmouth "All boys leave home some day. It said so on TV!"
-    mom -happyeyes @talkingmouth "Let's go home."
+    mom -angryeyes -angryeyebrows -talkingmouth @happy "[prologue_scene_text[182]]"
+    mom happyeyes talkingmouth -tears @talkingmouth "[prologue_scene_text[183]]"
+    mom -happyeyes @talkingmouth "[prologue_scene_text[184]]"
 
     hide mom with dis
     
     $ PlaySound("plane_chime.ogg")
     
-    TempCharacter("PA Voice") "This is the pre-boarding announcement for the 7:45 a.m. flight to Inspira City. Takeoff will begin in 45 minutes."
-    TempCharacter("PA Voice") "We are now requesting passengers with small children and Pokémon to begin boarding at this time. Regular boarding will begin in fifteen minutes. Thank you."
+    TempCharacter("[prologue_scene_text[185]]") "[prologue_scene_text[186]]"
+    TempCharacter("[prologue_scene_text[187]]") "[prologue_scene_text[188]]"
     
     pikachu neutral_3 "[ellipses]"
     
@@ -703,20 +710,20 @@ label prologue:
     
     hide airport
     
-    redmind -sadeyebrows closedeyes frownmouth "Phew!"
-    redmind "Do city folk really always use airplanes to go places?{w=0.5} This is nothing like flying on a Pokémon.{w=0.5}"
-    redmind happymouth "...Not that I've done that yet, either."
-    redmind -happymouth -closedeyes -frownmouth "Some of the older guys back in Pallet told me the Kobukan region is just next door to Unova... but pretty far away from Kanto."
-    redmind confusedeyebrows frownmouth "If Kobukan is this far away, I can't imagine how far Kalos or Paldea are."
-    redmind closedeyes frownmouth "...Ugh. I've been here for ten hours...{w=0.5}{nw}" 
-    redmind surprised "...Ugh. I've been here for ten hours... {fast}wait!{w=0.5} What's that out the window?"
+    redmind -sadeyebrows closedeyes frownmouth "[prologue_scene_text[189]]"
+    redmind "[prologue_scene_text[190]]"
+    redmind happymouth "[prologue_scene_text[191]]"
+    redmind -happymouth -closedeyes -frownmouth "[prologue_scene_text[192]]"
+    redmind confusedeyebrows frownmouth "[prologue_scene_text[193]]"
+    redmind closedeyes frownmouth "[prologue_scene_text[194]]" 
+    redmind surprised "[prologue_scene_text[195]]"
 
     $ PlaySound("plane_chime.ogg")
 
-    "PA Voice" "{color=#e70000}Good afternoon, passengers. We are expecting to land in the Kobukan region in approximately twenty minutes. The weather in Inspira City is clear and sunny.{/color}" 
-    "PA Voice" "{color=#e70000}As we start our descent, please make sure your seat belt is securely fastened, your tray table is in the locked and upright position, and all electronic devices are turned off. Thank you.{/color}"
+    "[prologue_scene_text[196]]" "{color=#e70000}Good afternoon, passengers. We are expecting to land in the Kobukan region in approximately twenty minutes. The weather in Inspira City is clear and sunny.{/color}" 
+    "[prologue_scene_text[197]]" "{color=#e70000}As we start our descent, please make sure your seat belt is securely fastened, your tray table is in the locked and upright position, and all electronic devices are turned off. Thank you.{/color}"
     
-    red happy "All right, this is it!{w=0.5} The beginning of the rest of my life!"
+    red happy "[prologue_scene_text[198]]"
     
     show blank2 with Dissolve(1.0)
         
@@ -749,10 +756,10 @@ label prologue:
     hide sky
     hide blank2
     
-    redmind closedeyes frownmouth "...Except I have no idea where I am, or which direction the school's in."
-    redmind happymouth "If I remember correctly from my research, there should be a bus that leads there, right? The Red Line."
-    redmind angrybrow frownmouth "The problem is...{w=0.5} I see the Scarlet Line, the Ruby Line, even the Pearl Line. Those are all red...{w=0.5} ish."
-    red -angrybrow happy "Well, if I just pick a direction and start running, I'm bound to hit something that points me in the right direction!"
+    redmind closedeyes frownmouth "[prologue_scene_text[199]]"
+    redmind happymouth "[prologue_scene_text[200]]"
+    redmind angrybrow frownmouth "[prologue_scene_text[201]]"
+    red -angrybrow happy "[prologue_scene_text[202]]"
 
     show pallet at sepia
     show flashback
@@ -762,7 +769,7 @@ label prologue:
     
     show mom angry at sepia, dissolvein behind flashback
 
-    mom "For heaven's sake, slow down and think about your surroundings! If you're lost, just ask someone for directions!"
+    mom "[prologue_scene_text[203]]"
 
     show blank with splitfade
 
@@ -771,92 +778,93 @@ label prologue:
     hide flashback
     hide blank with dis
 
-    red @talkingmouth "Yeah, I suppose I could do that."
+    red @talkingmouth "[prologue_scene_text[204]]"
 
     pause 1.5
 
-    red talkingmouth "Hey! Excuse me.{w=0.5} Do you know which bus goes to..."
+    red talkingmouth "[prologue_scene_text[205]]"
     
-    "{color=#3110dd}Familiar Voice" "\"Huh?\""
+    "[prologue_scene_text[206]]" "#!#Huh?#!#"
 
     show blue surprisedbrow frownmouth sweat with dis
 
-    red surprised "Wha-"
+    red surprised "[prologue_scene_text[207]]"
 
     show blue -surprisedbrow -frownmouth -surprised closedbrow frownmouth with dis
     
     pause 1.0
     
     blue "[ellipses]"
+
     
     play music "Audio/Music/RivalTune.ogg" noloop
-    blue -sweat -frownmouth @happymouth "...Son of a bitch."
+    blue -sweat -frownmouth @happymouth "[prologue_scene_text[208]]"
 
-    red -surprisedbrow -frownmouth -surprised angrybrow talking2mouth "...Blue."
+    red -surprisedbrow -frownmouth -surprised angrybrow talking2mouth "[prologue_scene_text[209]]"
     
     queue music "audio/music/Inspira_start.ogg" noloop
     queue music "audio/music/Inspira_loop.ogg"
 
-    blue -happymouth -closedbrow @surprised "What the hell are {i}you{/i} doing here?"
+    blue -happymouth -closedbrow @surprised "[prologue_scene_text[210]]"
     
-    red @closedbrow talking2mouth "Is it too hard to believe I got into Kobukan Academy?"
+    red @closedbrow talking2mouth "[prologue_scene_text[211]]"
     
-    blue @happy "No, I can totally believe that! Just like I can believe that you're the Queen of Kalos, or that it says gullible on the ceiling!"
+    blue @happy "[prologue_scene_text[212]]"
     
-    red -angrybrow @confused "But we're outdoors...?"
+    red -angrybrow @confused "[prologue_scene_text[213]]"
     
     show blue surprisedbrow frownmouth with dis
 
     pause 1.5
 
-    blue -surprisedbrow -frownmouth -surprised @happy "I almost wish you {i}had{/i} made it into Kobukan. I'll miss my favorite stooge when I'm taking my place among the future Champions of the world."
+    blue -surprisedbrow -frownmouth -surprised @happy "[prologue_scene_text[214]]"
     
-    red -surprisedeyes -surprisedeyebrows -frownmouth @playfulbrow talkingmouth "Then you'll be {i}really{/i} happy when you see me walking down the same hallways as you."
+    red -surprisedeyes -surprisedeyebrows -frownmouth @playfulbrow talkingmouth "[prologue_scene_text[215]]"
     
-    blue -happy @surprised sweat "You...{w=0.5} almost sound serious."
+    blue -happy @surprised sweat "[prologue_scene_text[216]]"
     
-    red @happy "There's two things I take seriously, Blue. My dream to be a Pokémon Champion, and my rivalry with you."
+    red @happy "[prologue_scene_text[217]]"
     
-    blue -surprisedbrow -frownmouth -surprised -sweat @angry "Don't be so cocky! I don't take you seriously at all. You're a dreamer with no direction."
-    blue -angry @closedbrow talkingmouth "I know exactly where I'm going, {i}and{/i} how I'm getting there."
+    blue -surprisedbrow -frownmouth -surprised -sweat @angry "[prologue_scene_text[218]]"
+    blue -angry @closedbrow talkingmouth "[prologue_scene_text[219]]"
 
-    red -happy @frownmouth "{w=0.5}.{w=0.5}.{w=0.5}."
+    red -happy @frownmouth "[prologue_scene_text[220]]"
 
-    red @talkingmouth "Hey, Blue. Since I'm obviously not going to Kobukan Academy, and you are, there's no way that anyone at this new school will learn about your nickname, right?"
+    red @talkingmouth "[prologue_scene_text[221]]"
 
-    blue frownmouth @angrybrow talkingmouth "Don't you dare."
+    blue frownmouth @angrybrow talkingmouth "[prologue_scene_text[222]]"
 
-    red @talking2mouth "That nickname that everyone called you? The one I came up with when I was, like, eight, and stuck with you all this time?"
+    red @talking2mouth "[prologue_scene_text[223]]"
 
-    blue -frownmouth angry "I'm warning you!"
+    blue -frownmouth angry "[prologue_scene_text[224]]"
 
-    red -talking2mouth @happy "Remind me what that was, again?"
+    red -talking2mouth @happy "[prologue_scene_text[225]]"
 
     label bluename:
-        $ blue_name = renpy.input("{color=#e70000}What was Blue's nickname? (Press Enter for the default.){/color}", length=12, exclude="{}[[]%<>",)
+        $ blue_name = renpy.input("[prologue_scene_text[226]]", length=12, exclude="{}[[]%<>",)
         $ blue_name = blue_name.strip()
 
         if blue_name == "" or blue_name == "blue" or blue_name == "Blue":
             $ blue_name = "Blueberry"
 
-        red @happy "Oh, I think I'm close. Was it...{w=0.5} [blue_name]?"
+        red @happy "[prologue_scene_text[227]][blue_name][prologue_scene_text[228]]"
 
         menu:
-            "Yep, that was it.":
-                red happyeyes talkingmouth "Yep, that was it."
+            "[prologue_scene_text[229]]":
+                red happyeyes talkingmouth "[prologue_scene_text[230]]"
                 pass
 
-            "Ooh, wait, here's an even better one.":
-                red happyeyes talkingmouth "Ooh, wait, here's an even better one."
+            "[prologue_scene_text[231]]":
+                red happyeyes talkingmouth "[prologue_scene_text[232]]"
                 jump bluename
 
-    blue @angry "It doesn't make sense! It's not clever, or catchy, or... It was so stupid! Why did everyone call me that?!"
+    blue @angry "[prologue_scene_text[233]]"
 
-    red -happyeyes -happyeyebrows -talkingmouth @talkingmouth "I guess the humor is just a bit too highbrow for you, [blue_name]."
+    red -happyeyes -happyeyebrows -talkingmouth @talkingmouth "[prologue_scene_text[234]][blue_name][prologue_scene_text[235]]"
 
-    blue @closedbrow happymouth "You wouldn't know 'highbrow' if it hit you with a shovel."
-    blue @angry "You're a country hick who saw a Champion on TV one day and deluded yourself into thinking you had a chance! Now, I've got {i}way{/i} more important stuff to do than hang around with a clown like you, so I'm out of here."
-    blue -angry @surprisedbrow happymouth "Smell ya later!"
+    blue @closedbrow happymouth "[prologue_scene_text[236]]"
+    blue @angry "[prologue_scene_text[237]]"
+    blue -angry @surprisedbrow happymouth "[prologue_scene_text[238]]"
 
     show blue:
         parallel:
@@ -866,7 +874,7 @@ label prologue:
 
     pause 1.5
 
-    redmind @thonk "'Country hick?' We come from the same town..."
+    redmind @thonk "[prologue_scene_text[239]]"
     
     show city_A:
         zoom 1.0 xalign 0.5 yalign 1.0
@@ -877,8 +885,8 @@ label prologue:
             pause 0.5
             ease 0.4 xalign 0.5
             
-    redmind -surprisedbrow -frownmouth -surprised "Anyway, I need to find someone that can point me in the direction of the academy."
-    redmind closedeyes frownmouth "Maybe someone I {i}don't{/i} know, this time..."
+    redmind -surprisedbrow -frownmouth -surprised "[prologue_scene_text[240]]"
+    redmind closedeyes frownmouth "[prologue_scene_text[241]]"
     
     show city_A:
         zoom 1.1 xalign 0.5 yalign 1.0
@@ -894,59 +902,59 @@ label prologue:
     
     hide blue
     
-    redmind @playfulbrow unamusedmouth "...Hm. I don't think I've ever seen a guy whose face says, more obviously, 'don't talk to me.'"
-    redmind happy "Well, I can definitely find someone without such an aura of antisociality if I just-"
+    redmind @playfulbrow unamusedmouth "[prologue_scene_text[242]]"
+    redmind happy "[prologue_scene_text[243]]"
 
-    silver @talkingmouth "Hey, red."
+    silver @talkingmouth "[prologue_scene_text[244]]"
 
-    red surprised "Huh? Me?"
+    red surprised "[prologue_scene_text[245]]"
 
-    silver angrybrow @talking2mouth "What're you, dense? I'm lookin' {i}straight{/i} at you!"
+    silver angrybrow @talking2mouth "[prologue_scene_text[246]]"
     
-    redmind @winkeyes sadeyebrows sweat frownmouth "Oh, shit, is this guy trying to pick a fight?" 
-    redmind @thinking "...I don't have any Pokémon on me. I should probably just get out of here."
+    redmind @winkeyes sadeyebrows sweat frownmouth "[prologue_scene_text[247]]" 
+    redmind @thinking "[prologue_scene_text[248]]"
 
-    red @sad2eyes talking2mouth "Uh... Okay. I think that's the end of this conversation."
+    red @sad2eyes talking2mouth "[prologue_scene_text[249]]"
     
-    silver sad "W-wait! I, uh... I just meant to..."
+    silver sad "[prologue_scene_text[250]]"
 
     pause 1.5
 
-    silver closedbrow "Forget it. Ignore me."
+    silver closedbrow "[prologue_scene_text[251]]"
 
-    redmind @confusedeyebrows frownmouth "Oh. Maybe he's just very awkward?"
+    redmind @confusedeyebrows frownmouth "[prologue_scene_text[252]]"
 
-    red @happy "Uh, maybe we got off on the wrong foot. Why don't you tell me what's up?"
-
-    pause 1.5
-
-    silver -closedbrow @sad "...Ugh. I just wanted to say, that... uh... I overheard your conversation..."
-
-    red @talking2mouth angrybrow "Not a {i}strong{/i} start, but carry on."
-
-    silver @closedbrow talkingmouth "And I figured that... well, if you really did get into Kobukan... and since you were looking around... you probably were trying to find your way there."
-
-    red @happy "You're pretty perceptive!"
-
-    silver @sadbrow happymouth "Thanks, it's a survival mechanism."
-    silver @talkingmouth "Anyway, am I right? {w=0.5}I mean, are you trying to get to Kobukan?"
-
-    red @talkingmouth "Yeah. If you could point me in the right direction, that'd be a big help."
-
-    silver @closedbrow talkingmouth "Good. That's what I want. {w=0.5}{nw}"
-    extend @surprisedbrow talkingmouth "To be helpful, I mean."
+    red @happy "[prologue_scene_text[253]]"
 
     pause 1.5
 
-    red @talking2mouth "So-"
+    silver -closedbrow @sad "[prologue_scene_text[254]]"
 
-    silver @closedbrow talkingmouth "That way."
+    red @talking2mouth angrybrow "[prologue_scene_text[255]]"
 
-    red happy "Thanks! Is it running distance?"
+    silver @closedbrow talkingmouth "[prologue_scene_text[256]]"
 
-    silver @surprisedbrow talkingmouth "I mean...{w=0.5} I wouldn't, but probably."
+    red @happy "[prologue_scene_text[257]]"
 
-    red @happy "Cool. Seeya!"
+    silver @sadbrow happymouth "[prologue_scene_text[258]]"
+    silver @talkingmouth "[prologue_scene_text[259]]"
+
+    red @talkingmouth "[prologue_scene_text[260]]"
+
+    silver @closedbrow talkingmouth "[prologue_scene_text[261]]"
+    extend @surprisedbrow talkingmouth "[prologue_scene_text[262]]"
+
+    pause 1.5
+
+    red @talking2mouth "[prologue_scene_text[263]]"
+
+    silver @closedbrow talkingmouth "[prologue_scene_text[264]]"
+
+    red happy "[prologue_scene_text[265]]"
+
+    silver @surprisedbrow talkingmouth "[prologue_scene_text[266]]"
+
+    red @happy "[prologue_scene_text[267]]"
 
     show silver:
         xpos 0.5
@@ -957,7 +965,7 @@ label prologue:
 
     pause 3.0
 
-    silver @surprised "Hey, wait!"
+    silver @surprised "[prologue_scene_text[268]]"
 
     show city_A:
         linear 1.0 zoom 1.0
@@ -965,19 +973,19 @@ label prologue:
     show silver:
         linear 1.0 xpos 0.5
 
-    red @talkingmouth "Yeah? What's up?"
+    red @talkingmouth "[prologue_scene_text[269]]"
 
-    silver @closedbrow talkingmouth "About earlier...{w=0.5} Sorry. It's, uh,{w=0.25} it's been a pretty rough day so far."
+    silver @closedbrow talkingmouth "[prologue_scene_text[270]]"
         
-    red @confused "But it's barely past noon?"
+    red @confused "[prologue_scene_text[271]]"
 
-    silver @surprisedbrow talkingmouth "Er..."
+    silver @surprisedbrow talkingmouth "[prologue_scene_text[272]]"
     
-    red @happy "Hey, don't worry about it.{w=0.5} We all have those kinds of days."
+    red @happy "[prologue_scene_text[273]]"
     
-    silver @closedbrow talkingmouth "Hmm... {w=0.5}{nw}"
-    extend @happy "Oh, I know!"
-    silver @happymouth "Here, take this."
+    silver @closedbrow talkingmouth "[prologue_scene_text[274]]"
+    extend @happy "[prologue_scene_text[275]]"
+    silver @happymouth "[prologue_scene_text[276]]"
     
     show ragecandy at itemhover
 
@@ -991,11 +999,11 @@ label prologue:
     
     pause 2.0
 
-    red surprised "A chocolate bar?"
+    red surprised "[prologue_scene_text[277]]"
         
-    silver sadbrow @talkingmouth "It's a Rage Candy Bar.{w=0.5} ...Yeah. A chocolate bar. They're from Johto."
+    silver sadbrow @talkingmouth "[prologue_scene_text[278]]"
     
-    red @talkingmouth "Huh."
+    red @talkingmouth "[prologue_scene_text[279]]"
 
     show ragecandy at itemhide
 
@@ -1005,13 +1013,13 @@ label prologue:
 
     pause 1.0
 
-    red happy "Well, my mother told me never to accept candy from strangers. So, the name's [first_name]. What's yours?"
+    red happy "[prologue_scene_text[280]][first_name][prologue_scene_text[281]]"
 
     $ BecomeNamed("Silver")
 
-    silver @talkingmouth "Oh. Uh, it's Silver."
+    silver @talkingmouth "[prologue_scene_text[282]]"
 
-    red -happy @talkingmouth "Cool. See ya, then."
+    red -happy @talkingmouth "[prologue_scene_text[283]]"
 
     show silver closedbrow with dis:
         xpos 0.5
@@ -1027,7 +1035,7 @@ label prologue:
     
     pause 2.0
     
-    silver neutralbrow @talkingmouth "...If you care, that bus goes directly there."
+    silver neutralbrow @talkingmouth "[prologue_scene_text[284]]"
 
     show city_A:
         linear 0.5 zoom 1.0
@@ -1035,12 +1043,12 @@ label prologue:
     show silver:
         linear 0.5 xpos 0.5
 
-    red angryeyebrows angryeyes frownmouth @talkingmouth "Man, I'm never going to get to go on my run, am I?" 
-    red happy "Fine, I'll get on the bus. Geez."
+    red angryeyebrows angryeyes frownmouth @talkingmouth "[prologue_scene_text[285]]" 
+    red happy "[prologue_scene_text[286]]"
     
-    silver surprisedbrow @talkingmouth "I feel like I'm missing some context...?"
+    silver surprisedbrow @talkingmouth "[prologue_scene_text[287]]"
     
-    red @talkingmouth "Life's better without it. Seeya, red!"
+    red @talkingmouth "[prologue_scene_text[288]]"
 
     $ renpy.music.set_volume(0.25, delay=0.5, channel="music")
     $ renpy.music.stop(channel='misc', fadeout=1.5)
@@ -1085,42 +1093,42 @@ label prologue:
     
     $ renpy.pause(1.5, hard=True)
     
-    red @surprised "Whoa!"
+    red @surprised "[prologue_scene_text[289]]"
 
-    redmind @thinking "This place is big. Like, really big! I saw Inspira tons of times when I was doing my research on Kobukan, but..."
-    redmind @upeyes sweat frownmouth "Eeesh. Just looking up at the skyscrapers gives me vertigo. I have to really crane my neck, too."
+    redmind @thinking "[prologue_scene_text[290]]"
+    redmind @upeyes sweat frownmouth "[prologue_scene_text[291]]"
 
-    red happy "Oh, hey, I can see the school from here! Alright, now, if I just tighten my laces, then I can finally-"
+    red happy "[prologue_scene_text[292]]"
 
     show city_B with hpunch
     
-    Character("Rude Man") "\"Can you {i}move{/i}, maybe? I'm walking here!\""
+    Character("[prologue_scene_text[293]]") "[prologue_scene_text[294]]"
 
-    red @surprised "Uh... s-sorry? Sorry!"
+    red @surprised "[prologue_scene_text[295]]"
 
-    redmind @closedeyes frownmouth "Wait, that was totally on him! Why'd I apologize?"
+    redmind @closedeyes frownmouth "[prologue_scene_text[296]]"
 
     show brawly uniform:
         xcenter 1.5
         ease 0.5 xcenter 0.5
 
-    brawly happy @angrybrow happymouth "Brother-man! You can't let jerks like that push you around. You need to stand up to them, and tell dicks like that what's what!"
-    brawly @closedbrow talking2mouth -happy "Have some confidence in yourself! You don't need anyone to back you up!"
+    brawly happy @angrybrow happymouth "[prologue_scene_text[297]]"
+    brawly @closedbrow talking2mouth -happy "[prologue_scene_text[298]]"
  
-    red surprised "...Uh, hi?"
-    red -surprisedbrow -frownmouth -surprised @talking2mouth "I appreciate the support, but who are you...?"
+    red surprised "[prologue_scene_text[299]]"
+    red -surprisedbrow -frownmouth -surprised @talking2mouth "[prologue_scene_text[300]]"
 
     $ BecomeNamed("Brawly")
 
-    brawly -happy @happy "Brawly!"
+    brawly -happy @happy "[prologue_scene_text[301]]"
 
-    redmind closedeyes frownmouth "Yeah, that checks out."
-    red surprised "Hey, that uniform! You're a Kobukan student, right?"
-    brawly @surprised "Oh, yeah! Member of the Student Council, actually. Are you a new student?"
-    red -surprisedbrow -frownmouth -surprised @talkingmouth "Yeah. My name's [first_name]. I'm actually heading to the academy now."
-    brawly @talkingmouth "Well, nice to meet ya, [first_name]! I'm actually running a bit late for this orientation the SC Prez is running, so I gotta dash. Up for a jog?"
-    red surprised "{w=0.5}.{w=0.5}.{w=0.5}."
-    red happy "Oh, I think we're going to get along fine. Yeah, lead the way, Brawly."
+    redmind closedeyes frownmouth "[prologue_scene_text[302]]"
+    red surprised "[prologue_scene_text[303]]"
+    brawly @surprised "[prologue_scene_text[304]]"
+    red -surprisedbrow -frownmouth -surprised @talkingmouth "[prologue_scene_text[305]][first_name][prologue_scene_text[306]]"
+    brawly @talkingmouth "[prologue_scene_text[307]][first_name][prologue_scene_text[308]]"
+    red surprised "[prologue_scene_text[309]]"
+    red happy "[prologue_scene_text[310]]"
 
     show blank2:
         alpha 0.0
@@ -1145,9 +1153,9 @@ label prologue:
         xcenter 1.5 xzoom -1
         ease 0.5 xcenter 0.5
 
-    brawly @surprisedbrow happymouth "Hoo boy! You're pretty damn fast! You sure you never trained?"
-    red closedeyes @talking2mouth "Just went for the odd run every day. Never had the chance for more. Back at Pallet High, the closest thing to a sports team we had was the old folks' bingo club."
-    brawly @happy "Maybe you're just a natural, then. Anyway, we're here!"
+    brawly @surprisedbrow happymouth "[prologue_scene_text[311]]"
+    red closedeyes @talking2mouth "[prologue_scene_text[312]]"
+    brawly @happy "[prologue_scene_text[313]]"
     
     hide city_B
     
@@ -1156,16 +1164,16 @@ label prologue:
         zoom 1.0 xpos 0.0 ypos 0.0 alpha 1.0
         ease 6.0 zoom 1.14 xpos -0.14 ypos -0.04
     
-    red surprised "...Damn. It's gorgeous."
+    red surprised "[prologue_scene_text[314]]"
      
-    red closedeyes happymouth happyeyebrows "Wow, okay. Gotta center myself." 
-    red -closedeyes -happymouth -happyeyebrows @talkingmouth "You said there's some sort of orientation thing first, right, Brawly?"
-    brawly @happy "Yeah, that's--"
+    red closedeyes happymouth happyeyebrows "[prologue_scene_text[315]]" 
+    red -closedeyes -happymouth -happyeyebrows @talkingmouth "[prologue_scene_text[316]]"
+    brawly @happy "[prologue_scene_text[317]]"
 
     show relichall_A with vpunch
 
-    roxanne uniform @angry "{size=50}{b}BRAWLY!{/b}{/size}"
-    brawly @closedbrow talking2mouth "...Yeah, that's the thing I'm late for."
+    roxanne uniform @angry "[prologue_scene_text[318]]"
+    brawly @closedbrow talking2mouth "[prologue_scene_text[319]]"
     
     show roxanne uniform:
         xcenter -0.5 xzoom -1
@@ -1175,47 +1183,47 @@ label prologue:
         xcenter 0.5
         ease 1.0 xcenter 0.66
 
-    roxanne @angrybrow talking2mouth "Brawly, were you running in your uniform again?"
-    brawly @sadbrow happymouth "Yep! Sorry, Prez."
-    roxanne @happybrow talkingmouth "Oh, sweetheart, you will be. {i}You will be.{/i}"
-    brawly @sadbrow happymouth "Eh heh heh... I already am."
+    roxanne @angrybrow talking2mouth "[prologue_scene_text[320]]"
+    brawly @sadbrow happymouth "[prologue_scene_text[321]]"
+    roxanne @happybrow talkingmouth "[prologue_scene_text[322]]"
+    brawly @sadbrow happymouth "[prologue_scene_text[323]]"
     
     show roxanne:
         xcenter 0.33
         ease 0.75 zoom 1.25 xcenter 0.33 ypos 1.1
 
-    roxanne @talkingmouth "Now, who's this?"
-    red @talkingmouth "[first_name], Ma'am."
+    roxanne @talkingmouth "[prologue_scene_text[324]]"
+    red @talkingmouth "[prologue_scene_text[325]][first_name][prologue_scene_text[326]]"
 
     menu: 
-        ">Cover for Brawly":
+        "[prologue_scene_text[327]]":
             show brawly happy with dis
-            red @talkingmouth "A new student. I was a bit lost, so Brawly helped me find my way here."
+            red @talkingmouth "[prologue_scene_text[328]]"
             $ AddEvent("Brawly", "Covered")
 
             show roxanne:
                 zoom 1.25 xcenter 0.33 ypos 1.1
                 ease 0.5 xzoom -1 xcenter 0.33 ypos 1.1 
 
-            roxanne @happy "Really? How wonderful it is to hear you're taking your Student Council responsibilities seriously.{w=1.0} For once."
+            roxanne @happy "[prologue_scene_text[329]]"
 
             show roxanne:
                 xzoom -1 xcenter 0.33 ypos 1.1 
                 ease 0.75 xzoom 1 xcenter 0.33 ypos 1.1
 
-            roxanne @talkingmouth "But where are my manners? Please, allow me to introduce myself."
+            roxanne @talkingmouth "[prologue_scene_text[330]]"
 
-        ">Leave it be":
-            red @talkingmouth "Pleasure to meet you."
-            roxanne @talkingmouth "The pleasure's all mine, I'm sure."
+        "[prologue_scene_text[331]]":
+            red @talkingmouth "[prologue_scene_text[332]]"
+            roxanne @talkingmouth "[prologue_scene_text[333]]"
 
     $ BecomeNamed("Roxanne")
-    roxanne @closedbrow talkingmouth "My name is Roxanne, Kobukan Academy Student Council President. Please, if you ever need something, know that we, the Student Council, are here to serve you."
-    roxanne @happybrow sweat talking2mouth "...Except for right now, as we're very late for the orientation we need to set up. Please excuse us."
+    roxanne @closedbrow talkingmouth "[prologue_scene_text[334]]"
+    roxanne @happybrow sweat talking2mouth "[prologue_scene_text[335]]"
 
-    red surprised "Huh? Uh, yeah, sure."
+    red surprised "[prologue_scene_text[336]]"
 
-    brawly @happy "See ya, [first_name]! You can just chill 'til we announce orientation over the loudspeaker. Go to the dorms, pick out a suite!"
+    brawly @happy "[prologue_scene_text[337]][first_name][prologue_scene_text[338]]"
 
     show brawly:
         ease 1.0 xcenter -0.5
@@ -1224,7 +1232,7 @@ label prologue:
         zoom 1.25 ypos 1.1
         ease 1.0 xcenter -0.5
 
-    red -surprisedbrow -frownmouth -surprised @talkingmouth "...Dorms, huh? Guess I should go looking for wherever those are."
+    red -surprisedbrow -frownmouth -surprised @talkingmouth "[prologue_scene_text[339]]"
 
     show relichall_A:
         ease 3.0 zoom 1.3
@@ -1246,58 +1254,60 @@ label prologue:
         parallel:
             ease 1.5 xpos 0.33    
     
-    mace @talkingmouth "We beg your pardon. Are you a new student?"
+    mace @talkingmouth "[prologue_scene_text[340]]"
     
     show relichall_A:
         zoom 1.3
         ease 1.0 zoom 1.14 xpos -0.1 ypos -0.1
     
-    red @talkingmouth "Uh, yeah. What's up?"
+    red @talkingmouth "[prologue_scene_text[341]]"
 
     show face smile2mouth happyeyebrows with dis
 
-    mace smilemouth happybrow @happy "Splendid. Us, too! Pleasure."
+    mace smilemouth happybrow @happy "[prologue_scene_text[342]]"
     
-    face @happy "We were hoping you knew something about the orientation that's coming up? We know there {i}is{/i} one, but don't know where it is."
+    face @happy "[prologue_scene_text[343]]"
 
     show face surprisedbrow frownmouth
     show mace surprisedbrow frownmouth
     with dis
 
-    red @happy "Oh, yeah, I was just chatting with a Student Council member about that. He said to just pick out a dorm, then they'd announce the assembly over the loudspeakers."
+    red @happy "[prologue_scene_text[344]]"
     
     show face surprisedbrow with dis
     
-    mace surprisedbrow @surprisedbrow talkingmouth "You already have the ear of a Student Council member? Formidable. Pre-existing connections, I suppose?"
+    mace surprisedbrow @surprisedbrow talkingmouth "[prologue_scene_text[345]]"
     
-    red -happy @sweat talkingmouth "Not so much. Just met him in Inspira half an hour ago. Don't know {i}anyone{/i} here except another new student, actually."
+    red -happy @sweat talkingmouth "[prologue_scene_text[346]]"
 
-    face -surprisedbrow -frownmouth -surprised smile2mouth sadbrow @happy "Really, no connections at all? It's so, so, hard to get in here though... how did you manage it?"
+    face -surprisedbrow -frownmouth -surprised smile2mouth sadbrow @happy "[prologue_scene_text[347]]"
     
-    mace @closedbrow talkingmouth "Would it be rude to assume that you come from money?"
+    mace @closedbrow talkingmouth "[prologue_scene_text[348]]"
     
     show face sad
     show mace sad
     with dis
     
-    red @happy "Hah, I wish! Nah, I lived in a one-bedroom house in Pallet Town."
+    red @happy "[prologue_scene_text[349]]"
     
-    mace @sweat sadbrow sadmouth "...Then, perhaps, you're a legacy?"
+    mace @sweat sadbrow sadmouth "[prologue_scene_text[350]]"
     
-    red -happy @talkingmouth "First person in my family to go to college, actually."
+    red -happy @talkingmouth "[prologue_scene_text[351]]"
     
-    face @angry "Okay, so your academics had to be stellar! Four point ones across the board! Top of your class, surely?!"
+    face @angry "[prologue_scene_text[352]]"
     
-    red @closedeyes sadmouth "You're not going to believe this, but my high-school was pass-fail. So, in the sense that there were only a few of us, and we all passed, I was top of the class."
-    red @happy sweat "Buuuut...{w=0.5} I was probably at the bottom of that group."
+    red @closedeyes sadmouth "[prologue_scene_text[353]]"
+    red @happy sweat "[prologue_scene_text[354]]"
     
     mace angry -sweat "[ellipses]"
+
     
     face @closedbrow frownmouth "[ellipses]"
+
     
     show face sad with dis
     
-    mace @sad "Apologies. We have to go...{w=0.5} somewhere else."
+    mace @sad "[prologue_scene_text[355]]"
 
     show mace sad:
         alpha 1.0 xpos 0.66
@@ -1319,9 +1329,10 @@ label prologue:
 
     stop music fadeout 3.5
     
-    redmind sad "Yeah.{w=0.5} That figures.{w=0.5} I mean, from their perspective, and even from mine, there's no way I should be here."
+    redmind sad "[prologue_scene_text[356]]"
     red @thinking "[ellipses]"
-    redmind angrybrow frownmouth "But I am. And I'll do whatever it takes to prove to everyone, and myself, that I deserve this chance."
+
+    redmind angrybrow frownmouth "[prologue_scene_text[357]]"
 
     queue music "Audio/Music/Show Me Around.ogg"
     
