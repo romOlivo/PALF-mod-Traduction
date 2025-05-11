@@ -57,6 +57,16 @@ init -3 python:
         def __ge__(self, other):
             return self._get_unique() >= other
 
+        def __getstate__(self):
+            return self._get_unique()
+
+        def __setstate__(self, state):
+            if isinstance(state, str):
+                self.values = {LANG_ENG: state}
+                self.prefix = ""
+            else:
+                self.__dict__.update(state)
+
         def split(self, value):
             return self._get_unique().split(value)
 
