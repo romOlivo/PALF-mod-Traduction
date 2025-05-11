@@ -1140,7 +1140,7 @@ screen foreveralinfo(foreveral):
     if liberationlimit:
         $ LLmsg = "Liberation Limit breakdown:\n"
         for category, specific, increase in liberationlimit[1]:
-            if (not isinstance(specific, str)):
+            if (not isinstance(specific, str) and not isinstance(specific, EvolvedString)):
                 $ specific = pokedexlookup(specific, DexMacros.Name)
             $ LLmsg += specific + ": " + str(math.floor(increase)) + "\n"
         $ LLmsg += "Total: " + str(liberationlimit[0]) + "/" + str(maxliberationlimit)
@@ -1613,7 +1613,7 @@ screen foreveralinventory(interact = True):
                 text "Liberation Limit" size 40 xalign 0.5 color "#000" font "fonts/pkmndp.ttf"
                 text str(ll[0]) + "/" + str(maxliberationlimit) size 40 xalign 0.5 color "#000" font "fonts/pkmndp.ttf"
                 for category, specific, increase in ll[1]:
-                    if (not isinstance(specific, str)):
+                    if (not isinstance(specific, str) and not isinstance(specific, EvolvedString)):
                         $ specific = pokedexlookup(specific, DexMacros.Name)
                     text specific + ": " + str(math.floor(increase)) size 30 color "#000" font "fonts/pkmndp.ttf"
         if (foreveralinvsubmenu == "Moves" or (foreveralinvsubmenu == "Loadouts" and loadoutscreen in ["Moves", "Loadouts"])):
@@ -2253,7 +2253,7 @@ screen foreveralinventory(interact = True):
                 if isinstance(GetTooltip(), (list, tuple)): # If this is a LL tooltip
                     vbox:
                         for category, specific, increase in GetTooltip():
-                            if (not isinstance(specific, str)):
+                            if (not isinstance(specific, str) and not isinstance(specific, EvolvedString)):
                                 $ specific = pokedexlookup(specific, DexMacros.Name)
                             text specific + ": " + str(math.floor(increase)) size 30 color "#000" font "fonts/pkmndp.ttf"
                 elif isinstance(GetTooltip(), str): # If text-based tooltip
@@ -2427,7 +2427,7 @@ screen fieldinventory(pickitem = False):
                     xalign 0.5
                     for move in passedpokemon.Moves:
                         if ValidateItemUsage(selecteditem, move):
-                            textbutton move.Name action (Function(InvokeUseItem, selecteditem, move, passedpokemon)) xsize 200 text_xalign .5 text_size 30 text_color "#000" text_hover_color "#f0f" style "menu_choice_button" text_font "fonts/pkmndp.ttf" hovered Show("movedata", move = move, vertoffset = .40) unhovered Hide("movedata")
+                            textbutton str(move.Name) action (Function(InvokeUseItem, selecteditem, move, passedpokemon)) xsize 200 text_xalign .5 text_size 30 text_color "#000" text_hover_color "#f0f" style "menu_choice_button" text_font "fonts/pkmndp.ttf" hovered Show("movedata", move = move, vertoffset = .40) unhovered Hide("movedata")
                         else:
                             null
                     for x in range(4 - len(playerparty)):
@@ -2514,9 +2514,9 @@ screen mondata(pkmn, showtip = True, showDex = True):
                 $ ll = GetLiberationLimit()
                 text "{b}Liberation Limit" xminimum 300 xalign .5 size 40
                 for category, specific, increase in ll[1]:
-                    if (not isinstance(specific, str)):
+                    if (not isinstance(specific, str) and not isinstance(specific, EvolvedString)):
                         $ specific = pokedexlookup(specific, DexMacros.Name)
-                    if (specific not in category):
+                    if (str(specific) not in category):
                         text category + " (" + specific +"): " + str(math.floor(increase)) xminimum 300 size 40
                     else:
                         text category + ": " +  str(math.floor(increase)) xminimum 300 size 40
@@ -2633,7 +2633,7 @@ screen nonbattlemoves(pkmn, newmove=False, tooltips = True):
 
         $ move_index = 0
         for move in pkmn.GetMoves():
-            textbutton move.Name: 
+            textbutton str(move.Name):
                 action ([Hide("movedata", Dissolve(0.5)), Hide("nonbattlemoves", Dissolve(0.5)), Return(move)] if newmove else [(SetVariable("pkmnlockedmove", (-1 if pkmnlockedmove != -1 else move_index)) if pkmnlockedmove == -1 or pkmnlockedmove == move_index else Function(SwapMovePositions, pkmn, pkmnlockedmove, move_index), renpy.restart_interaction)]) 
                 xminimum 300 text_xalign .5 text_size 50 
                 text_color ("#FF0000" if move_index == pkmnlockedmove else "#000")
@@ -3989,6 +3989,7 @@ screen moves(mon, ignoreValidity = False):
                     $ hovercolor = "#000"
                     $ bodycolor = "#616161"
                     $ name = "{s} " + name + " {/s}"
+                $ name = str(name)
                 textbutton name action [Hide("movedata", Dissolve(0.5)), Return(value=i)] xminimum 400 text_xalign .5 text_size 60 - max(len(name) - 12, 0) text_color bodycolor text_hover_color hovercolor style "menu_choice_button" text_font "fonts/pkmndp.ttf" hovered Show("movedata", Dissolve(0.5), move) unhovered Hide("movedata", Dissolve(0.5))
                 
             for i in range(4 - NumMoves):
@@ -4215,7 +4216,7 @@ screen battlemoves(pkmn):
         xalign .5
         yalign .57
         for move in pkmn.GetMoves():
-            textbutton move.Name action NullAction() xminimum 300 text_xalign .5 text_size 50 text_color "#000" text_hover_color "#f0f" style "menu_choice_button" text_font "fonts/pkmndp.ttf" hovered Show("movedata", Dissolve(0.5), move) unhovered Hide("movedata", Dissolve(0.5)), Show("stats", Dissolve(0.5), pkmn)
+            textbutton str(move.Name) action NullAction() xminimum 300 text_xalign .5 text_size 50 text_color "#000" text_hover_color "#f0f" style "menu_choice_button" text_font "fonts/pkmndp.ttf" hovered Show("movedata", Dissolve(0.5), move) unhovered Hide("movedata", Dissolve(0.5)), Show("stats", Dissolve(0.5), pkmn)
 
 screen rememberablemoves(pkmn):
     $ rememberablemoves = GetRememberableMoves(pkmn)

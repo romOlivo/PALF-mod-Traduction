@@ -45,6 +45,18 @@ init -3 python:
         def __contains__(self, item):
             return item in self.__str__()
 
+        def __lt__(self, other):
+            return self._get_unique() < other
+
+        def __le__(self, other):
+            return self._get_unique() <= other
+
+        def __gt__(self, other):
+            return self._get_unique() > other
+
+        def __ge__(self, other):
+            return self._get_unique() >= other
+
         def split(self, value):
             return self._get_unique().split(value)
 
