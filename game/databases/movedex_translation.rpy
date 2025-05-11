@@ -1,5 +1,5 @@
 init -1 python:
-    translations = {
+    move_translations = {
         LANG_ESP: {
             "Pound": ["Destructor", "Provoca daño al objetivo."],
             "Karate Chop": ["Golpe Karate", "Alta probabilidad de ser golpe crítico."],
@@ -974,8 +974,8 @@ init python:
             if language == LANG_ENG:
                 continue
             else:
-                if move_name in translations[language]:
-                    info = translations[language][move_name]
+                if move_name in move_translations[language]:
+                    info = move_translations[language][move_name]
                     move_names[language] = info[0]
                     move_descriptions[language] = info[1]
                 if move_type[LANG_ENG] in type_translation[language]:
