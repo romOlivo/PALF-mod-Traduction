@@ -958,13 +958,16 @@ init -1 python:
 init python:
     for i in range(len(movedex)):
         move_name = movedex[i][1]
-        names = {
+        move_names = {
             LANG_ENG: move_name,
         }
-        category = {
+        move_type = {
+            LANG_ENG: movedex[i][2],
+        }
+        move_category = {
             LANG_ENG: movedex[i][3],
         }
-        descriptions = {
+        move_descriptions = {
             LANG_ENG: movedex[i][9],
         }
         for language in languages:
@@ -973,13 +976,17 @@ init python:
             else:
                 if move_name in translations[language]:
                     info = translations[language][move_name]
-                    names[language] = info[0]
-                    descriptions[language] = info[1]
-                if category[LANG_ENG] in category_translation[language]:
-                    category[language] = category_translation[language][category[LANG_ENG]]
+                    move_names[language] = info[0]
+                    move_descriptions[language] = info[1]
+                if move_type[LANG_ENG] in type_translation[language]:
+                    move_type[language] = type_translation[language][move_type[LANG_ENG]]
+                if move_category[LANG_ENG] in category_translation[language]:
+                    move_category[language] = category_translation[language][move_category[LANG_ENG]]
         # Change names
-        movedex[i][1] = EvolvedString(names)
+        movedex[i][1] = EvolvedString(move_names)
+        # Change type
+        movedex[i][2] = EvolvedString(move_type)
         # Change category
-        movedex[i][3] = EvolvedString(category)
+        movedex[i][3] = EvolvedString(move_category)
         # Change descriptions
-        movedex[i][9] = EvolvedString(descriptions)
+        movedex[i][9] = EvolvedString(move_descriptions)
