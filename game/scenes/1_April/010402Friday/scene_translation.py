@@ -19,6 +19,8 @@ SPECIAL_COMMAND_CHARACTER = "Character"
 SPECIAL_CHARACTER = "\\\""
 SPECIAL_CHARACTER_TO_REPLACE = "#!#"
 
+LANGUAGE = "LANG_ENG"
+
 global pos_var
 
 
@@ -28,7 +30,7 @@ def str_init_text_file(var_name):
 
 def str_add_text_file(value):
     new_str = "EvolvedString({\n"
-    new_str += f'            LANG_ENG: "{value}",\n'
+    new_str += f'            {LANGUAGE}: "{value}",\n'
     new_str += "        }), "
     return new_str
 
