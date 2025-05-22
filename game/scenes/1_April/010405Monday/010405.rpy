@@ -16,8 +16,8 @@ hide blank2
 
 $ renpy.music.set_volume(1.0, delay=0.0, channel="ctc")
 
-redmind uniform closedbrow frownmouth "It's finally the first day of classes. I spent the weekend getting to know this place, so I shouldn't get lost again."
-redmind happy "I'm getting goosebumps! Let's do this!"
+redmind uniform closedbrow frownmouth "[day_010405_scene_text[0]]"
+redmind happy "[day_010405_scene_text[1]]"
 
 show calem uniform:
     xpos 0.25
@@ -29,11 +29,11 @@ with dis
     
 $ renpy.pause(0.5, hard=True)
     
-calem @talkingmouth "Are you ready to get some breakfast?"
-brendan @happy "Yeah! Never skip breakfast. It's the most important meal of the day."
-ethan @closedbrow talking2mouth "I'm pretty sure I read a headline somewhere that said that was misinfo by Big Breakfast..."
-red @happy "We're heading to the main cafeteria?"
-calem @talking2mouth "Indeed."
+calem @talkingmouth "[day_010405_scene_text[2]]"
+brendan @happy "[day_010405_scene_text[3]]"
+ethan @closedbrow talking2mouth "[day_010405_scene_text[4]]"
+red @happy "[day_010405_scene_text[5]]"
+calem @talking2mouth "[day_010405_scene_text[6]]"
 
 show calem surprisedbrow with dis
 
@@ -41,13 +41,13 @@ $ renpy.music.play("Audio/Pokemon/pikachu_pikapika1.ogg", channel="altcry", loop
 
 pikachu neutral_2b "Pikapika!"
 
-red @talkingmouth "Oh, can [pika_name] come with us?"
+red @talkingmouth "[day_010405_scene_text[7]][pika_name][day_010405_scene_text[8]]"
 
-calem -surprisedbrow @sadbrow talkingmouth "I went ahead and checked with the front desk yesterday, and they said Pokémon must remain in their rooms or in a Poké Ball outside of the room unless authorized by the academy."
+calem -surprisedbrow @sadbrow talkingmouth "[day_010405_scene_text[9]]"
 
-brendan @talking2mouth "So, I guess we can bring 'im as long as he stays in his Poké Ball?"
+brendan @talking2mouth "[day_010405_scene_text[10]]"
 
-ethan @sadbrow talkingmouth "Not sure he'll go for that..."
+ethan @sadbrow talkingmouth "[day_010405_scene_text[11]]"
 
 show calem surprisedbrow
 show brendan surprisedbrow frownmouth
@@ -59,30 +59,30 @@ pikachu angry_3 "Pi-{i}ka!{/i}"
 
 show brendan -surprisedbrow -frownmouth with dis
 
-calem -surprisedbrow @closedbrow talkingmouth "Perhaps not, then."
+calem -surprisedbrow @closedbrow talkingmouth "[day_010405_scene_text[12]]"
 
-ethan @happy "Yeah, some Pokémon just don't like to spend time in their Poké Balls! I tried putting my Pichu back home in a luxury ball, you know? Thought it'd be cozier."
-ethan @sad "Didn't do anything, and cost me a good chunk of change, too."
+ethan @happy "[day_010405_scene_text[13]]"
+ethan @sad "[day_010405_scene_text[14]]"
 
-brendan @happy "Dudes, that's actually pretty dope.{w=0.5} It's like you've got rogue Pokémon or something."
+brendan @happy "[day_010405_scene_text[15]]"
 
-calem @talkingmouth "It's odd. I've never heard of a Pokémon that exhibits that sort of behavior before today, and now I've heard of two."
+calem @talkingmouth "[day_010405_scene_text[16]]"
 
-red @confused "Maybe... it has something to do with their evolutionary line? Pichu evolves into Pikachu, after all."
+red @confused "[day_010405_scene_text[17]]"
 
-brendan @surprised "Woah, it does?! I thought it was a Plusle and Minun situation, where they're symbiotic, but don't evolve."
+brendan @surprised "[day_010405_scene_text[18]]"
 
-calem @happy "Then I'll really blow your mind when I tell you about Raichu."
+calem @happy "[day_010405_scene_text[19]]"
 
-red @sadeyes sadeyebrows talkingmouth "Sorry, [pika_name], but you're gonna have to stay here until I get back."
-red @confused "...Unless you want to come along in your Poké Ball?"
+red @sadeyes sadeyebrows talkingmouth "[day_010405_scene_text[20]][pika_name][day_010405_scene_text[21]]"
+red @confused "[day_010405_scene_text[22]]"
 
 $ renpy.music.play("Audio/Pokemon/pikachu_angry1.ogg", channel="altcry", loop=None)
 
 pikachu angry_2 "Pi-ka!"
     
-red @happy "All right, suit yourself.{w=0.5} There's some food in my drawer, but don't eat all of it at once! We'll be back after classes are over."
-red @angrybrow talking2mouth "And don't sneak out and follow me, got that?"
+red @happy "[day_010405_scene_text[23]]"
+red @angrybrow talking2mouth "[day_010405_scene_text[24]]"
 
 $ renpy.music.play("Audio/Pokemon/pikachu_happy2.ogg", channel="altcry", loop=None)
 
@@ -108,25 +108,25 @@ show hilbert uniform:
 
 pause 2.0
 
-red @confused "Yeah?"
+red @confused "[day_010405_scene_text[25]]"
 
-hilbert @closedbrow talkingmouth "We're going to the cafeteria, aren't we?"
+hilbert @closedbrow talkingmouth "[day_010405_scene_text[26]]"
 
-ethan @playfulbrow talking2mouth "I kinda figured you wouldn't want to come."
+ethan @playfulbrow talking2mouth "[day_010405_scene_text[27]]"
 
-hilbert @sadbrow talkingmouth "...I require food to live.{w=0.5} Didn't think I'd have to tell you that one."
+hilbert @sadbrow talkingmouth "[day_010405_scene_text[28]]"
 
-calem @closedbrow talkingmouth "You could go alone."
+calem @closedbrow talkingmouth "[day_010405_scene_text[29]]"
 
-hilbert @talkingmouth "I could."
+hilbert @talkingmouth "[day_010405_scene_text[30]]"
 
-brendan @happy "...But you don't wanna?"
+brendan @happy "[day_010405_scene_text[31]]"
 
-hilbert @angrybrow talkingmouth "The parameters I was operating under have changed. Now, I want to go to the cafeteria and eat a delicious breakfast with you. You want my life story, or can we leave it at that?"
+hilbert @angrybrow talkingmouth "[day_010405_scene_text[32]]"
 
 pause 1.0
 
-ethan @happy "Well... I guess let's go, then. Good to have you with us, Happenstance!"
+ethan @happy "[day_010405_scene_text[33]]"
 
 show hilbert:
     xpos 0.2
@@ -136,9 +136,9 @@ pause 1.0
 
 $ PlaySound("Door_Close1.ogg")
 
-red @closedeyes sadeyebrows talkingmouth "It's, uh, it's Hilbert."
+red @closedeyes sadeyebrows talkingmouth "[day_010405_scene_text[34]]"
 
-ethan surprisedbrow frownmouth @surprised "Why, what'd I say?"
+ethan surprisedbrow frownmouth @surprised "[day_010405_scene_text[35]]"
 
 pause 0.75
 
@@ -170,7 +170,7 @@ show may uniform with dis
     
 $ renpy.pause(1.0, hard=True)
 
-red @talkingmouth "Oh, hey, May! Waiting for us long?"
+red @talkingmouth "[day_010405_scene_text[36]]"
 
 show may:
     xpos 0.5
@@ -181,27 +181,27 @@ show brendan uniform with dis:
     
 hide blank2
 
-may @happy "Nah! Good to see you again! I didn't get to see much of you over the weekend!"
+may @happy "[day_010405_scene_text[37]]"
 
-red @happy "Well, even if Brendan and I were running the same kinds of errands, I wasn't planning on third-wheeling the whole time!"
+red @happy "[day_010405_scene_text[38]]"
 
-may @sadbrow talkingmouth "Speaking of third-wheeling...{w=0.5} you still haven't met my other roommates besides Serena, have you?"
+may @sadbrow talkingmouth "[day_010405_scene_text[39]]"
 
-red @talkingmouth "Hopefully we'll bump into at least a couple of them today on the way to class."
+red @talkingmouth "[day_010405_scene_text[40]]"
 
-may @happy "Well, if I see any of them, I'll let you know. Oh, that reminds me, sweetheart! Have you given [first_name] your phone number?"
+may @happy "[day_010405_scene_text[41]][first_name][day_010405_scene_text[42]]"
 
-brendan @surprised "Huh! No, I haven't. Good catch. Here, [first_name]!"
+brendan @surprised "[day_010405_scene_text[43]][first_name][day_010405_scene_text[44]]"
 
 show brendan happy with dis
 
 $ BecomeContacted("Brendan")
 
-brendan -happy @talking2mouth "Hey, why don't you give [first_name] your contact info, too? That way, if my phone's turned off or whatever, he can still reach me."
+brendan -happy @talking2mouth "[day_010405_scene_text[45]][first_name][day_010405_scene_text[46]]"
 
-may @surprised "Huh? Oh, um, sure! If you're okay with that."
+may @surprised "[day_010405_scene_text[47]]"
 
-red @talkingmouth "No problems here."
+red @talkingmouth "[day_010405_scene_text[48]]"
 
 show may happy 
 with dis
@@ -210,28 +210,28 @@ $ BecomeContacted("May")
 
 show may -happy with dis
 
-ethan uniform @happy "Alright, let's head out! I don't know if that's my stomach or Hillenbrand growling, but it's nothing a big plate of eggs won't fix."
+ethan uniform @happy "[day_010405_scene_text[49]]"
 
 scene cafe with Dissolve(1.5)
 $ renpy.pause(1.5, hard=True)
 
 hide blank2
 
-red uniform @surprisedbrow talking2mouth "Damn, this is fancy!"
+red uniform @surprisedbrow talking2mouth "[day_010405_scene_text[50]]"
 
 show calem uniform with dis:
     xpos 0.166
 
-calem @talkingmouth "I suppose such luxuries were a tad out of reach in Pallet Town?"
+calem @talkingmouth "[day_010405_scene_text[51]]"
 
-red @wince talking2mouth"Yeah."
+red @wince talking2mouth"[day_010405_scene_text[52]]"
 
 show ethan uniform with dis:
     xpos 0.333
 
-ethan @talkingmouth "Nothing like Kalos, I bet! I heard that in Kalos, even the smallest village has a five-star restaurant!"
+ethan @talkingmouth "[day_010405_scene_text[53]]"
 
-calem @surprised "You've... heard a lot of interesting things about Kalos."
+calem @surprised "[day_010405_scene_text[54]]"
 
 show calem:
     xpos 0.166
@@ -240,21 +240,21 @@ show calem:
 show brendan uniform with dis:
     xpos 0.499
 
-brendan @happy "Hey, May, look! They've got Basculin tartare!"
+brendan @happy "[day_010405_scene_text[55]]"
 
 show may uniform with dis:
     xpos 0.666
 
-may @sadbrow talkingmouth "...Yeah, but you're a vegetarian, sweetie."
+may @sadbrow talkingmouth "[day_010405_scene_text[56]]"
 
-brendan @happybrow angrymouth "Er... Of course! I didn't forget. It's just... {i}Basculin{/i} tartare! Swanky!"
+brendan @happybrow angrymouth "[day_010405_scene_text[57]]"
 
 show hilbert uniform with dis:
     xpos 0.833
 
-hilbert @sadbrow angrymouth "{size=30}Damn it, where {i}is{/i} she? Come on out, you...{/size}"
+hilbert @sadbrow angrymouth "[day_010405_scene_text[58]]"
 
-redmind @thonk "What's {i}that{/i} about?"
+redmind @thonk "[day_010405_scene_text[59]]"
 
 show hilbert with dis
 
@@ -264,7 +264,7 @@ show calem:
 
 pause 1.5
     
-calem @talkingmouth "Oh, look who's joining us this morning."
+calem @talkingmouth "[day_010405_scene_text[60]]"
 
 show calem:
     xpos 0.07 xzoom -1
@@ -292,50 +292,50 @@ show serena uniform:
 
 pause 1.5
 
-ethan @happy "Wait, wait, don't tell me. You're going to say 'personal space,' right, Calem?"
-calem @sadbrow talkingmouth "I was going to, yes, but now it seems redundant to do so."
+ethan @happy "[day_010405_scene_text[61]]"
+calem @sadbrow talkingmouth "[day_010405_scene_text[62]]"
 
-redmind @thonk "Hmm... Serena. Calem talked with her a few times during the weekend, but it seems he's still treating her with obvious forced casualness."
-redmind @thonk "I'll add that to my list of 'things to ask about when we're closer.'"
+redmind @thonk "[day_010405_scene_text[63]]"
+redmind @thonk "[day_010405_scene_text[64]]"
 
-red @talkingmouth "Morning, Serena."
+red @talkingmouth "[day_010405_scene_text[65]]"
 
-serena @talkingmouth "Good morning, [first_name]. Now, don't you look dashing in your new uniform?"
+serena @talkingmouth "[day_010405_scene_text[66]][first_name][day_010405_scene_text[67]]"
 
-calem @surprised "!"
-calem @closedbrow happymouth "Yes, doesn't he? It fits very well on him, I daresay."
+calem @surprised "[day_010405_scene_text[68]]"
+calem @closedbrow happymouth "[day_010405_scene_text[69]]"
 
-serena @sadbrow talkingmouth "Ah, well, it's certainly a new look. Perhaps I've just grown accustomed to seeing {i}you{/i} like this."
+serena @sadbrow talkingmouth "[day_010405_scene_text[70]]"
 
-calem @angrybrow talking2mouth "...Yes, perhaps."
+calem @angrybrow talking2mouth "[day_010405_scene_text[71]]"
 
 pause 2.0
 
-redmind @confusedeyebrows frownmouth "...What the hell kinds of mind games are these two playing?"
+redmind @confusedeyebrows frownmouth "[day_010405_scene_text[72]]"
 
-hilbert @talkingmouth "Hey. Is your dormmate Hilda around?"
+hilbert @talkingmouth "[day_010405_scene_text[73]]"
 
-serena @surprised "Oh? No, I don't believe so. She said she was looking for someone."
+serena @surprised "[day_010405_scene_text[74]]"
 
-ethan @surprised "Uh-oh!"
+ethan @surprised "[day_010405_scene_text[75]]"
 
-brendan @surprisedbrow talking2mouth "What is it, dude?"
+brendan @surprisedbrow talking2mouth "[day_010405_scene_text[76]]"
 
-ethan @sweat closedbrow talkingmouth "Every time we talk about someone, they show up. So Hilda'll probably be here any second."
+ethan @sweat closedbrow talkingmouth "[day_010405_scene_text[77]]"
 
-hilbert @angry "Don't be superstitious."
+hilbert @angry "[day_010405_scene_text[78]]"
 
-ethan @happy "It's not that, man, I just don't think we can {i}physically{/i} fit any more people onscreen."
+ethan @happy "[day_010405_scene_text[79]]"
 
-hilbert @sadbrow "{w=0.5}.{w=0.5}.{w=0.5}."
+hilbert @sadbrow "[day_010405_scene_text[80]]"
 
-hilbert @closedbrow talkingmouth "This is nonsense. I'll grab us a table."
+hilbert @closedbrow talkingmouth "[day_010405_scene_text[81]]"
 
 show hilbert:
     xpos (6.0/7.0)
     ease 1.0 xpos 1.5
 
-ethan happy "I'll go with him and make sure he doesn't start a fight."
+ethan happy "[day_010405_scene_text[82]]"
 
 show ethan:
     xpos (3.0/7.0)
@@ -343,7 +343,7 @@ show ethan:
 
 show may happy with dis
 
-brendan happy "I dunno about you guys, but I'm going to get some grub!"
+brendan happy "[day_010405_scene_text[83]]"
 
 show brendan:
     xpos (4.0/7.0)
@@ -355,7 +355,7 @@ show may:
 
 pause 2.0
 
-serena @talkingmouth "Well, now that your friends have stepped away for a moment, perhaps we could talk?"
+serena @talkingmouth "[day_010405_scene_text[84]]"
 
 show calem: 
     xpos (2.0/7.0)
@@ -365,120 +365,126 @@ show serena sadbrow with dis:
     xpos (1.0/7.0)
     ease 1.0 xpos 0.25
 
-calem @talking2mouth "Yes, we can do that."
+calem @talking2mouth "[day_010405_scene_text[85]]"
 
-redmind @thinking "Oof, cold."
+redmind @thinking "[day_010405_scene_text[86]]"
 
-redmind @surprisedbrow frownmouth "Wait. His friends haven't stepped away! I'm right here!"
+redmind @surprisedbrow frownmouth "[day_010405_scene_text[87]]"
 
-serena sadbrow @talkingmouth "...It's about..."
+serena sadbrow @talkingmouth "[day_010405_scene_text[88]]"
 
 show calem thinking with dis
 
 serena sadbrow frownmouth "[ellipses]"
 
-serena -sadbrow -frownmouth @sadbrow talkingmouth "About the Student Council."
 
-calem -thinking @surprised "Oh?"
+serena -sadbrow -frownmouth @sadbrow talkingmouth "[day_010405_scene_text[89]]"
+
+calem -thinking @surprised "[day_010405_scene_text[90]]"
 
 stop music fadeout 1.5
 queue music "Audio/Music/Waltz of the Sea_start.ogg" noloop
 queue music "Audio/Music/Waltz of the Sea_loop.ogg"
 
-serena @talkingmouth "We've done leadership work before, right, Calem?{w=0.5} Having membership in the Kobukan Student Council on our resumes would look really, really good to future employers."
+serena @talkingmouth "[day_010405_scene_text[91]]"
 
-calem @closedbrow talking2mouth "Hm. I'm not aware of the specifics, but I've heard that Kobukan's Student Council is extremely hard to get into."
+calem @closedbrow talking2mouth "[day_010405_scene_text[92]]"
 
-serena @closedbrow talkingmouth "Yes, we'd only have a month to campaign." 
-serena @happy "But we've certainly bested greater odds together before."
-serena @talkingmouth "Remember Professor Sycamore's internship, and how hard we worked on getting you that?"
+serena @closedbrow talkingmouth "[day_010405_scene_text[93]]" 
+serena @happy "[day_010405_scene_text[94]]"
+serena @talkingmouth "[day_010405_scene_text[95]]"
 
-calem smilemouth @happy "True! I never would have managed to snag that without your ceaseless support."
+calem smilemouth @happy "[day_010405_scene_text[96]]"
 
-serena @closedbrow talkingmouth "In any case, I think we should go for it. Since we only have a month to campaign, if we fail, well... there's not a lot of time lost, at least."
+serena @closedbrow talkingmouth "[day_010405_scene_text[97]]"
 
-calem @closedbrow talking2mouth "True. This would be a significant time commitment, far more so if we win, but perhaps it's something to look into."
+calem @closedbrow talking2mouth "[day_010405_scene_text[98]]"
 
-serena @sadbrow talkingmouth "Well... we kinda have to decide now. It's our third day here. That 'Cheren' guy has already put up posters across half the school, and is giving speeches in the courtyard."
+serena @sadbrow talkingmouth "[day_010405_scene_text[99]]"
 
-calem @sadbrow talkingmouth "Yes, well... given the policies he espouses, I wouldn't be surprised if the school's administration disappears him before the weekend."
+calem @sadbrow talkingmouth "[day_010405_scene_text[100]]"
 
-serena @happy "We might want to be a {i}bit{/i} less radical, to maintain our electability."
+serena @happy "[day_010405_scene_text[101]]"
 
-calem @closedbrow talking2mouth "Yes, a bit."
+calem @closedbrow talking2mouth "[day_010405_scene_text[102]]"
 
 serena @thinking "[ellipses]"
 
+
 calem @thinking "[ellipses]"
 
-serena @pout "[ellipses]"
-
-serena @sadbrow talkingmouth "Well?"
-
-calem @sad "I'm... unsure. I truly need a bit more time to decide. Can you give me until tomorrow?"
 
 serena @pout "[ellipses]"
-serena @happy "Okay! But you {i}will{/i} answer me tomorrow, right?"
 
-calem @closedbrow talkingmouth "I swear it."
 
-serena @happy "Alright! Let's meet up here tomorrow morning and figure this out, then. Bye, Calem! Bye, [first_name]!"
+serena @sadbrow talkingmouth "[day_010405_scene_text[103]]"
+
+calem @sad "[day_010405_scene_text[104]]"
+
+serena @pout "[ellipses]"
+
+serena @happy "[day_010405_scene_text[105]]"
+
+calem @closedbrow talkingmouth "[day_010405_scene_text[106]]"
+
+serena @happy "[day_010405_scene_text[107]][first_name][day_010405_scene_text[108]]"
 
 menu:
-    "Bye, Serena.":
-        redmind @thinking "Oh, so she {i}did{/i} know I was here. I was starting to wonder..."
+    "[day_010405_scene_text[109]]":
+        redmind @thinking "[day_010405_scene_text[110]]"
        
-    "Wait, count me in!":
+    "[day_010405_scene_text[111]]":
         $ council_campaigning = True
 
         show calem surprisedbrow -smilemouth
         show serena surprisedbrow frownmouth
         with dis
 
-        red @happy "Calem might need some more time, but I sure don't. I want to join you two on the Student Council."
+        red @happy "[day_010405_scene_text[112]]"
         
         $ ValueChange("Serena", 1, 0.25, False)
         $ ValueChange("Calem", 1, 0.75)
 
         pause 1.5
         
-        calem -surprisedbrow @sadbrow talkingmouth "Oh? Do you have... any experience with this sort of work?"
+        calem -surprisedbrow @sadbrow talkingmouth "[day_010405_scene_text[113]]"
         
         show serena -surprisedbrow -frownmouth with dis
 
-        red @sweat happy "Man, I come from Pallet Town. You know I don't."
+        red @sweat happy "[day_010405_scene_text[114]]"
         
-        red @talkingmouth "But I'm ready to learn. I've got a month, right?"
+        red @talkingmouth "[day_010405_scene_text[115]]"
         
-        serena @sadbrow happymouth "Well... it'll be tricky. But I'm happy to help you, if you would accept my tutelage."
+        serena @sadbrow happymouth "[day_010405_scene_text[116]]"
         
-        calem @closedbrow talkingmouth "Hm. You do have the sort of self-confidence and appeal that could make you popular amongst the student body, if we could refine your positions somewhat."
+        calem @closedbrow talkingmouth "[day_010405_scene_text[117]]"
         
-        red @happy "Yeah. I get that I have a month of campaigning ahead, and, honestly, I'm not even sure where to begin. Any tips from you two?"
+        red @happy "[day_010405_scene_text[118]]"
         
-        calem @closedbrow talking2mouth "Well... I'd try to get the ear of the current Student Council. If you can get the previous council's endorsement, you're almost guaranteed to get in."
+        calem @closedbrow talking2mouth "[day_010405_scene_text[119]]"
         
-        serena @closedbrow talkingmouth "There's also canvassing. Going from student to student and engaging them directly on your positions."
+        serena @closedbrow talkingmouth "[day_010405_scene_text[120]]"
         
-        calem @closedbrow talkingmouth "As a last resort, you can rely on name recognition. Anything that puts you in the public eye, good or bad, raises your odds."
+        calem @closedbrow talkingmouth "[day_010405_scene_text[121]]"
         
-        red @confused "Wait, good {i}or{/i} bad?"
+        red @confused "[day_010405_scene_text[122]]"
         
-        calem @sad "Unfortunately. That's politics."
+        calem @sad "[day_010405_scene_text[123]]"
         
-        serena @happy "Anyway, what a pleasant surprise this is. You didn't seem like the sort of fellow who'd want to be involved with something like that."
+        serena @happy "[day_010405_scene_text[124]]"
         
-        calem @happy "[first_name] is full of surprises!"
-        calem @closedbrow talking2mouth "Oh, if you two are definitely going to be working on Student Council matters together, you should exchange contact information."
+        calem @happy "[day_010405_scene_text[125]][first_name][day_010405_scene_text[126]]"
+        calem @closedbrow talking2mouth "[day_010405_scene_text[127]]"
         
         serena @sad "[ellipses]"
-        serena @talkingmouth "Yes, of course."
+
+        serena @talkingmouth "[day_010405_scene_text[128]]"
         
-        redmind @thonk "Hm. Did I imagine, that, or...?"
+        redmind @thonk "[day_010405_scene_text[129]]"
 
         $ BecomeContacted("Serena")
         
-        serena @happy "Splendid. I look forward to talking with you two about our meteoric rise to Student Councilhood. Calem, [first_name]."
+        serena @happy "[day_010405_scene_text[130]][first_name][day_010405_scene_text[131]]"
 
 show serena at dissolveaway:
     xpos 0.25
@@ -490,107 +496,110 @@ show calem:
 pause 2.0
 
 menu:
-    "What's your problem?":
-        red @angrybrow talking2mouth "What's your problem?"
+    "[day_010405_scene_text[132]]":
+        red @angrybrow talking2mouth "[day_010405_scene_text[133]]"
         
-        calem angrybrow frownmouth @talking2mouth "I beg your pardon?"
+        calem angrybrow frownmouth @talking2mouth "[day_010405_scene_text[134]]"
         
-        red @talking2mouth "She's nice, gorgeous, and obviously head over heels for you. You treat her like she's a nuisance."
-        red @talking2mouth "And I know you like girls, so why not her?"
+        red @talking2mouth "[day_010405_scene_text[135]]"
+        red @talking2mouth "[day_010405_scene_text[136]]"
 
         $ ValueChange("Calem", -1, 0.5)
 
-        calem @angry "I apologize, but I simply will not discuss this with you."
+        calem @angry "[day_010405_scene_text[137]]"
 
-        red @closedbrow talking2mouth "{i}Sigh{/i}... Fine. I can tell this is a sore point you've been wrestling with for much longer than you've known me. Still. Get it together."
+        red @closedbrow talking2mouth "[day_010405_scene_text[138]]"
         
-        calem @angrybrow talking2mouth "{cps=*0.2}I appreciate the advice.{/cps}"
-        calem -sad @closedbrow talking2mouth "Shall we go?"
+        calem @angrybrow talking2mouth "[day_010405_scene_text[139]]"
+        calem -sad @closedbrow talking2mouth "[day_010405_scene_text[140]]"
        
-    "She seems nice.":
-        red @happy "She seems nice."
+    "[day_010405_scene_text[141]]":
+        red @happy "[day_010405_scene_text[142]]"
         
-        calem sad "She is. Far nicer than I deserve."
+        calem sad "[day_010405_scene_text[143]]"
         calem "[ellipses]"
-        calem -sad @closedbrow talking2mouth "Well, enough of that. Shall we go?"
 
-    "You alright?":
-        red @sadeyebrows sadeyes talkingmouth "You alright?"
+        calem -sad @closedbrow talking2mouth "[day_010405_scene_text[144]]"
+
+    "[day_010405_scene_text[145]]":
+        red @sadeyebrows sadeyes talkingmouth "[day_010405_scene_text[146]]"
         
-        calem @sad "...I'm wrestling with whether or not I should join the Student Council.{w=0.5} I certainly want to, but I'd spend almost every day with her..."
-        calem @angrybrow talking2mouth "And it's pretty clear that's what she wants."
+        calem @sad "[day_010405_scene_text[147]]"
+        calem @angrybrow talking2mouth "[day_010405_scene_text[148]]"
         
-        red @confused "You don't want that?"
+        red @confused "[day_010405_scene_text[149]]"
         
-        calem @happy "I'm...{w=0.5} no longer sure what I want, to be honest!"
+        calem @happy "[day_010405_scene_text[150]]"
         
         $ ValueChange("Calem", 1, 0.5)
         
-        calem @sadbrow talkingmouth "But I appreciate you being my sounding board while I figure it out."
-        calem @talkingmouth "Well, enough of that. Shall we go?"
+        calem @sadbrow talkingmouth "[day_010405_scene_text[151]]"
+        calem @talkingmouth "[day_010405_scene_text[152]]"
 
-red @talkingmouth "Yeah, let's go get breakfast with the others."
+red @talkingmouth "[day_010405_scene_text[153]]"
 
 if council_campaigning:
-    redmind @thinking "Now that I'm trying to get on the Student Council, I should also tell Cheren. Maybe we could exchange tips!"
+    redmind @thinking "[day_010405_scene_text[154]]"
 
 scene cafe with Dissolve(1.5)
 
 show bianca uniform with dis
 
 bianca @thinking "[ellipses]"
+
 redmind uniform "[ellipses]"
+
 
 show bianca happyeyes with dis:
     ypos 1.0 zoom 1.0
     ease 0.2 ypos 1.05 zoom 1.1
 
-redmind @confusedeyebrows frownmouth "...?"
+redmind @confusedeyebrows frownmouth "[day_010405_scene_text[155]]"
 
 show bianca happyeyes with dis:
     ypos 1.05 zoom 1.1
     ease 0.2 ypos 1.1 zoom 1.2
 
-calem uniform @talkingmouth "She's approaching you."
-red @closedeyes talking2mouth "Yeah, got it, thanks."
+calem uniform @talkingmouth "[day_010405_scene_text[156]]"
+red @closedeyes talking2mouth "[day_010405_scene_text[157]]"
 
 show bianca excitedeyes:
     ypos 1.1 zoom 1.2
     ease 0.2 ypos 1.15 zoom 1.3
 
-redmind @surprised "Why am I sweating so much...?"
+redmind @surprised "[day_010405_scene_text[158]]"
 
 show bianca excitedeyes:
     ypos 1.15 zoom 1.3
     ease 0.2 ypos 1.2 zoom 1.4
 
-red talking2mouth "Hey, uh, can I help you?"
+red talking2mouth "[day_010405_scene_text[159]]"
 
 $ BecomeNamed("Bianca")
 
-bianca @happy "Hi! I'm Bianca. Cheren told me to go find the 'handsome guy in the red hat.'"
+bianca @happy "[day_010405_scene_text[160]]"
 
-red @surprised "Er..."
+red @surprised "[day_010405_scene_text[161]]"
 
-bianca @happymouth "So of course, I thought that was you, but before that I thought it was the other guy in the red hat but he just scowled at me and then I thought maybe it was the other other guy in the red hat, but then he said--"
-bianca -excitedeyes @happy "--he had no idea who Cheren was so now I'm asking you and I really hope you're the one because I'm getting really flustered talking to all these cute guys with red hats!"
+bianca @happymouth "[day_010405_scene_text[162]]"
+bianca -excitedeyes @happy "[day_010405_scene_text[163]]"
 
 show calem uniform surprisedbrow at dissolvein:
     xpos 0.25
 
-calem @sadbrow talkingmouth "Wait... why didn't you ask me?"
+calem @sadbrow talkingmouth "[day_010405_scene_text[164]]"
 
 show bianca:
     ypos 1.2 zoom 1.4 xpos 0.5
     ease 1.0 ypos 1.0 zoom 1.0 xpos 0.75
 
-bianca @happy "Oh, you're cute, really, but I think Cheren was looking for a student, not a Professor!"
+bianca @happy "[day_010405_scene_text[165]]"
 
 show calem deadbrow surprisedmouth at monochrome with vpunch:
     ypos 1.0 xpos 0.25
     ease 1.0 ypos 1.1 rotate 5.0    
 
-calem @talkingmouth "I'm... I'm eighteen..."
+calem @talkingmouth "[day_010405_scene_text[166]]"
 
 show calem at monochrome:
     ypos 1.1 rotate 5.0 xpos 0.25
@@ -600,85 +609,85 @@ show bianca:
     ypos 1.0 zoom 1.0 xpos 0.75
     ease 1.0 ypos 1.2 zoom 1.4 xpos 0.5
 
-bianca @talkingmouth "Anyway, are you [first_name], because Cheren's impatient, and red hat number one is at our table arguing with my dormmate Hilda and--"
+bianca @talkingmouth "[day_010405_scene_text[167]][first_name][day_010405_scene_text[168]]"
 
-red @surprised "Wait, did you say Hilda?"
+red @surprised "[day_010405_scene_text[169]]"
 
-bianca @happy "Oh, you know her?"
+bianca @happy "[day_010405_scene_text[170]]"
 
-red @confused "Well, I know {i}of{/i} her. She's the only thing that scares Hilbert, apparently."
-red @closedbrow sweat talking2mouth "Uh, Hilbert is red hat number one."
+red @confused "[day_010405_scene_text[171]]"
+red @closedbrow sweat talking2mouth "[day_010405_scene_text[172]]"
 
-bianca @talkingmouth "Okay[ellipses] So are you [first_name]?"
+bianca @talkingmouth "[day_010405_scene_text[173]][ellipses][day_010405_scene_text[174]][first_name][day_010405_scene_text[175]]"
 
-red @happy "Oh, yeah! Does Cheren need me now? I was just about to get some food and sit with my dormmates."
+red @happy "[day_010405_scene_text[176]]"
 
-bianca @talkingmouth "Nope, he just wanted me to give you a message!"
+bianca @talkingmouth "[day_010405_scene_text[177]]"
 
-redmind @thinking "What, like a Mafia Don? '[first_name] sleeps with da fishes...'"
+redmind @thinking "[day_010405_scene_text[178]][first_name][day_010405_scene_text[179]]"
 
-bianca @unamusedbrow trianglemouth "The message is: 'I'd like to talk to you after school. Please meet me here.'"
+bianca @unamusedbrow trianglemouth "[day_010405_scene_text[180]]"
 
-red @confused "[ellipses]That's it?"
+red @confused "[day_010405_scene_text[181]][ellipses][day_010405_scene_text[182]]"
 
-bianca @talkingmouth "Yep!"
+bianca @talkingmouth "[day_010405_scene_text[183]]"
 
-red @happy "Uh, alright, then! I'll be at the cafeteria later."
+red @happy "[day_010405_scene_text[184]]"
 
-bianca happy "Mission accomplished!"
+bianca happy "[day_010405_scene_text[185]]"
 
 show bianca:
     xpos 0.5 ypos 1.2 zoom 1.4
     ease 2.0 xpos 1.5 ypos 1.0 zoom 1.0
 
-redmind @thonk "[ellipses]I can't tell if this is just what it's like in the city, or if there's something about me that just attracts peculiar characters."
-redmind @thinking "Maybe I'm the weird one?"
+redmind @thonk "[day_010405_scene_text[186]][ellipses][day_010405_scene_text[187]]"
+redmind @thinking "[day_010405_scene_text[188]]"
 
 show blank2 with dis
 
 pause 2.0
 
-red @happy "Hey guys!"
+red @happy "[day_010405_scene_text[189]]"
 
-ethan uniform @talkingmouth"Buddy! What was the holdup? Calem returned a bit ago. He looks a bit shell-shocked."
+ethan uniform @talkingmouth"[day_010405_scene_text[190]]"
 
-red @talkingmouth "Just talking to another student. Hey, didn't you say you were going to stop Hilbert from getting into any fights?"
+red @talkingmouth "[day_010405_scene_text[191]]"
 
-ethan @surprised "What?! I thought I did! He was here just a moment ago!"
+ethan @surprised "[day_010405_scene_text[192]]"
 
-red @talking2mouth "Well, I happen to know that this 'Hilda' person he's so terrified of has made contact. Guess it makes sense he couldn't hide for more than four days."
+red @talking2mouth "[day_010405_scene_text[193]]"
 
 pause 1.0
 
-brendan uniform angrymouth closedbrow "Dudes! Don't want to rush you, but homeroom's pretty soon."
+brendan uniform angrymouth closedbrow "[day_010405_scene_text[194]]"
 
-may uniform surprised "Oh, shoot, you're right! Guess I'd better cram the rest of this down before we go..."
+may uniform surprised "[day_010405_scene_text[195]]"
 
-ethan @sweat lightblush sadbrow talkingmouth "Hey, could you, like, put a piece of toast in your mouth and run to class?"
+ethan @sweat lightblush sadbrow talkingmouth "[day_010405_scene_text[196]]"
 
-may frownmouth sadbrow @talking2mouth "...I could, but I don't really see why? I have time to finish it here."
+may frownmouth sadbrow @talking2mouth "[day_010405_scene_text[197]]"
 
-ethan sadbrow happymouth "Uh... nevermind!"
+ethan sadbrow happymouth "[day_010405_scene_text[198]]"
 
-brendan @angrybrow frownmouth "{w=0.5}.{w=0.5}.{w=0.5}."
+brendan @angrybrow frownmouth "[day_010405_scene_text[199]]"
 
-brendan @talkingmouth sweat closedbrow "I swear that reminds me of somethin' Wally once said. Somethin' about anime?"
+brendan @talkingmouth sweat closedbrow "[day_010405_scene_text[200]]"
 
 pause 1.0
 
 hide calem
 
-red @sadbrow talkingmouth "Hey, Calem, will you be okay?"
-calem uniform sad "{size=30}I'm eighteen. Not old. My hair is naturally grey. I'm eighteen. Not old. My hair is naturally grey.{/size}"
+red @sadbrow talkingmouth "[day_010405_scene_text[201]]"
+calem uniform sad "[day_010405_scene_text[202]]"
 
-red @confused "Riiiiight. Well, uh, we gotta go. Make sure you come with us, okay?"
+red @confused "[day_010405_scene_text[203]]"
 
-calem surprisedbrow frownmouth @surprised "Huh?" 
-calem sad "Oh, yes. Of course. Just give me a bit."
+calem surprisedbrow frownmouth @surprised "[day_010405_scene_text[204]]" 
+calem sad "[day_010405_scene_text[205]]"
 
 pause 1.0
 
-red @happy "Alright, let's go! Last one to the homeroom assignment board is a BAD EGG!"
+red @happy "[day_010405_scene_text[206]]"
 
 $ renpy.transition(dissolve)
 call clearscreens from _call_clearscreens_3
@@ -708,30 +717,30 @@ show academy:
 
 $ renpy.pause(3.0, hard=True)
 
-red uniform @surprised "Wow, this area of the campus is amazing!"
+red uniform @surprised "[day_010405_scene_text[207]]"
 
 show academy:
     zoom 1.0 xpos -700 ypos -575
     ease 1.0 zoom 1.1 xpos -730 ypos -300
 $ renpy.pause(1.2, hard=True)
 
-red @talkingmouth "See what it says on the facade there?"
-red @angrybrow talkingmouth "'Kobukan Academy.' That's in ancient Unown writing."
-red @happy "Did you know this school was founded in 1636?{w=0.5} Kinda hard to believe. The condition of this place makes it seem like it was built yesterday."
+red @talkingmouth "[day_010405_scene_text[208]]"
+red @angrybrow talkingmouth "[day_010405_scene_text[209]]"
+red @happy "[day_010405_scene_text[210]]"
 
 show academy:
     zoom 1.1 xpos -730 ypos -300
     ease 1.0 zoom 1.05 xpos -730 ypos -300
 $ renpy.pause(1.0, hard=True)
 
-red @talkingmouth "I'm having a difficult time imagining that this is what I'll be looking at each day from now on."
+red @talkingmouth "[day_010405_scene_text[211]]"
 
 show academy:
     zoom 1.05 xpos -730 ypos -300
     ease 1.5 zoom 1.0 xpos -700 ypos -575
 $ renpy.pause(2.0, hard=True)
 
-red @happy "Not that I'm complaining.{w=0.5} I'm just excited to be here. {w=0.5}Same as you guys, right?"
+red @happy "[day_010405_scene_text[212]]"
 
 pause 1.0
 show academy:
@@ -747,8 +756,8 @@ show academy:
     ease 1.0 zoom 1.0 xpos -700 ypos -525
 $ renpy.pause(2.0, hard=True)
 
-redmind @thinking "Huh. I guess I ran a bit too quickly."
-redmind @happy "Eh, whatever. I need to get inside and check the homeroom assignments."
+redmind @thinking "[day_010405_scene_text[213]]"
+redmind @happy "[day_010405_scene_text[214]]"
 
 show academy:
     zoom 1.0 xpos -700 ypos -525
@@ -776,7 +785,7 @@ hide blank
 hide academy
 hide academyold
 
-redmind uniform "There's a cluster of students gathered by a bulletin board.{w=0.5} That must be the homeroom list."
+redmind uniform "[day_010405_scene_text[215]]"
 
 window hide
 show academyhall_blur with dis:
@@ -797,14 +806,14 @@ show text "{font=fonts/consola_0.ttf}{color=#000000}{size=[fontsize]}{b}[last_na
 
 $ renpy.pause(2.0, hard=True)
 
-redmind surprisedbrow frownmouth @surprised "{w=0.5}.{w=0.5}.{w=0.5}."
-redmind "Wait. Oak?"
-redmind "Professor Oak? Like Sam? Like my neighbor? Like [blue_name]'s grandpa?!"
-redmind "He teaches here?! The faculty page of the website didn't say anything about this!"
-redmind angrybrow frownmouth "{w=0.5}.{w=0.5}.{w=0.5}."
-redmind angrybrow "And... why is my name in a different font? It looks like someone just hand wrote my name in..."
+redmind surprisedbrow frownmouth @surprised "[day_010405_scene_text[216]]"
+redmind "[day_010405_scene_text[217]]"
+redmind "[day_010405_scene_text[218]][blue_name][day_010405_scene_text[219]]"
+redmind "[day_010405_scene_text[220]]"
+redmind angrybrow frownmouth "[day_010405_scene_text[221]]"
+redmind angrybrow "[day_010405_scene_text[222]]"
 
-blue uniform "Well, well, well!"
+blue uniform "[day_010405_scene_text[223]]"
 
 show academyhall_blur:
     alpha 1.0
@@ -817,6 +826,7 @@ show text "{font=fonts/consola_0.ttf}{color=#000000}{size=[fontsize]}{b}[last_na
     ease 0.5 alpha 0.0
 
 red @frownmouth "[ellipses]"
+
 
 show blue with dis:
     xpos 1600
@@ -831,25 +841,25 @@ hide class_assign
 hide academyhall_blur
 hide text
     
-blue @angry "I said, WELL, WELL, WELL!"
-red @upeyes talking2mouth "I heard you the first time."
-blue @angrybrow happymouth "At least look at me when you're talking to me!"
-blue @happy "But, wow, you actually got here before the bell!{w=0.5} Still slower than me, but that's natural."
-redmind -angrybrow @confusedeyebrows frownmouth "In what world have I {i}ever{/i} been slower than you?"
-blue @closedbrow talking2mouth "So?{w=0.5} Which class are you in?"
+blue @angry "[day_010405_scene_text[224]]"
+red @upeyes talking2mouth "[day_010405_scene_text[225]]"
+blue @angrybrow happymouth "[day_010405_scene_text[226]]"
+blue @happy "[day_010405_scene_text[227]]"
+redmind -angrybrow @confusedeyebrows frownmouth "[day_010405_scene_text[228]]"
+blue @closedbrow talking2mouth "[day_010405_scene_text[229]]"
 show blue surprisedbrow frownmouth with dis
-red @talking2mouth "Your grandpa's, according to this.{w=0.5} You could've told me Sam was working here! I would've seen if he could pull some strings."
-blue @talkingmouth "Gramps'? Are you serious?"
-blue sad "Why?{w=0.5} I thought I told him to--"
+red @talking2mouth "[day_010405_scene_text[230]]"
+blue @talkingmouth "[day_010405_scene_text[231]]"
+blue sad "[day_010405_scene_text[232]]"
 $ renpy.pause(1.0, hard=True)
-blue angry "Ah, who cares?" 
-blue closedbrow -angrymouth @talkingmouth "Now I have a front row seat to watch you bomb in class!"
+blue angry "[day_010405_scene_text[233]]" 
+blue closedbrow -angrymouth @talkingmouth "[day_010405_scene_text[234]]"
 
 $ showredonly = True
 
-leaf uniform "Oh! You're all with Professor Oak?"
+leaf uniform "[day_010405_scene_text[235]]"
 
-redmind surprisedbrow frownmouth @surprised "That voice..."
+redmind surprisedbrow frownmouth @surprised "[day_010405_scene_text[236]]"
 
 $ showredonly = False
 
@@ -869,34 +879,35 @@ show blue surprisedbrow frownmouth with dis:
 show leaf:
     xpos 970 alpha 1.0
 
-red @talkingmouth "Oh? Hey, uh, you!"
-leaf @happy "Long time, no see!"
-leaf @flirtbrow talkingmouth "Did you get lost on the way here?"
+red @talkingmouth "[day_010405_scene_text[237]]"
+leaf @happy "[day_010405_scene_text[238]]"
+leaf @flirtbrow talkingmouth "[day_010405_scene_text[239]]"
 
 show blue angry with dis
 
-red @pity "Hey, give me a break, I thought we were done with that.{w=0.5} Didn't you say you had fun?"
+red @pity "[day_010405_scene_text[240]]"
 
-leaf @flirtbrow talkingmouth blush "Hey, don't get it twisted.{w=0.5} I had lots of fun!"
+leaf @flirtbrow talkingmouth blush "[day_010405_scene_text[241]]"
 
 show leaf angrybrow frownmouth with dis
 
-blue frownmouth -angry @sad2eyes talkingmouth"You know this windbag?"
+blue frownmouth -angry @sad2eyes talkingmouth"[day_010405_scene_text[242]]"
 
-leaf @angrybrow talking2mouth "Uh, excuse me.{w=0.5} Don't interrupt a girl when she's talking to her {i}friend.{/i}"
+leaf @angrybrow talking2mouth "[day_010405_scene_text[243]]"
 
 show leaf surprisedbrow frownmouth with dis
 
-blue @closedbrow talkingmouth "Yeah, right. I bet you don't even know his name."
+blue @closedbrow talkingmouth "[day_010405_scene_text[244]]"
 
 pause 1.0
 
-leaf embarrassed @embarrassedbrow talking2mouth "Obviously it's..."
+leaf embarrassed @embarrassedbrow talking2mouth "[day_010405_scene_text[245]]"
 
 window hide
 pause 1.5
 
 leaf @frownmouth "[ellipses]"
+
 
 show leaf at getcloser:
     xpos 970
@@ -904,49 +915,49 @@ show leaf at getcloser:
     
 $ renpy.pause(0.9, hard=True)
 
-redmind @thinking lightblush"Huh. I can smell her perfume."
+redmind @thinking lightblush"[day_010405_scene_text[246]]"
 
-leaf flirtbrow blush @talking2mouth "{size=30}Psst, what's your name again?{/size}"
+leaf flirtbrow blush @talking2mouth "[day_010405_scene_text[247]]"
 
-red @sad2eyes talkingmouth lightblush "{size=30}It's, uh, [first_name] [last_name].{/size}"
-red @closedbrow talkingmouth "{size=30}And, uh, I'm a firm believer in personal space!{/size}"
+red @sad2eyes talkingmouth lightblush "[day_010405_scene_text[248]][first_name][day_010405_scene_text[249]][last_name][day_010405_scene_text[250]]"
+red @closedbrow talkingmouth "[day_010405_scene_text[251]]"
 
 show leaf at getfurther:
     xpos 840
     ease 0.9 xpos 970
 
-leaf -flirtbrow @happy "Ah, yeah! [first_name]!{w=0.4} We're besties! Always been!"
+leaf -flirtbrow @happy "[day_010405_scene_text[252]][first_name][day_010405_scene_text[253]]"
 
-blue @closedbrow angrymouth "You're not fooling anybody!"
+blue @closedbrow angrymouth "[day_010405_scene_text[254]]"
 
-leaf @surprised "Wait...{w=0.5} [first_name]?"
-leaf @happybrow talkingmouth "[first_name]! Oh, you're [first_name]!{w=0.5} You're friends with May, right?"
+leaf @surprised "[day_010405_scene_text[255]][first_name][day_010405_scene_text[256]]"
+leaf @happybrow talkingmouth "[day_010405_scene_text[257]][first_name][day_010405_scene_text[258]][first_name][day_010405_scene_text[259]]"
 
-red @talkingmouth "You know May?"
+red @talkingmouth "[day_010405_scene_text[260]]"
 
-leaf @winkbrow talkingmouth "I would hope so. Being her dormmate and all."
+leaf @winkbrow talkingmouth "[day_010405_scene_text[261]]"
 
-redmind @thinking "Okay... I've met Bianca, Serena, and May... so, flipping the coin of probability, and taking into account she doesn't {i}seem{/i} like a Hilda..."
+redmind @thinking "[day_010405_scene_text[262]]"
 
-red @talkingmouth "You're Leaf?"
+red @talkingmouth "[day_010405_scene_text[263]]"
 
 $ BecomeNamed("Leaf")
 
-leaf @happy "That's my name!"
+leaf @happy "[day_010405_scene_text[264]]"
 
-blue @surprisedbrow angrymouth "My god--you better cut the crap.{w=0.5} Your acting is so bad that it's pissing me off!"
+blue @surprisedbrow angrymouth "[day_010405_scene_text[265]]"
 
-red @closedbrow sweat talking2mouth "Give it a rest, [blue_name]. I know who Leaf is."
-red @talkingmouth "I ran into her on our first day here and she helped me out of a tough spot.{w=0.5} We were both short on time so we forgot to introduce ourselves--"
+red @closedbrow sweat talking2mouth "[day_010405_scene_text[266]][blue_name][day_010405_scene_text[267]]"
+red @talkingmouth "[day_010405_scene_text[268]]"
 
 show leaf surprisedbrow frownmouth with dis
 
-blue @closedbrow angrymouth "Like I give a Rattata's ass what happened!"
+blue @closedbrow angrymouth "[day_010405_scene_text[269]]"
 
 pause 0.7
 
-blue @angrybrow talkingmouth "Ugh, you two have wasted my time enough today. I've gotta meet up with a friend--a {i}real{/i} friend, unlike this fake thing {i}you're{/i} doing!"
-blue angrybrow happymouth "Smell ya later!"
+blue @angrybrow talkingmouth "[day_010405_scene_text[270]]"
+blue angrybrow happymouth "[day_010405_scene_text[271]]"
 
 show blue:
     alpha 1.0 xpos 450
@@ -957,18 +968,18 @@ show blue:
 
 $ renpy.pause(2, hard=True)
     
-leaf @talking2mouth "{i}Smell ya later?{/i}{w=0.5} What does that even mean?"
+leaf @talking2mouth "[day_010405_scene_text[272]]"
 
 hide blue
 
-red @closedbrow sweat talking2mouth "It's Blue... or as I call him, '[blue_name].'{w=0.5} He's said that for as long as I've known him.{w=0.25} And I've known him for a long time."
-red @closedeyes talking2mouth "Not that I'm particularly proud about it."
+red @closedbrow sweat talking2mouth "[day_010405_scene_text[273]][blue_name][day_010405_scene_text[274]]"
+red @closedeyes talking2mouth "[day_010405_scene_text[275]]"
 
-leaf flirtbrow -frownmouth @talkingmouth "So he's been smelling you for a long time?{w=0.5} What a creep."
+leaf flirtbrow -frownmouth @talkingmouth "[day_010405_scene_text[276]]"
 
-red @closedbrow sweat talking2mouth "No. That's not how it works."
+red @closedbrow sweat talking2mouth "[day_010405_scene_text[277]]"
 
-leaf happy "Ha ha ha!{w=0.5} Let's go, [first_name], we'll be late for our first class!"
+leaf happy "[day_010405_scene_text[278]][first_name][day_010405_scene_text[279]]"
 
 window hide
 
@@ -981,13 +992,14 @@ show leaf happy:
         
 $ renpy.pause(1.5, hard=True)
 
-redmind @thinking "Leaf, huh?{w=1} And [blue_name].{w=1} And me.{w=0.5} In the same room for two hours."
+redmind @thinking "[day_010405_scene_text[280]][blue_name][day_010405_scene_text[281]]"
 
 hide leaf
 
-redmind @thinking "Every day, twice a day, for the next year."
+redmind @thinking "[day_010405_scene_text[282]]"
 redmind @thinking "[ellipses]"
-redmind @happy "This is going to be quite the year."
+
+redmind @happy "[day_010405_scene_text[283]]"
 
 window hide
 
@@ -1031,7 +1043,7 @@ show may uniform with dis:
     pause 0.5
     ease 0.5 xpos 1000
 
-leaf @happy "May! I can't believe we're in the same homeroom!"
+leaf @happy "[day_010405_scene_text[284]]"
 
 show leaf:
     xpos 550
@@ -1039,33 +1051,33 @@ show leaf:
 show may:
     xpos 1000
 
-red uniform @talkingmouth "These coincidences are just piling up today."
+red uniform @talkingmouth "[day_010405_scene_text[285]]"
 
-may @talkingmouth "Small world!{w=0.5}"
-may @happy "[first_name], I see you and Leaf finally got acquainted!"
+may @talkingmouth "[day_010405_scene_text[286]]"
+may @happy "[day_010405_scene_text[287]][first_name][day_010405_scene_text[288]]"
 
-leaf @flirtbrow talkingmouth "May, do you remember the guy I told you about when we first met?"
+leaf @flirtbrow talkingmouth "[day_010405_scene_text[289]]"
 
 show may surprisedbrow frownmouth with dis
 
-leaf @happy "Turns out you knew him all along."
+leaf @happy "[day_010405_scene_text[290]]"
 
-may -surprisedbrow -frownmouth @sadbrow talkingmouth "Oh, [first_name]. Since you ran ahead without us after breakfast, now I can believe how you got lost on the first day."
-may @happy "That's okay, a strong sense of adventure is a good thing!"
+may -surprisedbrow -frownmouth @sadbrow talkingmouth "[day_010405_scene_text[291]][first_name][day_010405_scene_text[292]]"
+may @happy "[day_010405_scene_text[293]]"
 
-red @closedeyes talking2mouth "I'll never be able to live this down, will I?"
+red @closedeyes talking2mouth "[day_010405_scene_text[294]]"
 
-leaf @blush happybrow talkingmouth "A boy, stranded in the forbidden territory of the terrible cheer squad. Sensing impending doom, he picked his poison and sought refuge in the abyssal bathroom of the fairer sex." 
-leaf @sadbrow cry talking2mouth blush "It was then a beautiful maiden, a girl he knew nothing about, happened to stumble upon him at the right time, pulling him into the light and guiding him to sanctuary."
+leaf @blush happybrow talkingmouth "[day_010405_scene_text[295]]" 
+leaf @sadbrow cry talking2mouth blush "[day_010405_scene_text[296]]"
 
 show leaf -blush happy
 show may happy 
 with dis
 
-red @angrybrow talking2mouth "Thank you for the epic summary."
+red @angrybrow talking2mouth "[day_010405_scene_text[297]]"
 
 if leafwindowjump == True:
-    red @angrybrow talking2mouth "And you're the one who {i}forced{/i} me into the bathroom!{w=0.5} I liked my window idea."
+    red @angrybrow talking2mouth "[day_010405_scene_text[298]]"
 else:
     pass
 
@@ -1077,23 +1089,23 @@ show leaf flirt blush:
 
 pause 1.0
 
-redmind @thonk "A curtsy? She's so unbelievably smug."
+redmind @thonk "[day_010405_scene_text[299]]"
 
 show leaf -flirt -blush
 show may -happy 
 with dis
 
-red @talkingmouth "Since you're here, May, I'm assuming Brendan's in another class?"
+red @talkingmouth "[day_010405_scene_text[300]]"
 
-may @happy "Brendan's in Class 1-A next door."
+may @happy "[day_010405_scene_text[301]]"
 
-leaf @talkingmouth "Oh, in your Dad's."
+leaf @talkingmouth "[day_010405_scene_text[302]]"
 
 show leaf surprisedbrow frownmouth
 show may surprisedbrow frownmouth 
 with dis
 
-oak @talkingmouth "You should tell your father, Miss Birch,{nw}"
+oak @talkingmouth "[day_010405_scene_text[303]]"
 
 show oak with dis:
     xpos 150
@@ -1107,7 +1119,7 @@ show may:
     xpos 1000
     ease 0.75 xpos 1200
 
-extend @talkingmouth " that his recent article regarding the pros and cons of invasive Bug Pokémon as biological control has been well-received.{w=0.5} I'm impressed."
+extend @talkingmouth "[day_010405_scene_text[304]]"
 
 show oak:
     xpos 300
@@ -1118,59 +1130,59 @@ show leaf:
 show may:
     xpos 1200
 
-red @happy "Sam!"
+red @happy "[day_010405_scene_text[305]]"
 
-oak @talkingmouth "Hello, lad. Great to see you've settled in nicely here."
+oak @talkingmouth "[day_010405_scene_text[306]]"
 
-red @pity "Sam, what's going on? Why am I here? Why are you teaching? Why didn't you tell me that you'd be working at Kobukan? How--"
+red @pity "[day_010405_scene_text[307]]"
 
-oak @angrybrow talkingmouth "[first_name]. There's a time and place for everything, but not now."
+oak @angrybrow talkingmouth "[day_010405_scene_text[308]][first_name][day_010405_scene_text[309]]"
 
-redmind @thinking "Ugh... I've heard that before."
+redmind @thinking "[day_010405_scene_text[310]]"
 
-oak @closedeyes talkingmouth "Also... in front of other students, Professor Oak, if you please."
+oak @closedeyes talkingmouth "[day_010405_scene_text[311]]"
 
-red @surprised "Oh! Uh, yeah, of course. Sorry, Sam-- I mean, Oak! Professor Oak."
+red @surprised "[day_010405_scene_text[312]]"
 
 show leaf -surprisedbrow -frownmouth 
 show may -surprisedbrow -frownmouth
 with dis
 
-oak @happy "Anyway, Miss Birch, on the topic of your father...?"
+oak @happy "[day_010405_scene_text[313]]"
 
-may @sadbrow talkingmouth "Oh! Right. I guess Dad's work in the field's been paying off."
-may @happy "For the last couple years, if it's not a swarm of Ninjask chasing him around, it'd be Beautifly or the occasional Surskit."
+may @sadbrow talkingmouth "[day_010405_scene_text[314]]"
+may @happy "[day_010405_scene_text[315]]"
 
-oak @talkingmouth "Ah, are you well-versed in Bug-types, May? I assume you've gained a lot of experience while assisting with your father's work."
+oak @talkingmouth "[day_010405_scene_text[316]]"
 
-may @happy "Yeah! I didn't like them at first, but I'm planning on taking the Bug-type Elective.{w=0.5} I'd like to go to Unova someday, too. I heard they have really powerful Bug-types there!"
+may @happy "[day_010405_scene_text[317]]"
 
-oak @closedbrow talkingmouth "I see.{w=0.5} So what Pokémon types will the three of you be focusing on this year?"
+oak @closedbrow talkingmouth "[day_010405_scene_text[318]]"
 
-may @talkingmouth "Well, there's Bug. But I'm also planning on taking Fire and Fighting!"
+may @talkingmouth "[day_010405_scene_text[319]]"
 
-leaf @talkingmouth "Grass, Electric, and Dragon over here."
+leaf @talkingmouth "[day_010405_scene_text[320]]"
 
-oak @happy "Solid choices! Varied and versatile. And you, lad? Perhaps you'll take Normal, as I did when I battled?"
+oak @happy "[day_010405_scene_text[321]]"
 
-red @happy "I'm uh, I'm not planning on specializing. I'm just going to take classes that help the Pokémon I can get my hands on."
+red @happy "[day_010405_scene_text[322]]"
 
-oak angrybrow frownmouth "{w=0.5}.{w=0.5}.{w=0.5}."
+oak angrybrow frownmouth "[day_010405_scene_text[323]]"
 
-redmind @sad "Oh, crap, did I say the wrong thing?"
+redmind @sad "[day_010405_scene_text[324]]"
 
-oak -angrybrow -frownmouth @happyeyes talkingmouth "Of course you are. Of {i}course{/i} you are."
-oak @happy "Lad, you never fail to impress me. You're a Champion, if I've ever seen one."
+oak -angrybrow -frownmouth @happyeyes talkingmouth "[day_010405_scene_text[325]]"
+oak @happy "[day_010405_scene_text[326]]"
 
-red @surprised "Uh..."
-red @happy "Thanks, Professor Oak. Does that mean it's the right decision?"
+red @surprised "[day_010405_scene_text[327]]"
+red @happy "[day_010405_scene_text[328]]"
 
-oak @closedeyes sadeyebrows happymouth "I couldn't possibly tell you that, [first_name]. But it's the one you've made."
+oak @closedeyes sadeyebrows happymouth "[day_010405_scene_text[329]][first_name][day_010405_scene_text[330]]"
 
-red @closedbrow talkingmouth "Uh... yeah, I guess so."
+red @closedbrow talkingmouth "[day_010405_scene_text[331]]"
 
-oak @closedbrow talkingmouth "Still, I would recommend that, for now, at least, [bluecolor]you focus on at least one type. You may find it hard to train up your Pokémon if you spread yourself too thin!{/color}"
-oak @talkingmouth "Well, excellent choices all around!{w=0.5} Now, I hope all of you are ready.{w=0.5} The bell will ring soon, so go ahead and find yourselves a seat."
+oak @closedbrow talkingmouth "[day_010405_scene_text[332]][bluecolor][day_010405_scene_text[333]]"
+oak @talkingmouth "[day_010405_scene_text[334]]"
 
 hide oak with dis
 
@@ -1182,15 +1194,15 @@ show may surprisedbrow frownmouth with dis
 
 show homeroom with vpunch
 
-leaf @angry "Okay, what the {i}hell{/i}, 'lad?' You're on a first name basis with our homeroom teacher?!"
+leaf @angry "[day_010405_scene_text[335]]"
 
 show may -surprisedbrow -frownmouth with dis
 
-red @closedbrow talking2mouth "Uh, yeah. He was my old neighbor."
+red @closedbrow talking2mouth "[day_010405_scene_text[336]]"
 
-leaf @closedbrow talking2mouth "We are {i}not{/i} done talking about this. For now, though[ellipses]" 
-leaf @happy "Let's sit together, May."
-leaf happy @flirtbrow talkingmouth blush "Sorry, [first_name], but since you'll be hopping around classes like a Spoink, I bet we'll have plenty of chances to bond later!~"
+leaf @closedbrow talking2mouth "[day_010405_scene_text[337]][ellipses][day_010405_scene_text[338]]" 
+leaf @happy "[day_010405_scene_text[339]]"
+leaf happy @flirtbrow talkingmouth blush "[day_010405_scene_text[340]][first_name][day_010405_scene_text[341]]"
 
 hide leaf with dis
 
@@ -1202,19 +1214,19 @@ show may:
 
 $ renpy.pause(0.65, hard=True)
 
-may @angrybrow talkingmouth "Sooo... what do you think of Leaf, [first_name]?"
+may @angrybrow talkingmouth "[day_010405_scene_text[342]][first_name][day_010405_scene_text[343]]"
     
 hide leaf
 
-red @pity "Absolutely charming."
-may @happybrow talkingmouth "Hehe, she's a lot of fun to be around!"
-may @happy "Come sit by us!"
+red @pity "[day_010405_scene_text[344]]"
+may @happybrow talkingmouth "[day_010405_scene_text[345]]"
+may @happy "[day_010405_scene_text[346]]"
 
 hide may
 
 $ renpy.pause(1.0, hard=True)
 
-red @happy "Well, I sure as hell won't be sitting by [blue_name]."
+red @happy "[day_010405_scene_text[347]][blue_name][day_010405_scene_text[348]]"
 
 $ renpy.music.set_volume(0.1, delay=1.0, channel="music")
 $ renpy.transition(dissolve)
@@ -1233,41 +1245,41 @@ hide morning
 
 show oak with dis
 
-oak @talkingmouth "Good morning, and welcome to your first class at Kobukan Academy!"
-oak @talkingmouth "I'll be your teacher for this homeroom. You can call me Oak, but most people simply call me the Pokémon Professor."
-oak @talkingmouth "This world is inhabited by creatures we call Pokémon.{w=0.5} People and Pokémon live together by supporting each other..."
+oak @talkingmouth "[day_010405_scene_text[349]]"
+oak @talkingmouth "[day_010405_scene_text[350]]"
+oak @talkingmouth "[day_010405_scene_text[351]]"
 
 window hide
 pause 1.5
 
-oak @closedbrow sweat talking2mouth "...I think I could skip this part. The entrance exam most of you took should have at least weeded out those of you who do not know what Pokémon are."
+oak @closedbrow sweat talking2mouth "[day_010405_scene_text[352]]"
 
-Character("Excited Student") "\"I can't believe we're hearing Professor Oak talk right in front of us. The man's a legend!\""
-Character("Gossiping Student") "\"I know! My dad's a huge fan of his. He's got all his encyclopedias, A to Z!{w=0.5} Oh man, he's gonna flip when I tell him I'm in his class!\""
+Character("[day_010405_scene_text[353]]") "[day_010405_scene_text[354]]"
+Character("[day_010405_scene_text[355]]") "[day_010405_scene_text[356]]"
 
-redmind "Even outside of Kanto everyone knows him."
-redmind thinking "I didn't know he was looked up to by so many people.{w=0.5} He's like a superhero to them."
-redmind happy "But to me, he's just my neighbor."
+redmind "[day_010405_scene_text[357]]"
+redmind thinking "[day_010405_scene_text[358]]"
+redmind happy "[day_010405_scene_text[359]]"
 
-oak @angrybrow talking2mouth "Now, something you need to know about this class is that it's extremely important for your final grade."
-oak @closedbrow talking2mouth sweat "Last year, everyone who failed to pass this class also failed to graduate."
+oak @angrybrow talking2mouth "[day_010405_scene_text[360]]"
+oak @closedbrow talking2mouth sweat "[day_010405_scene_text[361]]"
 
-Character("Shocked Student") "\"Holy crap!\""
-Character("Gossiping Student") "\"All of a sudden I don't feel like being in this class anymore...\""
+Character("[day_010405_scene_text[362]]") "[day_010405_scene_text[363]]"
+Character("[day_010405_scene_text[364]]") "[day_010405_scene_text[365]]"
 
-redmind @closedbrow frownmouth "Ugh... so if there's one class I absolutely can't screw up, it's this one."
+redmind @closedbrow frownmouth "[day_010405_scene_text[366]]"
 
-oak @talking2mouth "Yes, this class is challenging, but if you put in the work and keep at your studies, you should pass with flying colors."
-oak @talkingmouth "My job is not to assign you failing grades.{w=0.5} But my job is not to coddle you either."
-oak @happy "My job is to make sure you graduate this school with the knowledge and skills to excel in the Pokémon world."
-oak @talking2mouth "Which brings me to my next point."
-oak @talkingmouth "As you all know, Kobukan is a very selective school, and it demands you to give your best at all times, or you will be surpassed by your peers."
-oak @angrybrow talking2mouth "{color=#0048ff}The graduation rate for this school is fixed at eighty percent.{/color}{w=0.5} It is not for the weak-willed or unmotivated!"
+oak @talking2mouth "[day_010405_scene_text[367]]"
+oak @talkingmouth "[day_010405_scene_text[368]]"
+oak @happy "[day_010405_scene_text[369]]"
+oak @talking2mouth "[day_010405_scene_text[370]]"
+oak @talkingmouth "[day_010405_scene_text[371]]"
+oak @angrybrow talking2mouth "[day_010405_scene_text[372]]"
 
-Character("Crushed Student") "\"You gotta be kidding me!\""
-Character("Cynical Student") "\"Is this a joke?!{w=0.5} What kind of school life is this?!\""
+Character("[day_010405_scene_text[373]]") "[day_010405_scene_text[374]]"
+Character("[day_010405_scene_text[375]]") "[day_010405_scene_text[376]]"
 
-redmind -frownmouth @sadeyes sadeyebrows "Sounds like some people didn't read the website... but I didn't pick up a brochure, so I guess we all have our blind spots."
+redmind -frownmouth @sadeyes sadeyebrows "[day_010405_scene_text[377]]"
 
 show may surprisedbrow frownmouth uniform with dis:
     xpos 0.25 ypos 1.3 zoom 1.35
@@ -1277,7 +1289,7 @@ show leaf surprisedbrow frownmouth uniform with dis:
 
 pause 1.0
 
-redmind @sadbrow frownmouth "I guess Ethan wasn't the only person I know who didn't know this."
+redmind @sadbrow frownmouth "[day_010405_scene_text[378]]"
 
 hide leaf
 hide may
@@ -1287,7 +1299,7 @@ with dis
 
 pause 1.0
 
-redmind @angrybrow frownmouth "Of course. [blue_name] isn't phased at all."
+redmind @angrybrow frownmouth "[day_010405_scene_text[379]][blue_name][day_010405_scene_text[380]]"
 
 hide leaf
 hide may
@@ -1299,77 +1311,77 @@ show hilbert uniform with dis:
 
 pause 1.0
     
-redmind @surprisedbrow frownmouth "And I didn't realize at first, but Hilbert's in this class, too.{w=0.5} He already knew, of course. He isn't surprised."
+redmind @surprisedbrow frownmouth "[day_010405_scene_text[381]]"
 
 hide hilbert with dis
 
-oak @closedbrow sweat talking2mouth "Ahem, yes. I just wanted to clear that up."
-oak @talkingmouth "Now, are any of you interested in competing in the Pokémon League after you graduate? Just by a show of hands."
+oak @closedbrow sweat talking2mouth "[day_010405_scene_text[382]]"
+oak @talkingmouth "[day_010405_scene_text[383]]"
 
-redmind @sad2eyes frownmouth "A few dozen hands... Blue, Leaf..."
-redmind @surprisedbrow frownmouth "Oh! I should put my hand up, too!" 
+redmind @sad2eyes frownmouth "[day_010405_scene_text[384]]"
+redmind @surprisedbrow frownmouth "[day_010405_scene_text[385]]" 
 
-oak @angrybrow talking2mouth "Take a good look around."
+oak @angrybrow talking2mouth "[day_010405_scene_text[386]]"
 
 window hide
 pause 1.5
 
-oak @closedbrow talkingmouth "Now, everyone in the two middle sections, put your hands down."
+oak @closedbrow talkingmouth "[day_010405_scene_text[387]]"
 
-redmind @thinking "There are fewer than ten students left with their hands raised.{w=0.5} I think I know where this is going."
+redmind @thinking "[day_010405_scene_text[388]]"
 
-oak @talkingmouth "That's the percentage of those who will actually {i}qualify{/i} for the Pokémon League. And it is even less for those who can {i}make{/i} it there."
-oak confusedbrow frownmouth @happy "Now, don't let it discourage you. Let's start with some--"
+oak @talkingmouth "[day_010405_scene_text[389]]"
+oak confusedbrow frownmouth @happy "[day_010405_scene_text[390]]"
 
 window hide
 pause 1.0
 
-redmind @thonk "Hm? What's he looking at?"
+redmind @thonk "[day_010405_scene_text[391]]"
 
-oak -confusedbrow @confusedbrow talking2mouth "Yes, did you have a question?"
+oak -confusedbrow @confusedbrow talking2mouth "[day_010405_scene_text[392]]"
 
 show blue closedbrow happymouth uniform:
     xpos 0.75 xzoom -1
 
-blue @happy "Hah! I'm just gonna say this right now for all you quitters in this room!"
-blue angrybrow talkingmouth @talkingmouth "I'm gettin' to the Pokémon League and there's no chance in hell that I'm not!"
+blue @happy "[day_010405_scene_text[393]]"
+blue angrybrow talkingmouth @talkingmouth "[day_010405_scene_text[394]]"
 
-redmind @thinking "God, why does he always have to be like this?{w=0.5} It hasn't been ten minutes since class started and he's already trying to start something."
-redmind @thinking "He tries so hard to be cool and fails so hard at it that it's sickening."
+redmind @thinking "[day_010405_scene_text[395]]"
+redmind @thinking "[day_010405_scene_text[396]]"
 
-blue @talkingmouth "I'm not stopping until I wipe the floor with every single regional Pokémon League Champion! You're looking at the next World Champion!"
+blue @talkingmouth "[day_010405_scene_text[397]]"
 
-oak @closedbrow talkingmouth "Please, sit down--"
-oak sadbrow @confused "Erm, what was your name again?"
+oak @closedbrow talkingmouth "[day_010405_scene_text[398]]"
+oak sadbrow @confused "[day_010405_scene_text[399]]"
 
-blue wistfulbrow scaredmouth "Wha-? Gramps, it's me!"
+blue wistfulbrow scaredmouth "[day_010405_scene_text[400]]"
 
-oak @closedbrow talking2mouth "Yes, I know it's you! But what was..."
+oak @closedbrow talking2mouth "[day_010405_scene_text[401]]"
 
 show blue angry with dis
 
-red @happy "It's [blue_name]!"
+red @happy "[day_010405_scene_text[402]][blue_name][day_010405_scene_text[403]]"
 
-leaf uniform @happy "Oh my god, did you actually just say that?! Balls, [first_name]!"
+leaf uniform @happy "[day_010405_scene_text[404]][first_name][day_010405_scene_text[405]]"
 
-oak -sadbrow -frownmouth @closedbrow talking2mouth "Er, that's right! Anyway, sit down!"
+oak -sadbrow -frownmouth @closedbrow talking2mouth "[day_010405_scene_text[406]]"
 
-blue @angry "Man, what a load of...{w=0.5} can't believe..."
+blue @angry "[day_010405_scene_text[407]]"
 
 pause 1.0
 
-may uniform @sad "[blue_name]'s really glaring at you..."
-red @happy "Yeah, well, when he gets like this, it's best to just grin and give him a thumbs-up!"
+may uniform @sad "[day_010405_scene_text[408]][blue_name][day_010405_scene_text[409]]"
+red @happy "[day_010405_scene_text[410]]"
 
 show blue angrybrow talkingmouth with dis
 
-redmind @playfulbrow smirkmouth "That just made him madder.{w=0.4} I'm liking this class already."
+redmind @playfulbrow smirkmouth "[day_010405_scene_text[411]]"
 
 hide blue with dis
 
-oak @talkingmouth "Right then. I think that's enough talking.{w=0.5} Let's get started on going over the syllabus, for now."
-oak @closedbrow talking2mouth "Before asking me any questions about my lesson plans, or what this course will entail, I ask that you check the syllabus first. It's a handy tool!"
-oak @talkingmouth "Now, the most important thing to remember, is--"
+oak @talkingmouth "[day_010405_scene_text[412]]"
+oak @closedbrow talking2mouth "[day_010405_scene_text[413]]"
+oak @talkingmouth "[day_010405_scene_text[414]]"
 
 show oak surprisedbrow frownmouth with dis
 
@@ -1377,7 +1389,7 @@ show homeroom with vpunch
 
 $ showredonly = True
 
-whitney uniform @surprised "{cps=20}{gradualsize=26-52}WWWAAAAAAAIIIIITT!!{/gradualsize}{/cps}"
+whitney uniform @surprised "[day_010405_scene_text[415]]"
 
 window hide
 $ PlaySound("ExitBuilding.ogg")
@@ -1395,9 +1407,9 @@ show whitney happy with dis
 
 $ showredonly = False
 
-redmind @thinking "And now she's posing like she just finished an acrobatic stunt at the Pokéathlon."
+redmind @thinking "[day_010405_scene_text[416]]"
 
-whitney @talking2mouth "Here I am!{w=0.5} I'm not late, I was just waiting for the perfect time to make my grand entrance!"
+whitney @talking2mouth "[day_010405_scene_text[417]]"
 
 show whitney:
     xpos 500 zoom 1.0
@@ -1405,32 +1417,32 @@ show whitney:
     pause 0.3
     ease 0.15 ypos 1.3
 
-narrator "The strange redhead sits down in the empty chair in front of you like nothing happened."
+narrator "[day_010405_scene_text[418]]"
 
 show whitney -happy with dis:
     xpos 340 ypos 1.3 zoom 1.3
 
 pause 1.5
     
-whitney @talking2mouth "Please continue."
+whitney @talking2mouth "[day_010405_scene_text[419]]"
 
-oak -surprisedbrow -frownmouth @closedbrow talking2mouth "Very well. I would suggest you attempt to get to class slightly earlier in the future. This is university--not high school."
-oak @talking2mouth "There will be no attendance sheets, no roll call, and no-one holding you responsible for showing up to class."
-oak @angrybrow talking2mouth "No-one except yourself. So, please, {i}do be{/i} reliable for yourself."
-oak @talkingmouth sad2eyes "That aside, if you {i}must{/i} arrive late, try to do so {i}without{/i} a 'grand entrance', if you please."
+oak -surprisedbrow -frownmouth @closedbrow talking2mouth "[day_010405_scene_text[420]]"
+oak @talking2mouth "[day_010405_scene_text[421]]"
+oak @angrybrow talking2mouth "[day_010405_scene_text[422]]"
+oak @talkingmouth sad2eyes "[day_010405_scene_text[423]]"
 
-whitney @happy sweat "Hah hah... yeah, of course!"
+whitney @happy sweat "[day_010405_scene_text[424]]"
 
 pause 1.0
 
-whitney @surprised "Oh!"
-whitney @sadeyebrows talking2mouth "Um... my dormmate isn't here yet, either."
+whitney @surprised "[day_010405_scene_text[425]]"
+whitney @sadeyebrows talking2mouth "[day_010405_scene_text[426]]"
 
-oak @closedbrow talking2mouth "Then I trust you will convey the gist of my prior speech unto her."
+oak @closedbrow talking2mouth "[day_010405_scene_text[427]]"
 
 $ showredonly = True
 
-flannery tired uniform "{cps=22}Who're.{w=0.25}.{w=0.25}.{w=0.5} we talking about...?{/cps}"
+flannery tired uniform "[day_010405_scene_text[428]]"
 
 show flannery -tired tiredbrow frownmouth uniform behind whitney with dis:
     xpos 0 ypos 1.9 zoom 1.2
@@ -1441,13 +1453,13 @@ $ renpy.pause(2.0, hard=True)
 
 $ showredonly = False
 
-whitney @sweat happy "You, Flan! And how we're {i}totally{/i} sorry that we showed up late, right?"
+whitney @sweat happy "[day_010405_scene_text[429]]"
 
-flannery @closedbrow frazzled talking2mouth "Yeah, sorry... I'm not a big fan of mornings..."
+flannery @closedbrow frazzled talking2mouth "[day_010405_scene_text[430]]"
 
-oak @talking2mouth "Fan or not, try and get to class on time from now on."
+oak @talking2mouth "[day_010405_scene_text[431]]"
 
-flannery @talking2mouth "Yeah... okay."
+flannery @talking2mouth "[day_010405_scene_text[432]]"
 
 show flannery tired:
     xpos 0.35 ypos 1.1 zoom 1.0
@@ -1457,7 +1469,7 @@ show flannery tired:
     
 $ renpy.pause(2.5, hard=True)
 
-redmind @thonk "She's... kinda intimidating. Reminds me of one of those biker gang chicks that hang out West of Celadon City."
+redmind @thonk "[day_010405_scene_text[433]]"
 
 pause 1.0
 
@@ -1465,7 +1477,7 @@ hide flannery
 hide whitney
 with dis
 
-redmind @thinking "Anyway, now that she's sitting next to me, I've got May to my left, this new redhead to my right, the pink-haired girl in front of me, and behind me is..."
+redmind @thinking "[day_010405_scene_text[434]]"
 
 hide oak 
 show dawn uniform 
@@ -1473,14 +1485,14 @@ with dis
 
 pause 1.0
 
-redmind @thonk "Another cute girl."
-redmind @thinking "Is this some kind of social experiment? Invite a ridiculously unqualified student to Kobukan, but surround them by attractive women, so they can't focus at all?"
+redmind @thonk "[day_010405_scene_text[435]]"
+redmind @thinking "[day_010405_scene_text[436]]"
 
 hide dawn
 show oakbg
 with dis
 
-redmind @happy "Well, it's a good thing whoever was setting this up didn't know I find guys hot, too."
+redmind @happy "[day_010405_scene_text[437]]"
 
 pause 1.0
 
@@ -1489,70 +1501,70 @@ show flannery tired uniform with dis:
 
 pause 1.0
 
-narrator "After a moment, you notice the spiky-haired redhead is staring at you."
+narrator "[day_010405_scene_text[438]]"
 
-redmind @thonk "Hm? Does she expect me to say anything? Or maybe her eyes are just glassy from tiredness?"
+redmind @thonk "[day_010405_scene_text[439]]"
 
 menu:
-    "Rough morning, huh?":        
-        flannery angrybrow frownmouth eyebags frazzled @angrybrow talking2mouth "Who wants to know?"
+    "[day_010405_scene_text[440]]":        
+        flannery angrybrow frownmouth eyebags frazzled @angrybrow talking2mouth "[day_010405_scene_text[441]]"
 
-        red @surprisedbrow talking2mouth "Uh, I just thought that, you know, you kind of looked tired?"
-        red @closedbrow talking2mouth "{size=30}Not anymore, though.{/size}"
+        red @surprisedbrow talking2mouth "[day_010405_scene_text[442]]"
+        red @closedbrow talking2mouth "[day_010405_scene_text[443]]"
 
         show flannery angry frazzled with dis:
             xpos 1200 ypos 1.2
             ease 0.5 xpos 1140
             
-        flannery "How about you mind your own business?{w=0.5} I don't remember asking for your opinion on anything."
+        flannery "[day_010405_scene_text[444]]"
 
-    "Want some coffee?":
-        red @talkingmouth "I picked some up earlier this morning."
+    "[day_010405_scene_text[445]]":
+        red @talkingmouth "[day_010405_scene_text[446]]"
 
-        flannery angrybrow frownmouth eyebags frazzled @angrybrow talking2mouth "Are you talking to {i}me?{/i}"
+        flannery angrybrow frownmouth eyebags frazzled @angrybrow talking2mouth "[day_010405_scene_text[447]]"
         
-        red @confusedbrow talking2mouth "...I'm sensing I said something wrong?"
+        red @confusedbrow talking2mouth "[day_010405_scene_text[448]]"
         
-        flannery angry frazzled "Do I look like a charity case to you?"
+        flannery angry frazzled "[day_010405_scene_text[449]]"
         
         $ ValueChange("Flannery", -1, 0.66)
 
-        red @wince talking2mouth "No! You look really tired so I thought--"
+        red @wince talking2mouth "[day_010405_scene_text[450]]"
         
-        flannery furiousbrow angrymouth frazzled "You thought what?{w=0.5} That you think I'd want your handouts?"
+        flannery furiousbrow angrymouth frazzled "[day_010405_scene_text[451]]"
         
         show flannery frazzled with dis:
             xpos 1200 ypos 1.2
             ease 0.5 xpos 1140
             
-        flannery furious frazzled veins "Why don't you take that coffee of yours, and shove it up your--"
+        flannery furious frazzled veins "[day_010405_scene_text[452]]"
 
-    ">Say nothing":        
-        redmind "On second thought, maybe I shouldn't. With that glare... discretion is the better part of valor, and all that."
+    "[day_010405_scene_text[453]]":        
+        redmind "[day_010405_scene_text[454]]"
         
-        redmind @thonk "Unrelatedly... doesn't her hair break some kind of school code?{w=0.5} It's gotta be at least a couple of feet across."
+        redmind @thonk "[day_010405_scene_text[455]]"
         
         show flannery eyebags angrybrow frazzled frownmouth with dis
         
-        redmind @closedeyes confusedeyebrows sweat frownmouth "How does she get it to stay up like that anyway?{w=0.5} I can't imagine the amount of hairspray she uses."
+        redmind @closedeyes confusedeyebrows sweat frownmouth "[day_010405_scene_text[456]]"
         
-        flannery @angrymouth "You got a problem, pal?"
+        flannery @angrymouth "[day_010405_scene_text[457]]"
         
-        red @confused "Wha?"
+        red @confused "[day_010405_scene_text[458]]"
         
-        flannery @furiousbrow angrymouth "What the hell are you staring at me for?"
+        flannery @furiousbrow angrymouth "[day_010405_scene_text[459]]"
         
-        red @surprisedeyes surprisedeyebrows talking2mouth "Uh, nothing in particular. Just, wondering how you got your hair like.{w=0.25}.{w=0.25}.{w=0.5} that."
+        red @surprisedeyes surprisedeyebrows talking2mouth "[day_010405_scene_text[460]]"
         
-        flannery frazzled furiousbrow angrymouth "Like {i}what?{/i} "
+        flannery frazzled furiousbrow angrymouth "[day_010405_scene_text[461]]"
         
-        red @wince "You know...{w=0.5} like..."
+        red @wince "[day_010405_scene_text[462]]"
 
         show flannery frazzled with dis:
             xpos 1200 ypos 1.2
             ease 0.5 xpos 1140
             
-        flannery furious frazzled veins "You making fun of my hair?! I'll mess you up!"
+        flannery furious frazzled veins "[day_010405_scene_text[463]]"
 
 hide whitney
 
@@ -1560,20 +1572,20 @@ show whitney uniform with dis:
     xpos 685 ypos 1.2 zoom 1.25
     ease 0.5
 
-whitney @happy "Chill out, Flan!{w=0.5} I'm sure he didn't mean anything by it."
+whitney @happy "[day_010405_scene_text[464]]"
 
 show flannery tiredbrow frownmouth -veins with dis
 
-red @closedeyes talking2mouth  "Yes, thank you!"
+red @closedeyes talking2mouth  "[day_010405_scene_text[465]]"
 
-whitney @talking2mouth "It's the first day."
-whitney @sadbrow talking2mouth "You should keep it a little on the DL, girl."
+whitney @talking2mouth "[day_010405_scene_text[466]]"
+whitney @sadbrow talking2mouth "[day_010405_scene_text[467]]"
 
 show flannery:
     xpos 1140 ypos 1.2
     ease 0.6 xpos 1200
     
-flannery angrybrow @talking2mouth "Psh."
+flannery angrybrow @talking2mouth "[day_010405_scene_text[468]]"
 
 hide flannery with dis
 
@@ -1581,44 +1593,44 @@ pause 1.0
 
 $ BecomeNamed("Flannery")
 
-whitney @talking2mouth "You'll have to ease up on Flannery.{w=0.5} She's a little rough around the edges in the morning."
+whitney @talking2mouth "[day_010405_scene_text[469]]"
 
-red uniform @sadbrow talkingmouth "I understand. Morning isn't exactly my favorite time of day either."
+red uniform @sadbrow talkingmouth "[day_010405_scene_text[470]]"
 
-whitney @angrybrow happymouth "Heh, we were late 'cause Flan slept through all of her alarm clocks!"
+whitney @angrybrow happymouth "[day_010405_scene_text[471]]"
 
 show flannery uniform tiredbrow tiredmouth with dis:
     xpos 1200 ypos 1.2 xzoom -1 zoom 1.25
 
 $ BecomeNamed("Whitney")
 
-flannery @talking2mouth "They don't work, Whitney. I don't know how many times I have to tell you."
+flannery @talking2mouth "[day_010405_scene_text[472]]"
 
 pause 1.5
 
 show flannery surprisedbrow frownmouth with dis
 
-whitney @happy "I think it's because your snore is louder than the clocks."
+whitney @happy "[day_010405_scene_text[473]]"
 
-flannery @furious veins "I do NOT snore!"
-flannery tiredbrow tiredmouth @angrybrow -veins furiousmouth "Hey, what're you smirkin' at?{w=0.5} I don't snore, you hear me?!"
+flannery @furious veins "[day_010405_scene_text[474]]"
+flannery tiredbrow tiredmouth @angrybrow -veins furiousmouth "[day_010405_scene_text[475]]"
 
-red @pity "I believe you.{w=0.5} So you're Whitney, and you're Flannery."
-red @happy "I'm [first_name]."
+red @pity "[day_010405_scene_text[476]]"
+red @happy "[day_010405_scene_text[477]][first_name][day_010405_scene_text[478]]"
 
-whitney @happy "Nice to meet ya, [first_name]!"
+whitney @happy "[day_010405_scene_text[479]][first_name][day_010405_scene_text[480]]"
 
 if persondex["Flannery"]["Value"] != -1:
-    flannery sad2eyes talking2mouth "Yeah. Sorry about... getting on your case earlier."
+    flannery sad2eyes talking2mouth "[day_010405_scene_text[481]]"
 
-    red @wince talking2mouth "Don't worry about it."
+    red @wince talking2mouth "[day_010405_scene_text[482]]"
 
 show flannery surprisedbrow frownmouth
 show whitney surprisedbrow frownmouth 
 with dis
 
 
-oak @talkingmouth "Keep it down back there!"
+oak @talkingmouth "[day_010405_scene_text[483]]"
 
 hide flannery
 hide whitney 
@@ -1626,7 +1638,7 @@ with dis
 
 stop music fadeout 1.5
 
-redmind @closedbrow sweat frownmouth "Alright, really gotta buckle down and focus, now..."
+redmind @closedbrow sweat frownmouth "[day_010405_scene_text[484]]"
 
 $ renpy.music.queue("Audio/Music/ViridianCity_Start.ogg", channel='music', loop=None, fadein=1.0, tight=None)
 $ renpy.music.queue("Audio/Music/ViridianCity_Loop.ogg", channel='music', loop=True, tight=None)
@@ -1646,17 +1658,17 @@ call clearscreens from _call_clearscreens_7
 
 pause 2.0
 
-narrator "The rest of your class passes without incident."
-narrator "It's now time to pick the elective you're going to go to."
+narrator "[day_010405_scene_text[485]]"
+narrator "[day_010405_scene_text[486]]"
 
 window hide
 scene blank2
 $ renpy.music.stop(channel='crowd', fadeout=1.0)
 
-narrator "[bluecolor]It's important to remember two things. Taking an elective class raises your proficiency, and your proficiency in a type is equal to the highest level a Pokémon you own can level up to.{/color}"
+narrator "[day_010405_scene_text[487]][bluecolor][day_010405_scene_text[488]]"
 
-narrator "[bluecolor]Pokémon already above that level cap will not be de-leveled, but they also cannot level up.{/color}"
+narrator "[day_010405_scene_text[489]][bluecolor][day_010405_scene_text[490]]"
 
-narrator "[bluecolor]For that reason, it is advisable to focus on at least one type, for a while. It will be, however, a while longer before your Pokémon begin gaining experience from battles.{/color}"
+narrator "[day_010405_scene_text[491]][bluecolor][day_010405_scene_text[492]]"
 
 jump PickElective

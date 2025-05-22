@@ -27,7 +27,7 @@ IGNORE_SYMBOLS = ["$", "queue"]
 SPECIAL_CHARACTER = "\\\""
 SPECIAL_CHARACTER_TO_REPLACE = "#!#"
 
-LANGUAGE = "LANG_ENG"
+LANGUAGE = "LANG_ESP"
 
 global pos_var
 
@@ -102,6 +102,7 @@ if __name__ == "__main__":
         all_scene_info = file.read().split("\n")
 
     for line in all_scene_info:
+        line = line.replace(".{w=0.5}.{w=0.5}.{w=0.5}", "[ellipses]")
         split_line_space = line.split(" ")
         pos_first_word = 0
         while pos_first_word < len(split_line_space) and split_line_space[pos_first_word] == '':
