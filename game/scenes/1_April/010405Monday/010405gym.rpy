@@ -14,20 +14,20 @@ scene gym with Dissolve(2.0)
 
 $ renpy.pause(1.0, hard=True)
 
-ethan uniform @talkingmouth "So this is the gymnasium.{w=0.5} I wonder if this is an official Gym sanctioned by the Pokémon League?"
+ethan uniform @talkingmouth "[day_010405gym_scene_text[0]]"
 
-red uniform @talking2mouth "Most likely not. I didn't read anything about that on the website when I was doing my research."
-red @closedbrow talkingmouth "I think it's safe to assume it's just another fancy room in the academy's collection.{w=0.5} Though, other than some old banners lining the walls, this place is barren compared to the others."
+red uniform @talking2mouth "[day_010405gym_scene_text[1]]"
+red @closedbrow talkingmouth "[day_010405gym_scene_text[2]]"
 
-ethan @surprised "Old banners?! Dude, those are Champion pennants! They're only given to winners of {i}at least{/i} national tournaments!"
+ethan @surprised "[day_010405gym_scene_text[3]]"
 
-red @happy "Yeah, but they're just banners. If it was the actual Champions hanging up there, then maybe I'd be impressed."
+red @happy "[day_010405gym_scene_text[4]]"
 
 pause 2.0
 
-red @sad "That didn't sound the way I thought it was going to."
+red @sad "[day_010405gym_scene_text[5]]"
 
-ethan @talking2mouth "Yeah, let's just... ignore that..."
+ethan @talking2mouth "[day_010405gym_scene_text[6]]"
 
 hide blank2
 
@@ -43,21 +43,21 @@ show hilbert uniform sad:
     xpos (5/6)
 with Dissolve(0.5)
 
-ethan @happy "Hey, look, there's the rest of the gang!"
+ethan @happy "[day_010405gym_scene_text[7]]"
 
 pause 1.0
 
 show misty uniform with Dissolve(0.5):
     xpos (4.5/6)
 
-red @talkingmouth "Oh, and there's Misty...{w=0.5} Hopefully she's feeling a bit better since I last saw her."
+red @talkingmouth "[day_010405gym_scene_text[8]]"
 
-ethan @talkingmouth "What's her story?"
+ethan @talkingmouth "[day_010405gym_scene_text[9]]"
 
-red @happy "Wish I knew."
+red @happy "[day_010405gym_scene_text[10]]"
 
 if (GetElective("Water") > 0 or GetElective("Ice") > 0):
-    red @talkingmouth "I learned more from our elective together than I did before."
+    red @talkingmouth "[day_010405gym_scene_text[11]]"
 
 hide misty 
 hide calem
@@ -90,7 +90,7 @@ with Dissolve(0.5)
 
 $ renpy.pause(1.5, hard=True)
 
-ethan @talkingmouth "Man, this is a huge class.{w=0.75} I can actually recognize a few faces now!"
+ethan @talkingmouth "[day_010405gym_scene_text[12]]"
 
 hide flannery
 hide whitney
@@ -101,24 +101,24 @@ with dis
 
 show blue uniform with dis
 
-red @talkingmouth "Looks like [blue_name]'s sitting alone. Kinda surprising. I'd've thought he would have tried to surround himself with people by now."
+red @talkingmouth "[day_010405gym_scene_text[13]][blue_name][day_010405gym_scene_text[14]]"
 
-ethan @talkingmouth "You know that guy?"
+ethan @talkingmouth "[day_010405gym_scene_text[15]]"
 
-red @talkingmouth "Yeah. We have a history."
+red @talkingmouth "[day_010405gym_scene_text[16]]"
 
-ethan @confused "Oh, you dated?"
+ethan @confused "[day_010405gym_scene_text[17]]"
 
-red @happy "Hah! No, I still have some dignity. Trust me, his personality is {i}not{/i} worth it."
+red @happy "[day_010405gym_scene_text[18]]"
 
-ethan @happy "I dunno, I feel like my standards could learn to limbo for that guy..."
+ethan @happy "[day_010405gym_scene_text[19]]"
 
 pause 1.0
 
-red @angrybrow talking2mouth "Ethan."
-ethan @surprised "Uh? So serious, all of a sudden..."
-red @angrybrow talking2mouth "I'm saying this in {i}full seriousness.{/i} Don't do that to yourself."
-ethan @winkeyes sadeyebrows sweat talking2mouth "Alright! I'll take your word for it."
+red @angrybrow talking2mouth "[day_010405gym_scene_text[20]]"
+ethan @surprised "[day_010405gym_scene_text[21]]"
+red @angrybrow talking2mouth "[day_010405gym_scene_text[22]]"
+ethan @winkeyes sadeyebrows sweat talking2mouth "[day_010405gym_scene_text[23]]"
 
 hide flannery
 hide whitney
@@ -129,7 +129,7 @@ hide text
 
 hide blue with dis
 
-red @talkingmouth "Anyway, let's go sit over by the gang.{w=0.5} Don't want to end up like Mr.-Too-Cool-For-Friends."
+red @talkingmouth "[day_010405gym_scene_text[24]]"
 
 $ renpy.pause(1.0, hard=True)
 
@@ -141,30 +141,30 @@ show bruno with dis:
 show alder happy with dis:
     xpos 0.66
 
-alder @happy2 "Yes, right. Settle down."
+alder @happy2 "[day_010405gym_scene_text[25]]"
 
 $ renpy.music.stop(channel='crowd', fadeout=1.5)
 
-red @confused "Are these guys our teachers?{w=0.5} The guy on the left definitely looks like one..."
+red @confused "[day_010405gym_scene_text[26]]"
 
 show bruno think with dis:
     xpos 0.33
 
-ethan @closedbrow talkingmouth "But the other guy looks like one of those off-the-grid mountain hermits you hear about on survivalist websites."
+ethan @closedbrow talkingmouth "[day_010405gym_scene_text[27]]"
 
 $ BecomeNamed("Alder")
 $ BecomeNamed("Bruno")
 
-alder @norm2 "Welcome to gym class!{w=0.5} I'm Alder and he's Bruno."
-alder @happy2 "We'll be your instructors for this year."
-alder @norm2 "Now I bet you're all wondering what you'll actually be doing in this class.{w=0.5} Well, it'll be just like the other gym classes you've probably taken in your other schools."    
-alder @happy2 "Except we're not going to make you change into shorts and play sports.{w=0.5} In this school, we focus more on training Pokémon, not your bodies."    
-alder norm @norm2 "But training your body is important too, ha ha!"
+alder @norm2 "[day_010405gym_scene_text[28]]"
+alder @happy2 "[day_010405gym_scene_text[29]]"
+alder @norm2 "[day_010405gym_scene_text[30]]"    
+alder @happy2 "[day_010405gym_scene_text[31]]"    
+alder norm @norm2 "[day_010405gym_scene_text[32]]"
 
 pause 1.5
 
-alder @norm2 "Ahem. Anyway, the real reason why this school has a gym class like this is to prepare you kids for the real Pokémon Gyms after you graduate.{w=0.5} At least for those interested in tackling the League."
-alder @happy2 "Can any of you tell me why Gyms exist in the first place?"
+alder @norm2 "[day_010405gym_scene_text[33]]"
+alder @happy2 "[day_010405gym_scene_text[34]]"
 
 hide alder 
 hide bruno 
@@ -179,11 +179,11 @@ show hilda uniform behind cheren with dis:
 show serena uniform behind cheren with dis:
     xpos 0.5
 
-cheren @talking2mouth "Gyms were created as a way to gatekeep less strong Trainers from challenging the Pokémon Leagues."
+cheren @talking2mouth "[day_010405gym_scene_text[35]]"
     
-serena @talkingmouth "Quite. If we didn't have Gyms, any trainer could directly attempt to challenge the league, overwhelming its resources."
+serena @talkingmouth "[day_010405gym_scene_text[36]]"
 
-hilda @closedbrow talking2mouth "Yeah, and they're a hell of a good wakeup call for people who think they can challenge the league without training!"
+hilda @closedbrow talking2mouth "[day_010405gym_scene_text[37]]"
 
 hide hilda
 hide cheren
@@ -194,72 +194,72 @@ show bruno:
     xpos 0.33
 with dis
 
-alder @winkbrow talkingmouth "Right, very good guesses...{w=0.5} but the main purpose of a Gym is to allow Trainers who are less experienced to test their skills against more experienced ones on even footing."
+alder @winkbrow talkingmouth "[day_010405gym_scene_text[38]]"
 
 hide cheren
 hide hilda
 hide serena
 
-alder @happy2 "And that is what we're going to be doing in this class."
-alder @talkingmouth "Everyone will have at least one battle a day. But we won't start on that {i}immediately.{/i}"
-alder @spunky2 "First, we need to review the basics.{w=0.5} You're all so busy trying to learn new things that sometimes you forget the most rudimentary skills."
+alder @happy2 "[day_010405gym_scene_text[39]]"
+alder @talkingmouth "[day_010405gym_scene_text[40]]"
+alder @spunky2 "[day_010405gym_scene_text[41]]"
 
-leaf uniform @surprised "What, are you going to teach us how to catch Pokémon or something?"
+leaf uniform @surprised "[day_010405gym_scene_text[42]]"
 
 show bruno think with dis
 
-alder norm @happy2 "Yes, that's a very important part of the curriculum!"
+alder norm @happy2 "[day_010405gym_scene_text[43]]"
 
-leaf @sadmouth "Sheesh..."
+leaf @sadmouth "[day_010405gym_scene_text[44]]"
 
-alder @happy2 "Even if some of you think you have everything you need to know about Pokémon battling, trust me when I say you don't."
-alder @happy2 "We've been in this field a lot longer than you have and even {i}we{/i} still don't have it down perfectly, ha ha!"
+alder @happy2 "[day_010405gym_scene_text[45]]"
+alder @happy2 "[day_010405gym_scene_text[46]]"
 
 show alder happy with dis
 
 show blue uniform angry behind alder with dis:
     xpos 0.95 xzoom -1 zoom 0.9
 
-redmind @thinking "As I expected, [blue_name] seems a bit irked by what Alder just said."
-redmind @sad "I hope he doesn't make a scene like he did in homeroom."
+redmind @thinking "[day_010405gym_scene_text[47]][blue_name][day_010405gym_scene_text[48]]"
+redmind @sad "[day_010405gym_scene_text[49]]"
 
 hide blue with dis
 
-alder @surprised2 "Oh, excuse me for rambling on like that."        
-alder @happy2 "Uhhhh, Bruno!{w=0.5} Why don't you tell them more about this class?"
+alder @surprised2 "[day_010405gym_scene_text[50]]"        
+alder @happy2 "[day_010405gym_scene_text[51]]"
 
-bruno @think2 "Very well."    
-bruno @norm2 "This gym was first and foremost designed to be a training ground for students, and as such, it is available for free use after class hours."
-bruno @think2 "Just bring your student ID and you receive unlimited access to its facilities."
-bruno @talkingmouth "In addition to the exercise machines available, the gym also contains several battle simulators to allow students to experience what a live Pokémon match would feel like in real-time."
-bruno @sadbrow talkingmouth "These are useful in case you wish to simulate battles outside of the realm of your own ability to train."
-bruno @talkingmouth "On your own time, you may also hold battles here--genuine or simulated. Another place live battles may be fought is in the Battle Hall."
-bruno @think2 "However, the members of the Battle Team have priority to use the Battle Hall."
+bruno @think2 "[day_010405gym_scene_text[52]]"    
+bruno @norm2 "[day_010405gym_scene_text[53]]"
+bruno @think2 "[day_010405gym_scene_text[54]]"
+bruno @talkingmouth "[day_010405gym_scene_text[55]]"
+bruno @sadbrow talkingmouth "[day_010405gym_scene_text[56]]"
+bruno @talkingmouth "[day_010405gym_scene_text[57]]"
+bruno @think2 "[day_010405gym_scene_text[58]]"
 
-blue uniform @talkingmouth "Battle Team? What's that about?"
+blue uniform @talkingmouth "[day_010405gym_scene_text[59]]"
 
-bruno @closedbrow talkingmouth "Our school has a competitive battling team for students who wish to take their Pokémon training to the next level."
-bruno @closedbrow happymouth "They have the honor and privilege of representing Kobukan in national and international engagements."
-bruno @angrybrow talkingmouth "It's a very selective club, so don't think about signing up so quickly."
+bruno @closedbrow talkingmouth "[day_010405gym_scene_text[60]]"
+bruno @closedbrow happymouth "[day_010405gym_scene_text[61]]"
+bruno @angrybrow talkingmouth "[day_010405gym_scene_text[62]]"
 
-blue @angrybrow talking2mouth "Oh, yeah?{w=0.5} What does it take to get in there? Impeccable grades? A strong team?"
+blue @angrybrow talking2mouth "[day_010405gym_scene_text[63]]"
 
-bruno @think2 "Nothing quite so concrete. You must impress the captain of the Battle Team."
+bruno @think2 "[day_010405gym_scene_text[64]]"
 
-blue @happy "Ha! That's easy!"
+blue @happy "[day_010405gym_scene_text[65]]"
 
-bruno @closedbrow talking2mouth "Hm."
-bruno -think @closedbrow smilemouth "You may test that assumption at your convenience."
+bruno @closedbrow talking2mouth "[day_010405gym_scene_text[66]]"
+bruno -think @closedbrow smilemouth "[day_010405gym_scene_text[67]]"
 
-blue @happy "C'mon, how hard can it be? All I've gotta do is impress the captain? If he has eyes, he'll be impressed when he sees me!"
+blue @happy "[day_010405gym_scene_text[68]]"
 
-alder -happy @sadbrow talkingmouth "Be careful of what you say.{w=0.5} Arrogance and strength do not go hand in hand." 
+alder -happy @sadbrow talkingmouth "[day_010405gym_scene_text[69]]" 
 
-blue @happy "I'm telling you, it'll be a piece of cake.{w=0.5} Who's in charge of the team?"
+blue @happy "[day_010405gym_scene_text[70]]"
 
 $ showredonly = True
 
-lance @talking2mouth "My goddaughter."
+lance @talking2mouth "[day_010405gym_scene_text[71]]"
 
 show bruno: 
     xpos 0.33
@@ -277,50 +277,50 @@ pause 1.5
 
 $ showredonly = False
 
-calem uniform @surprised "H-huh?"
+calem uniform @surprised "[day_010405gym_scene_text[72]]"
 
-red @confused "Wait, who is this guy? He looks familiar. Did I... see him on a newspaper?"
+red @confused "[day_010405gym_scene_text[73]]"
 
 $ BecomeNamed("Lance")
 
-ethan @surprised "Dude! Don't you go on the internet?! That's Lance! He's the Indigo League Champion! {i}Our{/i} League, dude!"
+ethan @surprised "[day_010405gym_scene_text[74]]"
 
-red @happy "Then I guess [blue_name] should watch his mouth around him."
+red @happy "[day_010405gym_scene_text[75]][blue_name][day_010405gym_scene_text[76]]"
     
-lance @talking2mouth "Being accepted to the Battle Team is one of the highest honors a student can receive in this school.{w=0.5} It is not to be taken lightly."
+lance @talking2mouth "[day_010405gym_scene_text[77]]"
 
-bruno @norm2 "Lance.{w=0.5} How long have you been standing there?"
+bruno @norm2 "[day_010405gym_scene_text[78]]"
 
-lance @talking2mouth "I was just passing by.{w=0.5} It's been a while, Bruno. Alder."
+lance @talking2mouth "[day_010405gym_scene_text[79]]"
 
-alder @happy2 "Ha! It has indeed."
+alder @happy2 "[day_010405gym_scene_text[80]]"
 
-alder @happy2 "Oh, where are my manners?{w=0.5} Students, this is Lance, the advisor of the Battle Team."
+alder @happy2 "[day_010405gym_scene_text[81]]"
 
-lance @talking2mouth "Pleased to meet you all."
-lance @closedbrow talking2mouth "So these are the new students that just came in?{w=0.5} They look quite capable."
-lance angrybrow @talking2mouth "I expect great things from some of you.{w=0.5} Janine will certainly--"
+lance @talking2mouth "[day_010405gym_scene_text[82]]"
+lance @closedbrow talking2mouth "[day_010405gym_scene_text[83]]"
+lance angrybrow @talking2mouth "[day_010405gym_scene_text[84]]"
     
-blue cocky "Hey, you're the guy running the Battle Team?"
+blue cocky "[day_010405gym_scene_text[85]]"
 
-lance @angrybrow talking2mouth "...Yes. And you should heed the advice of Alder and Bruno."
+lance @angrybrow talking2mouth "[day_010405gym_scene_text[86]]"
 
-lance @closedbrow talking2mouth "For someone currently at your level, it'd be impossible to get in."
+lance @closedbrow talking2mouth "[day_010405gym_scene_text[87]]"
     
-blue angry "...What did you say?"
+blue angry "[day_010405gym_scene_text[88]]"
 
-redmind @upeyes frownmouth angryeyebrows "Here we go..."
+redmind @upeyes frownmouth angryeyebrows "[day_010405gym_scene_text[89]]"
     
-blue @angry "Just because you're some bigshot Champion doesn't mean you can look down on me!"
+blue @angry "[day_010405gym_scene_text[90]]"
 
-lance @closedbrow talking2mouth "I am not a 'bigshot Champion,' nor am I looking down on you.{w=0.5} I am simply stating the facts."
+lance @closedbrow talking2mouth "[day_010405gym_scene_text[91]]"
 
-lance @talking2mouth "...Anyway, I'm in a hurry.{w=0.5} I have business to attend to and I cannot be late."
+lance @talking2mouth "[day_010405gym_scene_text[92]]"
 
-alder @happy2 "All right. It was good seeing you again, Lance." 
-alder @sadbrow happymouth "You know, you could drop by the staff dorms once in a while--Lenora's throwing a party before Springsday, and--"
+alder @happy2 "[day_010405gym_scene_text[93]]" 
+alder @sadbrow happymouth "[day_010405gym_scene_text[94]]"
 
-lance @talking2mouth "My thoughts on such things are apparent. Take care, Alder. Bruno."
+lance @talking2mouth "[day_010405gym_scene_text[95]]"
 
 hide lance with dis
 
@@ -334,26 +334,26 @@ show alder:
     xpos 0.75
     ease 0.5 xpos 0.66
 
-blue angrybrow frownmouth "{w=0.5}.{w=0.5}.{w=0.5}."
-blue angry "{size=30}You'll see, so-called 'champion.'{/size}"
+blue angrybrow frownmouth "[day_010405gym_scene_text[96]]"
+blue angry "[day_010405gym_scene_text[97]]"
 
-alder @happy2 "You heard him!{w=0.5} The Battle Team is serious business!"
-alder @talkingmouth "After all, it wasn't luck that our school has produced the most World Champions, Elite Four members, and holds the record for most wins at the National Tournament."
+alder @happy2 "[day_010405gym_scene_text[98]]"
+alder @talkingmouth "[day_010405gym_scene_text[99]]"
 
-alder @happy "But anyway, you shouldn't worry about things like that. Not yet, at least!"
-alder @closedbrow talking2mouth "There are much more important things to take care of, after all."
+alder @happy "[day_010405gym_scene_text[100]]"
+alder @closedbrow talking2mouth "[day_010405gym_scene_text[101]]"
 
 show bruno think with dis
 
-alder @happy2 "Like graduating on time, heh heh!"
+alder @happy2 "[day_010405gym_scene_text[102]]"
 
 pause 1.5
 
-alder @happy2 "Well, uh, I think that about covers all the boring boilerplate stuff. Let's move on."
+alder @happy2 "[day_010405gym_scene_text[103]]"
 
 show blank2 with dis
 
-narrator "Despite Alder's assertion you were done with the 'boring boilerplate', you notice more than a couple of your classmates are struggling to stifle yawns as the lectures continue."
+narrator "[day_010405gym_scene_text[104]]"
     
 hide blank2 with dis
 
@@ -366,17 +366,17 @@ $ renpy.music.stop(channel='misc', fadeout=1.0)
 $ renpy.pause(2.0, hard=True)
 $ renpy.music.set_volume(1.0, delay=1.0, channel="music")
 
-alder norm @happy2 "Okay, that's enough for one day, students. Believe me, I'd {i}love{/i} to jump into the battling myself, but the lectures must continue until morale improves!"
+alder norm @happy2 "[day_010405gym_scene_text[105]]"
 
 show bruno think with dis
 
-alder @talkingmouth "Next class, we'll talk about the basics of Pokémon battling and how to deal with Pokémon in the wild."
+alder @talkingmouth "[day_010405gym_scene_text[106]]"
 
 show bruno with dis
     
-bruno @think2 "It'll be review, but don't underestimate the intricacies of the basics."
+bruno @think2 "[day_010405gym_scene_text[107]]"
 
-alder @happy2 "Right.{w=0.5} Well then, so long, students! Enjoy the rest of your day."
+alder @happy2 "[day_010405gym_scene_text[108]]"
 
 call clearscreens from _call_clearscreens_237
 hide alder
@@ -384,9 +384,9 @@ hide bruno
 show blank2
 with dis
 
-ethan uniform @talkingmouth "Looks like... next on our schedule is lunch! I gotta handle something at the office, so you head on without me, alright?"
+ethan uniform @talkingmouth "[day_010405gym_scene_text[109]]"
 
-red @talkingmouth "Sure thing. Take care."
+red @talkingmouth "[day_010405gym_scene_text[110]]"
 
 hide bruno
 hide alder

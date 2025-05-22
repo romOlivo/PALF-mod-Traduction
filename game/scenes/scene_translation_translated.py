@@ -12,9 +12,9 @@ CHARACTER_NAMES = [
     # Male roommates
     "ethan", "calem", "hilbert", "brendan",
     # Female roommates
-    "may", "serena", "bianca",
+    "may", "serena",
     # Future council
-    "grusha", "cheren",
+    "grusha", "cheren", "bianca",
     # Other male students
     "silver", "wally",
     # Other female students
@@ -22,12 +22,12 @@ CHARACTER_NAMES = [
 ]
 INMUTABLE_TEXTS = ["[ellipse]", "[ellipses]"]
 SPECIAL_COMMAND_CHARACTER = "Character"
-IGNORE_SYMBOLS = ["$", "queue"]
 
 SPECIAL_CHARACTER = "\\\""
 SPECIAL_CHARACTER_TO_REPLACE = "#!#"
+IGNORE_SYMBOLS = ["$", "queue"]
 
-LANGUAGE = "LANG_ESP"
+LANGUAGE = "LANG_ENG"
 
 global pos_var
 
@@ -73,7 +73,7 @@ def process_single_text(line_to_process, file):
     return processed_line
 
 
-def _replace_line_and_write_output(line, file):
+def replace_line_and_write_output(line, file):
     global pos_var
     split_line_comma = line.split('"')
     new_text = line + "\n"
@@ -102,8 +102,7 @@ if __name__ == "__main__":
         all_scene_info = file.read().split("\n")
 
     for line in all_scene_info:
-        line = line.replace(".{w=0.5}.{w=0.5}.{w=0.5}", "[ellipses]")
-        split_line_space = line.split(" ")
+        split_line_space = line.rstrip().split(" ")
         pos_first_word = 0
         while pos_first_word < len(split_line_space) and split_line_space[pos_first_word] == '':
             pos_first_word += 1
@@ -125,12 +124,12 @@ if __name__ == "__main__":
                 pos_var += 2
             elif split_line_space[-1][-1] == '"' and not is_ignorable:
                 # It is a character line
-                new_scene_text += _replace_line_and_write_output(line, var_name)
+                new_scene_text += replace_line_and_write_output(line, output_file)
             elif '"' in split_line_space[pos_first_word]:
                 # Command start with string, so probably are menu options
-                new_scene_text += _replace_line_and_write_output(line, var_name)
+                new_scene_text += replace_line_and_write_output(line, output_file)
             elif 'renpy.input(' in line:
-                new_scene_text += _replace_line_and_write_output(line, var_name)
+                new_scene_text += replace_line_and_write_output(line, output_file)
             else:
                 new_scene_text += line + "\n"
 
