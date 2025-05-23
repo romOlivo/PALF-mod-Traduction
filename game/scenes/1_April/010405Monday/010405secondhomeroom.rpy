@@ -13,17 +13,17 @@ $ renpy.transition(dissolve)
 show screen currentdate
 $ renpy.pause(1.5, hard=True)
 
-narrator "You return to homeroom as the school day draws to a close."
-redmind uniform "The day didn't feel like it dragged on for that long, but all things considered, I'm ready to call it.{w=0.5} Judging by the looks on everyone's faces, they look like they're ready, too."
-narrator "The final period burns through while you listen to Professor Oak talk about rather trivial matters."
-redmind @thonk "It's weird. I was expecting class with the professor to be a little more--how should I put it--fulfilling?{w=0.5} At least, that's what my other classmates were making it out to be earlier in the day."
-redmind @thinking "But so far I haven't taken anything out of homeroom that's especially memorable, other than the scary speech about the school's graduation rate."
+narrator "[day_010405secondhomeroom_scene_text[0]]"
+redmind uniform "[day_010405secondhomeroom_scene_text[1]]"
+narrator "[day_010405secondhomeroom_scene_text[2]]"
+redmind @thonk "[day_010405secondhomeroom_scene_text[3]]"
+redmind @thinking "[day_010405secondhomeroom_scene_text[4]]"
 
 hide blank2
 
-oak @talkingmouth "I can tell by the look in your eyes that you're all quite tired of listening to me prattle on."
-oak @talkingmouth "To tell you the truth, I'm tired of it, too, ha ha!"
-oak @talkingmouth "But before I dismiss you, let me give you all a welcoming gift as celebration for your acceptance into Kobukan Academy."
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[5]]"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[6]]"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[7]]"
 
 show pokeballs_full:
     alpha 0.0 xalign 0.5 yalign 1.0
@@ -31,13 +31,13 @@ show pokeballs_full:
 
 $ renpy.pause(2.0, hard=True)
 
-redmind @surprisedbrow frownmouth "Are those what I think they are?{w=0.5} If so, then this class just got a little more exciting."
+redmind @surprisedbrow frownmouth "[day_010405secondhomeroom_scene_text[8]]"
 
-oak @talkingmouth "Today, each of you will be taking home a Pokémon for yourself, courtesy of the academy!"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[9]]"
 
 $ renpy.music.play("Audio/school_crowd.ogg", channel='crowd', loop=True, fadein=1.0)
 
-oak @talkingmouth "In each of these Poké Balls that you will receive is a random unevolved, untamed Pokémon.{w=0.5} Consider them your homework for the next year."
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[10]]"
 
 show pokeballs_full:
     alpha 1.0
@@ -45,62 +45,62 @@ show pokeballs_full:
 
 show blue uniform with dis
 
-blue @talkingmouth "Hey, I got plenty of Pokémon back home already.{w=0.5} I don't need any more, especially unevolved ones."
+blue @talkingmouth "[day_010405secondhomeroom_scene_text[11]]"
 
-oak @talkingmouth "{color=#0048ff}Regardless of what Pokémon you may already own, these Pokémon will be required to stay on hand for the rest of your time at Kobukan Academy.{/color}"
-oak @talkingmouth "{color=#0048ff}At the end of the year, this Pokémon will be reviewed along with yourself and other potential Pokémon in your party to determine whether or not you can graduate.{/color}"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[12]]"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[13]]"
 
-blue @angry "GREAT!{w=0.6} I just {i}love{/i} being forced to take on liabilities!"
+blue @angry "[day_010405secondhomeroom_scene_text[14]]"
 show blue surprisedbrow frownmouth with dis
 
-oak @talkingmouth "That's the spirit, [blue_name]!"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[15]][blue_name][day_010405secondhomeroom_scene_text[16]]"
 
 hide blue with dis
 
-redmind "So that's how they do it.{w=0.5} I had assumed this school wasn't going to be all about good grades, so this isn't a complete shocker."
+redmind "[day_010405secondhomeroom_scene_text[17]]"
 
-oak @talkingmouth "I'll call you up one by one to receive your Pokémon.{w=0.5} Remember, what you get is what you get!"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[18]]"
 
-red @talkingmouth "This takes me back to when I was a kid and Professor Oak gave me [pika_name]."
+red @talkingmouth "[day_010405secondhomeroom_scene_text[19]][pika_name][day_010405secondhomeroom_scene_text[20]]"
 
 $ renpy.music.play("Audio/pokemon/cries/37.mp3", channel="altcry", loop=None)
 
-Character("Excited Student") "\"I got a Vulpix?!{w=0.5} WOOHOO!\""
+Character("[day_010405secondhomeroom_scene_text[21]]") "[day_010405secondhomeroom_scene_text[22]]"
 
-redmind "Nice. Vulpix are pretty rare, so I bet whoever I get has to be at least equally as rare!"
+redmind "[day_010405secondhomeroom_scene_text[23]]"
 
-oak @talkingmouth "[first_name]!"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[24]][first_name][day_010405secondhomeroom_scene_text[25]]"
 
 $ renpy.music.set_volume(0.0, delay=1.0, channel="music")
 
-redmind "Phew! Okay."
-redmind @sweat closedbrow frownmouth "Here goes.{w=0.5} The moment of truth!"
+redmind "[day_010405secondhomeroom_scene_text[26]]"
+redmind @sweat closedbrow frownmouth "[day_010405secondhomeroom_scene_text[27]]"
 
 show pokeballs_emptyA:
     alpha 0.0 xalign 0.5 yalign 1.0
     ease 1.0 alpha 1.0
 
-redmind @sadbrow sweat "Knowing my luck, I'm {i}gonna{/i} end up getting a Rattata or Bidoof."
-redmind @closedbrow frownmouth "Whatever gods are out there watching me, please, don't let me down!"
-redmind @thinking "[ellipses]Wait."
-redmind "The Poké Balls here are marked with National ID numbers. I've memorized {i}every{/i} Pokémon and their numbers. I can just... like, pick, whatever I want!"
+redmind @sadbrow sweat "[day_010405secondhomeroom_scene_text[28]]"
+redmind @closedbrow frownmouth "[day_010405secondhomeroom_scene_text[29]]"
+redmind @thinking "[day_010405secondhomeroom_scene_text[30]][ellipses][day_010405secondhomeroom_scene_text[31]]"
+redmind "[day_010405secondhomeroom_scene_text[32]]"
 
 pause 1.0
 
-redmind "That means... I can influence my choice here. Sam knows that I know the National ID numbers of every Pokémon, right? Maybe he was giving me a leg up here."
+redmind "[day_010405secondhomeroom_scene_text[33]]"
 
 menu:
-    ">Pick from three random balls":
+    "[day_010405secondhomeroom_scene_text[34]]":
         $ starter_id = renpy.call("PickPokemon", "all")
 
-    ">Pick from three Pokémon from your elective classes":
+    "[day_010405secondhomeroom_scene_text[35]]":
         $ starter_id = renpy.call("PickPokemon", "electives")
 
-    ">Pick from three Pokémon from a specific type":
+    "[day_010405secondhomeroom_scene_text[36]]":
         call PickType() from _call_PickType
         $ starter_id = renpy.call("PickPokemon", _return)
 
-    ">Pick a specific Pokémon":
+    "[day_010405secondhomeroom_scene_text[37]]":
         $ starter_id = renpy.call("PickPokemon", "every")
 
 $ starter_id = _return
@@ -113,7 +113,7 @@ pause 0.5
 
 $ PlaySound("Pokemon/Ball sound.ogg")
 
-oak @talkingmouth "Hmmm..."
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[38]]"
 
 hide pokeballs_emptyA
 
@@ -141,25 +141,25 @@ $ starterobj = Pokemon(starter_id, shinylock=False)
 $ playerparty.append(starterobj)
 $ starter_species_name = playerparty[0].GetNickname()
 $ starter_preposition = ("a" if starter_species_name[0] not in ["A", "E", "I", "O", "U"] else "an")
-oak @happy "Congratulations, it's [starter_preposition] [starter_name]!"
-oak @talkingmouth "This Pokémon is really quite energetic!"
+oak @happy "[day_010405secondhomeroom_scene_text[39]][starter_preposition][day_010405secondhomeroom_scene_text[40]][starter_name][day_010405secondhomeroom_scene_text[41]]"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[42]]"
 
 if (ReadHeight(starter_id) > 48):
-    oak @angry "...However, it's also quite large, for a baby. Would you mind getting it off my table?"
-    red @surprised "Oh, shoot, sorry Sa-- I mean, Professor Oak. I'm just..."
+    oak @angry "[day_010405secondhomeroom_scene_text[43]]"
+    red @surprised "[day_010405secondhomeroom_scene_text[44]]"
 
 $ renpy.music.set_volume(1.0, delay=1.0, channel="music")
 
-red @surprised "I--{w=0.5}Wha--"
-red @happy sweat"You're not pulling my leg, are you?"
+red @surprised "[day_010405secondhomeroom_scene_text[45]]"
+red @happy sweat"[day_010405secondhomeroom_scene_text[46]]"
 
-oak @talkingmouth "I am not pulling anybody's leg.{w=0.5} It's in your care now."
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[47]]"
 
-red @happy "ALL RIGHT!"
+red @happy "[day_010405secondhomeroom_scene_text[48]]"
 $ starter_preposition = ("a" if starter_species_name[0] not in ["A", "E", "I", "O", "U"] else "an").title()
-redmind @closedeyes frownmouth "[starter_preposition] [starter_name]?!{w=0.5} Today is my lucky day!"
-redmind @closedeyes frownmouth "I didn't know what to expect, but everything somehow turned out better than I could have imagined."
-redmind happy "Thank you! I knew the gods were looking after me!"
+redmind @closedeyes frownmouth "[day_010405secondhomeroom_scene_text[49]][starter_preposition][day_010405secondhomeroom_scene_text[50]][starter_name][day_010405secondhomeroom_scene_text[51]]"
+redmind @closedeyes frownmouth "[day_010405secondhomeroom_scene_text[52]]"
+redmind happy "[day_010405secondhomeroom_scene_text[53]]"
 
 hide pokeballs_emptyB
 hide starterportraitfull
@@ -171,21 +171,21 @@ $ PlaySound("BellChime.ogg")
 show leaf uniform at leftside with dis:
     xzoom -1
 
-leaf @happy "Nice Pokémon, [first_name]!"
+leaf @happy "[day_010405secondhomeroom_scene_text[54]][first_name][day_010405secondhomeroom_scene_text[55]]"
 
-red @happy "Thanks!{w=0.5} I actually always wanted one. Did you get a Pokémon you wanted, too?"
+red @happy "[day_010405secondhomeroom_scene_text[56]]"
 
-leaf @talkingmouth "You bet I did!{w=0.5} Say hello to Bulbasaur!"
+leaf @talkingmouth "[day_010405secondhomeroom_scene_text[57]]"
 
 $ DisplayPokemon("Bulbasaur")
 
-leaf @happy "Your [starter_name] should play with my Bulbasaur sometime."
-leaf @flirttalk "It's only natural that our Pokémon should be best friends like their Trainers!"
+leaf @happy "[day_010405secondhomeroom_scene_text[58]][starter_name][day_010405secondhomeroom_scene_text[59]]"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[60]]"
 
 $ PlaySound("pokemon/ball sound.ogg")
 show sideportraitfull at backinpokeball
 
-red @confused "Since when were we best fri--"
+red @confused "[day_010405secondhomeroom_scene_text[61]]"
 show leaf surprisedbrow frownmouth with dis
 
 hide blue
@@ -193,58 +193,58 @@ show blue uniform at rightside with dis:
     xzoom -1
 
 $ starter_preposition = ("a" if starter_species_name[0] not in ["A", "E", "I", "O", "U"] else "an")
-blue @happy "You got [starter_preposition] [starter_name], [first_name]?{w=0.5} HA! That's perfect!"
+blue @happy "[day_010405secondhomeroom_scene_text[62]][starter_preposition][day_010405secondhomeroom_scene_text[63]][starter_name][day_010405secondhomeroom_scene_text[64]][first_name][day_010405secondhomeroom_scene_text[65]]"
 
 show leaf flirtbrow with dis
 
-red @sweat talking2mouth "I'm going to regret asking this, but... {w=0.5}{nw}" 
-extend @confused "What's wrong with [starter_preposition] [starter_name]?"
+red @sweat talking2mouth "[day_010405secondhomeroom_scene_text[66]]" 
+extend @confused "[day_010405secondhomeroom_scene_text[67]][starter_preposition][day_010405secondhomeroom_scene_text[68]][starter_name][day_010405secondhomeroom_scene_text[69]]"
 
-blue @happy "Oh, nothing really..."
+blue @happy "[day_010405secondhomeroom_scene_text[70]]"
 show leaf angrybrow frownmouth with dis
-blue @angrybrow happymouth "Except it's not nearly as rare as my {i}Eevee!{/i} Ha ha ha ha!"
+blue @angrybrow happymouth "[day_010405secondhomeroom_scene_text[71]]"
 
-red @surprised "Wha?"
+red @surprised "[day_010405secondhomeroom_scene_text[72]]"
 
-blue @happy "It must be divine retribution!"
-blue @closedbrow talkingmouth "You're never gonna beat me, even at random draws! Ha ha!"
-blue @happy "Once this Eevee evolves, I'll be able to beat any kind of team you try to set up against me! You're powerless!"
+blue @happy "[day_010405secondhomeroom_scene_text[73]]"
+blue @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[74]]"
+blue @happy "[day_010405secondhomeroom_scene_text[75]]"
 
-red @closedbrow talking2mouth "I mean, sure, if you want to evolve your Eevee to beat one particular trainer's team, knock yourself out."
+red @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[76]]"
 
-blue @angry "Yo! Let's check out our Pokémon!{w=0.5} Come on, I'll take you on!"
+blue @angry "[day_010405secondhomeroom_scene_text[77]]"
 show blue surprisedbrow frownmouth with dis
 
-oak @talkingmouth "Blue! This isn't the time or place for that!"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[78]]"
 
-blue @sad2eyes talkingmouth "Psh. Whatever, my Pokémon looks a lot stronger anyway!"
+blue @sad2eyes talkingmouth "[day_010405secondhomeroom_scene_text[79]]"
 show blue surprisedbrow frownmouth with dis
 show leaf surprisedbrow frownmouth with dis
 
 show may uniform angrybrow frownmouth with dis
 
-may @angry "Hey, leave him alone!{w=0.5} It's not nice to bully others!"
+may @angry "[day_010405secondhomeroom_scene_text[80]]"
 
-blue @closedbrow sweat talkingmouth "Oh. I, uh..."
+blue @closedbrow sweat talkingmouth "[day_010405secondhomeroom_scene_text[81]]"
 
-may @angry "And for your information, there's a lot more to winning battles than type advantage!"
+may @angry "[day_010405secondhomeroom_scene_text[82]]"
 
-leaf -surprisedbrow -frownmouth @talkingmouth "Just ignore him.{w=0.5} What'd you get, May?"
+leaf -surprisedbrow -frownmouth @talkingmouth "[day_010405secondhomeroom_scene_text[83]]"
 
 hide blue with dis
 
 $ renpy.pause(1.0, hard=True)
 
-may -angrybrow -frownmouth @happy "A Torchic!{w=0.5} I love Fire-types so she and I are gonna be best buds, I just know it!"
+may -angrybrow -frownmouth @happy "[day_010405secondhomeroom_scene_text[84]]"
 
-leaf @happy "Ha ha! A Torchic really suits you, May!{w=0.5} I mean, your bow already kinda reminds me of their fuzzy heads."
+leaf @happy "[day_010405secondhomeroom_scene_text[85]]"
 
-may @surprised "Hey... you're right!" 
-may @happy "You hear that, Torchic? This was fate!{w=0.5} You and me were meant to be!"
+may @surprised "[day_010405secondhomeroom_scene_text[86]]" 
+may @happy "[day_010405secondhomeroom_scene_text[87]]"
 
 $ showredonly = True
 
-whitney uniform @smile "You guys got starters? Luckyyy!"
+whitney uniform @smile "[day_010405secondhomeroom_scene_text[88]]"
 
 show may:
     xpos 0.5
@@ -266,34 +266,34 @@ pause 1.0
 
 $ showredonly = False
 
-red @talkingmouth "Starters are pretty cool, but every Pokémon can be great with the right trainer.{w=0.5} What Pokémon did you guys get?"
+red @talkingmouth "[day_010405secondhomeroom_scene_text[89]]"
 
-whitney @happy "A Cleffa!{w=0.5} It's a different kinda cute compared to my Miltank, but I'll take it!"
-whitney @winkbrow talkingmouth "I heard these little tykes are really rare."
+whitney @happy "[day_010405secondhomeroom_scene_text[90]]"
+whitney @winkbrow talkingmouth "[day_010405secondhomeroom_scene_text[91]]"
 
-flannery @happybrow talkingmouth "I got a cute li'l Numel.{w=0.5} I'm taking the Fire and Ground electives, so this is just great!"
-flannery @closedbrow talkingmouth "My family back in Lavaridge had tons of these. Somehow, I never got one. Might not be the best in battle, but I still love him."
+flannery @happybrow talkingmouth "[day_010405secondhomeroom_scene_text[92]]"
+flannery @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[93]]"
 
-whitney @talking2mouth "Really? Isn't it one of the few Pokémon in the world that can learn Eruption?"
-whitney @surprised "I don't know all there is to know about Fire Pokémon, but isn't that move super good?"
+whitney @talking2mouth "[day_010405secondhomeroom_scene_text[94]]"
+whitney @surprised "[day_010405secondhomeroom_scene_text[95]]"
 
-flannery @happy "Sure!{w=0.5} But, I mean, Camerupt are {i}really{/i} slow. Still, they're super-fun to cuddle with!"
+flannery @happy "[day_010405secondhomeroom_scene_text[96]]"
 
-redmind @thinking "So... are we just going to overlook Flannery's 180-degree personality switch?"
+redmind @thinking "[day_010405secondhomeroom_scene_text[97]]"
 
 show hilbert uniform sad behind leaf with dis:
     xpos 0.5 zoom 0.8
 
 pause 2.0 
 
-redmind @thonk "...Just going to lurk, huh?"
+redmind @thonk "[day_010405secondhomeroom_scene_text[98]]"
 
 pause 1.0
 
 show hilbert surprisedbrow with dis
-red @happy "What about you, Hilbert?"
+red @happy "[day_010405secondhomeroom_scene_text[99]]"
 
-hilbert @surprised "Huh?"
+hilbert @surprised "[day_010405secondhomeroom_scene_text[100]]"
 
 show hilbert uniform sad behind whitney:
     xpos 0.5 zoom 0.8
@@ -315,18 +315,18 @@ show flannery uniform:
     xpos 0.2
     ease 0.5 xpos 0.1
 
-hilbert @sadbrow talkingmouth "Oh...{w=0.5} I got a Cubchoo."
+hilbert @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[101]]"
 
-red @confused "Hey, a Unova 'mon.{w=0.5} Old territory for you, right?"
+red @confused "[day_010405secondhomeroom_scene_text[102]]"
 
-whitney @happy "Aw, Cubchoo are so adorable!"
-whitney @talking2mouth sadbrow "...At least until they become Beartic."
+whitney @happy "[day_010405secondhomeroom_scene_text[103]]"
+whitney @talking2mouth sadbrow "[day_010405secondhomeroom_scene_text[104]]"
 
-whitney @sadbrow talking2mouth "Hey, are you gonna evolve your Cubchoo?"
+whitney @sadbrow talking2mouth "[day_010405secondhomeroom_scene_text[105]]"
 
-hilbert @angrybrow talkingmouth "Probably."
+hilbert @angrybrow talkingmouth "[day_010405secondhomeroom_scene_text[106]]"
 
-whitney @sad "Aw, that's too bad..."
+whitney @sad "[day_010405secondhomeroom_scene_text[107]]"
 
 hide hilbert with dis
 
@@ -349,24 +349,24 @@ show flannery uniform:
 
 $ renpy.pause(0.6, hard=True)
 
-may @happy "I can't wait to play with my Torchic!{w=0.5} She's gonna have so much fun with my Nincada when she gets here!"
+may @happy "[day_010405secondhomeroom_scene_text[108]]"
 
-flannery @surprised "We can bring our Pokémon here from home?"
+flannery @surprised "[day_010405secondhomeroom_scene_text[109]]"
 
-leaf @talking2mouth "The Professor said that it doesn't matter what other Pokémon we have in our party, so yeah."
-leaf @talkingmouth "I'm getting my Dratini and Helioptile sent here tomorrow morning."
+leaf @talking2mouth "[day_010405secondhomeroom_scene_text[110]]"
+leaf @talkingmouth "[day_010405secondhomeroom_scene_text[111]]"
 
-leaf @closedbrow talking2mouth "It's so hard to get anything shipped into Kobukan, but I put some money aside a while ago, so we should be fine."
+leaf @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[112]]"
 
-whitney @angrybrow talking2mouth "Tell me about it! Do you know how much it costs to find a Moon Stone in this region? It might actually be cheaper to just fly to Unova!"
+whitney @angrybrow talking2mouth "[day_010405secondhomeroom_scene_text[113]]"
 
-may @talkingmouth "Well, the mining industry is--"
+may @talkingmouth "[day_010405secondhomeroom_scene_text[114]]"
 
 show leaf surprisedbrow frownmouth with dis
 show may surprisedbrow frownmouth with dis
 show whitney surprisedbrow frownmouth with dis
 show flannery surprisedbrow frownmouth sweat with dis
-oak @talkingmouth "What are you all still standing around for?{w=0.5} Class is over! Go on home already!"
+oak @talkingmouth "[day_010405secondhomeroom_scene_text[115]]"
 
 show leaf:
     alpha 1.0 xpos 0.6
@@ -410,72 +410,72 @@ show leaf uniform with dis
 
 show may uniform at leftside with dis
 
-leaf @happy "Mmm, sweet freedom!{w=0.5} What do you guys wanna do now?"
+leaf @happy "[day_010405secondhomeroom_scene_text[116]]"
     
-may @sadbrow happymouth "Sorry, I've got plans.{w=0.5} Brendan said he was hungry and wanted me to meet up with him in the cafeteria after classes."
+may @sadbrow happymouth "[day_010405secondhomeroom_scene_text[117]]"
 
-leaf @surprised "But we just had lunch!"
+leaf @surprised "[day_010405secondhomeroom_scene_text[118]]"
 
-leaf @flirttalk "You guys are gonna stuff your faces again?{w=0.5} You're gonna get fat!"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[119]]"
 
-may @sadbrow happymouth "Well, {i}I'm{/i} not hungry, but Brendan wants me to come with him, so...{w=0.5} I mean, unless you guys want to come with me."
+may @sadbrow happymouth "[day_010405secondhomeroom_scene_text[120]]"
 
-leaf @talkingmouth "Nah, I'm okay. {w=0.5}{nw}"
-extend @flirttalk "I'm sure [first_name] and I can find something else to do!"
+leaf @talkingmouth "[day_010405secondhomeroom_scene_text[121]]"
+extend @flirttalk "[day_010405secondhomeroom_scene_text[122]][first_name][day_010405secondhomeroom_scene_text[123]]"
 
-red uniform @confused "Huh?"
-red @happy "Seems you may have just decided something for yourself again."
+red uniform @confused "[day_010405secondhomeroom_scene_text[124]]"
+red @happy "[day_010405secondhomeroom_scene_text[125]]"
 
-leaf @angrybrow talking2mouth "I dare you to tell me that you have plans today."
+leaf @angrybrow talking2mouth "[day_010405secondhomeroom_scene_text[126]]"
 
-red @closedeyes happymouth "...Point."
+red @closedeyes happymouth "[day_010405secondhomeroom_scene_text[127]]"
 
 show brendan uniform happybrow at rightside with dis
 
-brendan @happymouth "Yo!{w=0.5} Let's go, May!"
+brendan @happymouth "[day_010405secondhomeroom_scene_text[128]]"
 
-may @happy "Oh, great!{w=0.5} Have fun, you two!"
+may @happy "[day_010405secondhomeroom_scene_text[129]]"
 
 show may:
     xpos 0.25
     ease 0.5 xpos 0.4
 
-may @flirtbrow talkingmouth "Give me a call if you... {i}need anything{/i}, Leaf. {size=30}I have a massive stash in our dorm.{/size}"
+may @flirtbrow talkingmouth "[day_010405secondhomeroom_scene_text[130]]"
 
-leaf @flirttalk "{size=30}Good to know.{/size}"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[131]]"
 
 hide may
 hide brendan
 with dis
 
-leaf @happy "All right! Toodles!"
+leaf @happy "[day_010405secondhomeroom_scene_text[132]]"
 
 $ renpy.pause(1.5, hard=True)
 
-leaf happybrow @happy "So, what do you wanna do?{w=0.5} I don't even really know what kind of stuff you like."
+leaf happybrow @happy "[day_010405secondhomeroom_scene_text[133]]"
 
-red @happy "Big fan of running."
+red @happy "[day_010405secondhomeroom_scene_text[134]]"
 
-leaf @happy "Great!{w=0.5} I won't be doing that."
-leaf @closedbrow talking2mouth "Umm... {w=0.5}{nw}"
-extend -happybrow @talking2mouth "Wanna hang out in the lobby while we think of a place to go?"
+leaf @happy "[day_010405secondhomeroom_scene_text[135]]"
+leaf @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[136]]"
+extend -happybrow @talking2mouth "[day_010405secondhomeroom_scene_text[137]]"
 
 show leaf surprisedbrow frownmouth with dis
 
-red @sadbrow talkingmouth "Sure, but I don't really know any place to go around here."
+red @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[138]]"
 
-leaf @surprised "What are you talking about?"
-leaf @happybrow talkingmouth"We can go to {color=#0048ff}the garden, the Recreation Center, the Research Center,{/color} or..."
+leaf @surprised "[day_010405secondhomeroom_scene_text[139]]"
+leaf @happybrow talkingmouth"[day_010405secondhomeroom_scene_text[140]]"
 
 pause 1.5
 
-leaf -surprisedbrow -frownmouth @sarcastic "...Does any of this sound familiar to you?"
+leaf -surprisedbrow -frownmouth @sarcastic "[day_010405secondhomeroom_scene_text[141]]"
 
-red @confused "A few friends of mine brought up the garden earlier, but for the rest... {w=0.5}{nw}"
-extend @closedbrow talking2mouth sweat "Look, my research into Kobukan was more about academics and history than geography."
+red @confused "[day_010405secondhomeroom_scene_text[142]]"
+extend @closedbrow talking2mouth sweat "[day_010405secondhomeroom_scene_text[143]]"
 
-leaf @happy "Hmmm, I would've thought that maybe you wised up since the last time, but maybe your sense of direction is innately hopeless."
-leaf @flirttalk "Luckily, you have me!{w=0.5} Let's break out the ol' map and take a look around the area."
+leaf @happy "[day_010405secondhomeroom_scene_text[144]]"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[145]]"
 
 $ renpy.music.play("Audio/Music/Show Me Around.ogg", channel='music', loop=True, fadein=1.0)
 
@@ -485,66 +485,66 @@ with dis
 
 $ renpy.pause(1.5, hard=True)
 
-leaf @talking2mouth "We're right here, over at the main building above the Student Center."
-leaf @flirttalk "Now you see all the paths on the map?{w=0.5} Those are paths that we can take to get to the other--"
+leaf @talking2mouth "[day_010405secondhomeroom_scene_text[146]]"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[147]]"
 
-red @unamusedbrow talking2mouth "Look, despite the evidence to the contrary, I {i}do{/i} know how to read a map."
+red @unamusedbrow talking2mouth "[day_010405secondhomeroom_scene_text[148]]"
 
-leaf @happy "All right, but if you have any questions about the area in general, just let me know!"
+leaf @happy "[day_010405secondhomeroom_scene_text[149]]"
 
 jump map_tutorial
 
 label map_tutorial:
 
 menu:
-    extend ""
-    "Which buildings are open to students?":
-        leaf @talkingmouth "Well, right now all of them, more or less. With the exception of the Battle Hall, {color=#0048ff}they're all open to students throughout the day, but they close down at night.{w=0.5} After that, you'll need special permits.{/color}"
+    extend "[day_010405secondhomeroom_scene_text[150]]"
+    "[day_010405secondhomeroom_scene_text[151]]":
+        leaf @talkingmouth "[day_010405secondhomeroom_scene_text[152]]"
 
-        red @talkingmouth "So basically once they're closed, I'll have to wait until the next day to get in."
+        red @talkingmouth "[day_010405secondhomeroom_scene_text[153]]"
 
-        leaf @talking2mouth "Yeah, it's kinda lame, but {color=#0048ff}once they're closed, your activities will be limited to your dorm.{/color}{w=0.5} You should really try to make the most out of your day before that."
-        leaf @talkingmouth "Anything else you'd like to know?"
+        leaf @talking2mouth "[day_010405secondhomeroom_scene_text[154]]"
+        leaf @talkingmouth "[day_010405secondhomeroom_scene_text[155]]"
 
         jump map_tutorial
 
-    "What activities are there to do around here?":
-        red @talkingmouth "Is there anything in particular that everyone enjoys?"
+    "[day_010405secondhomeroom_scene_text[156]]":
+        red @talkingmouth "[day_010405secondhomeroom_scene_text[157]]"
 
-        leaf @talking2mouth "Not that I can think of.{w=0.5}"
+        leaf @talking2mouth "[day_010405secondhomeroom_scene_text[158]]"
 
-        leaf @talkingmouth "There's plenty of stuff to do, but {color=#0048ff}it all depends on where you decide to visit.{/color}"
-        leaf @talking2mouth "{color=#0048ff}Depending on what you do, some activities may take a little bit of time out of your day, or it may take up your entire day.{/color}{w=0.5} Try to manage your time well and plan ahead what you're going to be doing."
+        leaf @talkingmouth "[day_010405secondhomeroom_scene_text[159]]"
+        leaf @talking2mouth "[day_010405secondhomeroom_scene_text[160]]"
 
-        leaf @flirttalk "Or if you're tired or just feeling lazy, you can {color=#0048ff}go back to your dorm after classes and just kill the rest of your time there.{/color}"
-        leaf @surprised "I mean, that's only if you {i}really{/i} can't think of anything to do...{w=0.5} or if you have no friends."
-        leaf @talking2mouth "Personally, I'd love to go out and do stuff, but this school has a strict curfew.{w=0.5}{nw}"
-        extend @talking2mouth " So {color=#0048ff}once it's night, you can't leave the dorms.{/color}"
+        leaf @flirttalk "[day_010405secondhomeroom_scene_text[161]]"
+        leaf @surprised "[day_010405secondhomeroom_scene_text[162]]"
+        leaf @talking2mouth "[day_010405secondhomeroom_scene_text[163]]"
+        extend @talking2mouth "[day_010405secondhomeroom_scene_text[164]]"
         
-        red @talkingmouth "Yeah, I remember hearing about that on orientation day."
+        red @talkingmouth "[day_010405secondhomeroom_scene_text[165]]"
 
-        leaf @talkingmouth "Anything else you'd like to know?"
+        leaf @talkingmouth "[day_010405secondhomeroom_scene_text[166]]"
 
         jump map_tutorial
 
-    "What can you tell me about Inspira City?":
-        red @talkingmouth "What can you tell me about Inspira City?"
+    "[day_010405secondhomeroom_scene_text[167]]":
+        red @talkingmouth "[day_010405secondhomeroom_scene_text[168]]"
 
-        leaf @happy "It's got all these cool shops and markets to visit!"
-        leaf @talking2mouth "It's every girl's paradise."
+        leaf @happy "[day_010405secondhomeroom_scene_text[169]]"
+        leaf @talking2mouth "[day_010405secondhomeroom_scene_text[170]]"
 
-        leaf @flirttalk "But for someone like you...{w=0.5} I'd go {color=#0048ff}after I've become familiar enough with the campus.{/color}"
+        leaf @flirttalk "[day_010405secondhomeroom_scene_text[171]]"
         
-        red @closedbrow talking2mouth "I can't think of any reason to go to the city right now anyway."
+        red @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[172]]"
 
-        leaf @talking2mouth "Anything else you'd like to know?"
+        leaf @talking2mouth "[day_010405secondhomeroom_scene_text[173]]"
 
         jump map_tutorial
 
-    "I'm good.":
-        red @talkingmouth "All right, I got it.{w=0.5} Thanks for the help."
+    "[day_010405secondhomeroom_scene_text[174]]":
+        red @talkingmouth "[day_010405secondhomeroom_scene_text[175]]"
 
-        leaf @happy "No problem!"
+        leaf @happy "[day_010405secondhomeroom_scene_text[176]]"
 
 hide academyhall_blur
 hide mapdemo
@@ -552,38 +552,38 @@ with dis
 
 $ renpy.pause(1.5, hard=True)
 
-leaf @talking2mouth "So, now that we got that all sorted out, where do you want to go?"
+leaf @talking2mouth "[day_010405secondhomeroom_scene_text[177]]"
 
-red @confused "Me?{w=0.25} I didn't say anything about going anywhere."
+red @confused "[day_010405secondhomeroom_scene_text[178]]"
 
-leaf @flirttalk "Oh, don't be shy! Come on, come on, let's go somewhere fun!"  
-leaf @happy "It's not like you have any other plans right now anyway!"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[179]]"  
+leaf @happy "[day_010405secondhomeroom_scene_text[180]]"
 
-red @talkingmouth "Oh, why not? You lead the way."
+red @talkingmouth "[day_010405secondhomeroom_scene_text[181]]"
 
-leaf @happy "Awesome!"
-leaf @closedbrow talking2mouth "Let's see...{w=0.5} how about the gym?{w=0.5} Since the Battle Hall requires permission to battle there, I bet we can catch some cool battles in the gym!"
-leaf @flirttalk blush "Besides, you look like you could use a good workout."
+leaf @happy "[day_010405secondhomeroom_scene_text[182]]"
+leaf @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[183]]"
+leaf @flirttalk blush "[day_010405secondhomeroom_scene_text[184]]"
 
-red @upeyes angryeyebrows talking2mouth "Hey!"
+red @upeyes angryeyebrows talking2mouth "[day_010405secondhomeroom_scene_text[185]]"
 
-leaf @happy "I'm kidding!{w=0.5} It's obvious that you stay in shape. Probably go to the gym every day, right? And get all gross and sweaty, huffing and puffing like an overexerted Slowpoke?"
+leaf @happy "[day_010405secondhomeroom_scene_text[186]]"
 
 pause 2.0
 
-red @closedbrow talking2mouth sweat "Leaf, I'm begging you, whoever taught you how to flirt, you need to stop listening to them."
+red @closedbrow talking2mouth sweat "[day_010405secondhomeroom_scene_text[187]]"
 
-leaf @happy "Hey, I don't get this from {i}anyone!{/i} My technique is 100\% a Leaf original! Homegrown and homemade! Fresh from the garden."
+leaf @happy "[day_010405secondhomeroom_scene_text[188]]"
 
-red @unamusedbrow talking2mouth "Your 'technique' puts me in the mood for fast food."
+red @unamusedbrow talking2mouth "[day_010405secondhomeroom_scene_text[189]]"
 
 pause 1.0
 
-leaf @sad "...What's fast food in this context?"
+leaf @sad "[day_010405secondhomeroom_scene_text[190]]"
 
-red @sigh "Let's not--"
+red @sigh "[day_010405secondhomeroom_scene_text[191]]"
 
-leaf happy "Doesn't matter. Let's go!"
+leaf happy "[day_010405secondhomeroom_scene_text[192]]"
 
 hide leaf with dis
 
@@ -621,82 +621,84 @@ $ renpy.pause(1.0, hard=True)
 
 show leaf uniform with dis
 
-leaf @talkingmouth "Wow. Looooots of people here." 
+leaf @talkingmouth "[day_010405secondhomeroom_scene_text[193]]" 
 
-red uniform @talkingmouth "Guess it makes sense. It's a good place to battle {i}and{/i} work out. All kinds would come here."
+red uniform @talkingmouth "[day_010405secondhomeroom_scene_text[194]]"
 
-leaf @closedbrow talkingmouth "It's a bit crowded.{w=0.5} Maybe we should try somewhere..."
+leaf @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[195]]"
 show leaf surprisedbrow frownmouth with dis
 
 pause 1.5
 
-red @confused "Hm? What's up?"
+red @confused "[day_010405secondhomeroom_scene_text[196]]"
 
-leaf surprisedbrow frownmouth @surprised "Hold the front door. Is that freakin' {i}ROSA?{/i}"
+leaf surprisedbrow frownmouth @surprised "[day_010405secondhomeroom_scene_text[197]]"
 
 $ rosanamed = IsNamed("Rosa")
 
 if (rosanamed):
     if (classstats["Electric"] > 0):
-        red @confused "Huh? {w=0.5}{nw}" 
-        extend @talkingmouth "Oh, yeah, it is. I mean, we took the Electric elective together before, right?"
+        red @confused "[day_010405secondhomeroom_scene_text[198]]" 
+        extend @talkingmouth "[day_010405secondhomeroom_scene_text[199]]"
 
-        leaf @angry "What! That's a lie! There's {i}no way{/i} I didn't notice her."
+        leaf @angry "[day_010405secondhomeroom_scene_text[200]]"
 
     else:
-        red @confused "Huh? {w=0.5}{nw}" 
-        red @talkingmouth "Oh, yeah, it is. I met her earlier, in my elective class."
+        red @confused "[day_010405secondhomeroom_scene_text[201]]" 
+        red @talkingmouth "[day_010405secondhomeroom_scene_text[202]]"
 
-        leaf @angry "Shut {i}up!{/i} You did {i}not!{/i}"
+        leaf @angry "[day_010405secondhomeroom_scene_text[203]]"
 
-    red @happy "Totally did."
+    red @happy "[day_010405secondhomeroom_scene_text[204]]"
 
-    leaf @angry "Well... whatever! I'm going to talk to her!"
+    leaf @angry "[day_010405secondhomeroom_scene_text[205]]"
 
-    red @confused "How do you know her?"
+    red @confused "[day_010405secondhomeroom_scene_text[206]]"
 
 else:
-    red @confused "Who's that?"
+    red @confused "[day_010405secondhomeroom_scene_text[207]]"
 
-leaf @surprised "You're kidding me! You don't know Rosa? The Queen of Pokéstar Studios? One of the most talented actresses {i}ever?{/i}"
+leaf @surprised "[day_010405secondhomeroom_scene_text[208]]"
 
-red @talking2mouth "Well, I didn't watch many movies back in Pallet Town. And most of what I watched was on VHS, which I'm guessing is a bit older than her."
+red @talking2mouth "[day_010405secondhomeroom_scene_text[209]]"
 
-leaf -surprisedbrow -frownmouth @happy "Oh my god, I have {i}so{/i} many movies to show you. She's legendary. There's one scene where her character in {i}Timegate Traveler{/i} gets buried under rubble, and her arm is torn off--"
-leaf @happy "--and she screams and cries {i}so realistically{/i} that if the volume on your TV is too high, your neighbors will call the cops on you!"
+leaf -surprisedbrow -frownmouth @happy "[day_010405secondhomeroom_scene_text[210]]"
+leaf @happy "[day_010405secondhomeroom_scene_text[211]]"
 
-red @confused "That's... that's great?"
+red @confused "[day_010405secondhomeroom_scene_text[212]]"
 
-leaf @embarrassedbrow talkingmouth "Oh, and this one time, when she was filming {i}Love and Battles{/i}, the guy who played her love interest {i}actually fell in love with her!{/i} He even proposed!"
-leaf @happy "I read about it in a magazine."
+leaf @embarrassedbrow talkingmouth "[day_010405secondhomeroom_scene_text[213]]"
+leaf @happy "[day_010405secondhomeroom_scene_text[214]]"
 
-red @confused "Huh."
+red @confused "[day_010405secondhomeroom_scene_text[215]]"
 
 pause 1.0
 
-leaf @talking2mouth angrybrow "I better get more than a 'huh' for introducing you to the best actress who ever lived."
+leaf @talking2mouth angrybrow "[day_010405secondhomeroom_scene_text[216]]"
 
-red @talking2mouth "It's just... I tend to prefer flicks like Diantha's more, you know?"
+red @talking2mouth "[day_010405secondhomeroom_scene_text[217]]"
 
-leaf surprisedbrow frownmouth @surprised "{w=0.5}.{w=0.5}.{w=0.5}."
-leaf surprisedbrow @talking2mouth "Like... old black and white films?"
+leaf surprisedbrow frownmouth @surprised "[ellipses]"
 
-red @confused "How old do you think she is? No, modern stuff."
-red @closedbrow talkingmouth "Although I guess I do like Brycen's old snowball westerns, too."
+leaf surprisedbrow @talking2mouth "[day_010405secondhomeroom_scene_text[218]]"
 
-leaf "{w=0.5}.{w=0.5}.{w=0.5}."
-leaf -surprisedbrow -frownmouth @closedbrow talking2mouth "I'm going to be the bigger woman here and let you have awful taste."
-leaf @happy "Oh! That's another one of her films! 'The Giant Woman!'"
+red @confused "[day_010405secondhomeroom_scene_text[219]]"
+red @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[220]]"
 
-red @wince talking2mouth "Even without having seen it, I can tell that's the director's barely-disguised fetish."
+leaf "[ellipses]"
 
-leaf @closedbrow talkingmouth "Yeah, it really was..."
+leaf -surprisedbrow -frownmouth @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[221]]"
+leaf @happy "[day_010405secondhomeroom_scene_text[222]]"
+
+red @wince talking2mouth "[day_010405secondhomeroom_scene_text[223]]"
+
+leaf @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[224]]"
 
 pause 2.0
 
-leaf @happy "Well, whatever! I'm going to go talk to Rosa! And then we'll be best friends, and she'll cast me as an extra in her movies!"
+leaf @happy "[day_010405secondhomeroom_scene_text[225]]"
 
-red @happy "How mercenary."
+red @happy "[day_010405secondhomeroom_scene_text[226]]"
 
 show rosa with dis:
     xpos 0.66
@@ -705,7 +707,7 @@ show leaf:
     xpos 0.5 xzoom 1
     ease 0.5 xpos 0.33 xzoom -1
 
-leaf @happy "Rosa!"
+leaf @happy "[day_010405secondhomeroom_scene_text[227]]"
 
 $ BecomeNamed("Rosa")
 
@@ -715,86 +717,86 @@ show leaf:
 show rosa:
     xpos 0.66
 
-rosa @surprised "Huh?"
-rosa @talkingmouth "Oh, hi! You must be a fan."
+rosa @surprised "[day_010405secondhomeroom_scene_text[228]]"
+rosa @talkingmouth "[day_010405secondhomeroom_scene_text[229]]"
 
-leaf @surprised "I totally am! Your biggest fan! Oh, my gosh! It's Rosa!{w=0.25} It's really you!"
+leaf @surprised "[day_010405secondhomeroom_scene_text[230]]"
 
-leaf @happy "[first_name], can you believe it?!"
+leaf @happy "[day_010405secondhomeroom_scene_text[231]][first_name][day_010405secondhomeroom_scene_text[232]]"
 
-red @happy "Sure can't!"
+red @happy "[day_010405secondhomeroom_scene_text[233]]"
 
 show rosa happybrow sweat with dis
 
-leaf @embarrassedbrow talkingmouth "I've seen {i}all{/i} your interviews! You're amazing! Is it really true that when you were filming {i}Full Metal Cop{/i}, the International Police visited the studio, because they thought you {i}actually were{/i} an infamous jewel thief?"
+leaf @embarrassedbrow talkingmouth "[day_010405secondhomeroom_scene_text[234]]"
 
-rosa @talkingmouth "Ha ha! Maybe!"
-rosa @closedbrow sweat talking2mouth "...But, for legal reasons, no."
+rosa @talkingmouth "[day_010405secondhomeroom_scene_text[235]]"
+rosa @closedbrow sweat talking2mouth "[day_010405secondhomeroom_scene_text[236]]"
 
-leaf @happy "I'm like, your biggest fan {i}ever{/i}! Did I say that? Whatever, it's still true."
+leaf @happy "[day_010405secondhomeroom_scene_text[237]]"
 
 if (not rosanamed):
-    leaf @happy "What are you doing here? Are you a guest speaker? Are you being hired to teach a class?"
+    leaf @happy "[day_010405secondhomeroom_scene_text[238]]"
 
-    rosa @happy "Hah hah, what? No? I'm only twenty, you know. I'm just attending--"
+    rosa @happy "[day_010405secondhomeroom_scene_text[239]]"
 
-    leaf @surprised "{i}*GASP*{/i} You're enrolled here?!{w=0.5} Pinch me, I'm dreaming!"
+    leaf @surprised "[day_010405secondhomeroom_scene_text[240]]"
     
-leaf @flirttalk "Hey, what dorm do you live in? Can I see your room sometime? Like, right now, maybe?"
+leaf @flirttalk "[day_010405secondhomeroom_scene_text[241]]"
 
-redmind @unamusedbrow unamusedmouth "Alright, {b}now{/b} it's time to intervene."
+redmind @unamusedbrow unamusedmouth "[day_010405secondhomeroom_scene_text[242]]"
 
 show leaf surprisedbrow frownmouth with dis
 
-red @sadbrow talkingmouth "Leaf.{w=0.5} Be cool."
+red @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[243]]"
     
-leaf @surprised "But--"
+leaf @surprised "[day_010405secondhomeroom_scene_text[244]]"
 
-rosa -sweat -happybrow @talkingmouth "Nah, it's okay.{w=0.5} I appreciate the enthusiasm, but I'm just a student here, like you!"
-rosa @happy "If I'm not in front of a green screen, there's no reason to treat me any differently to anyone else."
+rosa -sweat -happybrow @talkingmouth "[day_010405secondhomeroom_scene_text[245]]"
+rosa @happy "[day_010405secondhomeroom_scene_text[246]]"
 
-leaf @sadbrow talkingmouth "Oh gosh, I'm sorry." 
-leaf -surprisedbrow -frownmouth @happy "I just never thought my idol would wind up so close to me, and talking to me face-to-face no less..."
+leaf @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[247]]" 
+leaf -surprisedbrow -frownmouth @happy "[day_010405secondhomeroom_scene_text[248]]"
 
-rosa @happy "Don't worry about it!"
+rosa @happy "[day_010405secondhomeroom_scene_text[249]]"
 
 pause 0.75
 
 if (rosanamed):
-    rosa @talkingmouth "...Hi, [first_name]."
+    rosa @talkingmouth "[day_010405secondhomeroom_scene_text[250]][first_name][day_010405secondhomeroom_scene_text[251]]"
 
-    red @happy "Hey."
+    red @happy "[day_010405secondhomeroom_scene_text[252]]"
 
-    rosa @sadbrow talkingmouth "I guess you get why I was a bit weird in class before, huh?"
+    rosa @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[253]]"
 
-    red @happy "I wouldn't say that, but it {i}does{/i} explain a couple things."
+    red @happy "[day_010405secondhomeroom_scene_text[254]]"
     
-rosa @talkingmouth "Well, Miss, I don't think I caught your name.{w=0.5} Refresh me?"
+rosa @talkingmouth "[day_010405secondhomeroom_scene_text[255]]"
 
-leaf surprisedbrow frownmouth @surprised "Oh, I'm Leaf! Leaf's my name. And this is [first_name]! You can call him [first_name]. Kinda a silly name, right?"
+leaf surprisedbrow frownmouth @surprised "[day_010405secondhomeroom_scene_text[256]][first_name][day_010405secondhomeroom_scene_text[257]][first_name][day_010405secondhomeroom_scene_text[258]]"
       
-rosa @surprised sweat "Silly? Um, I wouldn't-- I mean, that's not the first thing I would say..."
+rosa @surprised sweat "[day_010405secondhomeroom_scene_text[259]]"
 
-leaf @happy "I know! {i}Soooo{/i} silly! Hahahahaha? Ha!"
+leaf @happy "[day_010405secondhomeroom_scene_text[260]]"
 
 show leaf surprisedbrow frownmouth with dis
 
-red @closedeyes talkingmouth "It's an unspoken rule to not throw your friends under the bus, Leaf. {w=0.5}{cps=*0.2}{nw}" 
-extend @noeyes shadow frownmouth "{color=#f00}I'll remember this.{/color}"
+red @closedeyes talkingmouth "[day_010405secondhomeroom_scene_text[261]]" 
+extend @noeyes shadow frownmouth "[day_010405secondhomeroom_scene_text[262]]"
 
 show leaf sadbrow -frownmouth with dis
 
 pause 1.5
     
-rosa @surprisedbrow talking2mouth sweat "Whoa, look at the time!{w=0.5}{nw}" 
-extend @sadbrow talkingmouth " Break's over. I need to get back to my workout! Every ounce of extra weight is an extra five weeks for the CGI team."
-rosa @happy "Sorry, guys, I gotta run...{w=0.5} literally!"
+rosa @surprisedbrow talking2mouth sweat "[day_010405secondhomeroom_scene_text[263]]" 
+extend @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[264]]"
+rosa @happy "[day_010405secondhomeroom_scene_text[265]]"
 
 show rosa happybrow sweat with dis
     
-leaf -sadbrow @happy "Ha! That's a good one, Rosa!{w=0.5} Ha ha ha! My sides!"
+leaf -sadbrow @happy "[day_010405secondhomeroom_scene_text[266]]"
 
-rosa @talkingmouth "All right, nice meeting you, Leaf.{w=0.5} Catch you later!"
+rosa @talkingmouth "[day_010405secondhomeroom_scene_text[267]]"
 
 hide rosa at rightside with dis
 
@@ -802,29 +804,29 @@ pause 1.0
 
 hide rosa
 
-red @happy "She seems nice."
+red @happy "[day_010405secondhomeroom_scene_text[268]]"
 
-leaf -happy @talkingmouth "She is {i}so{/i} nice!"
-leaf @happy "I've heard all these horror stories about actors being huge jerks offscreen, but Rosa obviously isn't anything like that!"
+leaf -happy @talkingmouth "[day_010405secondhomeroom_scene_text[269]]"
+leaf @happy "[day_010405secondhomeroom_scene_text[270]]"
 
-leaf @talkingmouth "If I could just end up being friends with Rosa by the time I graduate, I would be so happy."
+leaf @talkingmouth "[day_010405secondhomeroom_scene_text[271]]"
 
-red @talkingmouth "You guys seem like you'd get along well."
+red @talkingmouth "[day_010405secondhomeroom_scene_text[272]]"
 
-leaf @surprised "You really think so?"
+leaf @surprised "[day_010405secondhomeroom_scene_text[273]]"
 
-red @happy "Sure. Just maybe lay off the brown-nosing a little."
+red @happy "[day_010405secondhomeroom_scene_text[274]]"
 
-leaf thinking @angrybrow talking2mouth "Excuse me?! I don't--"
+leaf thinking @angrybrow talking2mouth "[day_010405secondhomeroom_scene_text[275]]"
 
 pause 2.0
 
-leaf -thinking @sadbrow talkingmouth "[ellipses]I'll try to keep it under control."
+leaf -thinking @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[276]][ellipses][day_010405secondhomeroom_scene_text[277]]"
 
-red @confused "So, do you still want to stay here?{w=0.5} This place looks packed."
+red @confused "[day_010405secondhomeroom_scene_text[278]]"
 
-leaf @talking2mouth "Yeah, definitely not."
-leaf @talkingmouth "Let's try somewhere else."
+leaf @talking2mouth "[day_010405secondhomeroom_scene_text[279]]"
+leaf @talkingmouth "[day_010405secondhomeroom_scene_text[280]]"
 
 hide leaf with dis
 
@@ -861,31 +863,31 @@ hide night
 
 show leaf uniform happy at night with dis
 
-narrator "You end up wandering around the campus for a while, talking about nothing in particular."
-narrator "Under the cover of idle chatter, night descends."
+narrator "[day_010405secondhomeroom_scene_text[281]]"
+narrator "[day_010405secondhomeroom_scene_text[282]]"
 
-leaf frownmouth @surprised "Is it that time of day already?{w=0.5} Shoot, we need to head back to the dorms before we get in trouble."
+leaf frownmouth @surprised "[day_010405secondhomeroom_scene_text[283]]"
 
-red night uniform @sigh "I was wondering... is it that big a deal if we're caught outside after dark?"
+red night uniform @sigh "[day_010405secondhomeroom_scene_text[284]]"
 
-leaf -surprisedbrow -frownmouth -surprised @sarcastic "Do it too often, and the Academy could suspend or even expel you.{w=0.5} Personally, I'd love to go out and do stuff, but with so much time and money at stake, it's just not worth it."
-leaf @talking2mouth "Anyway, Kobukan's super-classy and junk, but Inspira's full of delinquents and thugs that wander over at night sometimes."
-leaf -frownmouth @happy "Of course, my elite battling skills are more than enough to beat up anyone who tries something, but you might want to stay clear."
+leaf -surprisedbrow -frownmouth -surprised @sarcastic "[day_010405secondhomeroom_scene_text[285]]"
+leaf @talking2mouth "[day_010405secondhomeroom_scene_text[286]]"
+leaf -frownmouth @happy "[day_010405secondhomeroom_scene_text[287]]"
 
-red @talking2mouth "I am very delicate, yes."
+red @talking2mouth "[day_010405secondhomeroom_scene_text[288]]"
 
-leaf @surprised "...Whoops! I didn't mean to ramble on for so long about that."
-leaf @happy "It was fun while it lasted, but we should really head back in."
+leaf @surprised "[day_010405secondhomeroom_scene_text[289]]"
+leaf @happy "[day_010405secondhomeroom_scene_text[290]]"
 
-red @sadbrow talkingmouth "That's fine with me. Thanks for the tour, and, uh, tutorial on how to use maps."
+red @sadbrow talkingmouth "[day_010405secondhomeroom_scene_text[291]]"
 
-leaf happy "G'night!"
+leaf happy "[day_010405secondhomeroom_scene_text[292]]"
 
 hide leaf at night with dis
 
 pause 2.0
 
-redmind @thinking "Leaf wasn't kidding.{w=0.5} This place is like a ghost town once it gets close to curfew."
+redmind @thinking "[day_010405secondhomeroom_scene_text[293]]"
 
 window hide
 
@@ -905,107 +907,107 @@ scene dorm_B norm with Dissolve(2.0)
 hide blank2
 hide relichall_B
 
-red uniform @talkingmouth "Phew!"
+red uniform @talkingmouth "[day_010405secondhomeroom_scene_text[294]]"
 
 $ PlaySound("Door_Close1.ogg")
 
-red @happy "Finally back.{w=0.5} It's only the first day of class and I'm already feeling like sleeping the rest of the week away."
-red @happy "Hey, guys!"
+red @happy "[day_010405secondhomeroom_scene_text[295]]"
+red @happy "[day_010405secondhomeroom_scene_text[296]]"
 
 $ renpy.music.play("Audio/Pokemon/pikachu_norm1.ogg", channel="altcry", loop=None)
 
-pikachu happy_3 "Pi-KA-chu!"
+pikachu happy_3 "[day_010405secondhomeroom_scene_text[297]]"
 
-red @happy "Hey, [pika_name]! Did ya miss me?"
+red @happy "[day_010405secondhomeroom_scene_text[298]][pika_name][day_010405secondhomeroom_scene_text[299]]"
 
 $ renpy.music.play("Audio/Pokemon/pikachu_norm4.ogg", channel="altcry", loop=None)
 
-pikachu happy_3 "Pika-pika."
+pikachu happy_3 "[day_010405secondhomeroom_scene_text[300]]"
 
 show calem at leftside with dis
 
-calem @talkingmouth "I'd say he missed you.{w=0.5} Ever since I got back, he hasn't stopped staring at the door."
+calem @talkingmouth "[day_010405secondhomeroom_scene_text[301]]"
 
 show brendan at rightside with dis
 
-brendan @happy "He's like a little robot!"
+brendan @happy "[day_010405secondhomeroom_scene_text[302]]"
 
-calem @closedbrow talkingmouth "It's very endearing to watch, albeit a little unsettling."
-calem smilemouth @talkingmouth "Anyway, how'd the day go for you, overall?"
+calem @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[303]]"
+calem smilemouth @talkingmouth "[day_010405secondhomeroom_scene_text[304]]"
 
-red @happy "All things considered, it was all right.{w=0.5} I got a new Pokémon, so that was pretty cool."
+red @happy "[day_010405secondhomeroom_scene_text[305]]"
 
-calem @surprised "Oh? A new Pokémon? Fantastic!" 
-calem @happy "I, myself, received a Fletchling in my homeroom with Professor Sycamore."
+calem @surprised "[day_010405secondhomeroom_scene_text[306]]" 
+calem @happy "[day_010405secondhomeroom_scene_text[307]]"
 
-brendan @happy "Professor Birch gave me a Mudkip! When this li'l guy evolves into a Swampert, it'll be one of the best ground types from Hoenn!"
+brendan @happy "[day_010405secondhomeroom_scene_text[308]]"
 
-red @talkingmouth "I have homeroom with Hilbert, and he said he got a Cubchoo. Pretty sure he'll be beelining it into a Beartic, though."
+red @talkingmouth "[day_010405secondhomeroom_scene_text[309]]"
 
 show ethan with dis
 
-ethan @happy "Well, what did you get?"
+ethan @happy "[day_010405secondhomeroom_scene_text[310]]"
 
 show ethan surprisedbrow frownmouth with dis
 show calem surprisedbrow with dis
 show brendan surprisedbrow frownmouth with dis
 $ starter_preposition = ("a" if starter_species_name[0] not in ["A", "E", "I", "O", "U"] else "an")
-red @happy "I got [starter_preposition] [starter_name]! Which is kinda crazy, because I always wanted one when I was a kid."
+red @happy "[day_010405secondhomeroom_scene_text[311]][starter_preposition][day_010405secondhomeroom_scene_text[312]][starter_name][day_010405secondhomeroom_scene_text[313]]"
 if (starter_name == "Mudkip"):
-    red @happy "Looks like we've got two Mudkip in this dorm, now!"
+    red @happy "[day_010405secondhomeroom_scene_text[314]]"
 
 pause 2.0
 
-red @confused "What?"
+red @confused "[day_010405secondhomeroom_scene_text[315]]"
 
 show calem happy with dis
 show brendan happy with dis
 $ starter_preposition = ("a" if starter_species_name[0] not in ["A", "E", "I", "O", "U"] else "an")
-ethan happy "Dude, I got [starter_preposition] [starter_name] as well!"
+ethan happy "[day_010405secondhomeroom_scene_text[316]][starter_preposition][day_010405secondhomeroom_scene_text[317]][starter_name][day_010405secondhomeroom_scene_text[318]]"
 
 show brendan -happy with dis
 show calem -happy with dis
-red @happy "No shit? Huh! The coincidences just keep piling up between us."
+red @happy "[day_010405secondhomeroom_scene_text[319]]"
 if (starter_name == "Mudkip"):
-    red @talkingmouth "I can't believe that three of the five of us ended up with Mudkip! Crazy."
+    red @talkingmouth "[day_010405secondhomeroom_scene_text[320]]"
 
-ethan @talkingmouth "So true."
-ethan @happy "Hey, you guys, the craziest thing happened. We both picked the same electives today! Same order and everything!"
+ethan @talkingmouth "[day_010405secondhomeroom_scene_text[321]]"
+ethan @happy "[day_010405secondhomeroom_scene_text[322]]"
 
-calem @closedbrow talkingmouth "Hm... the odds of that are quite low."
+calem @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[323]]"
 
 if (GetStatRank(0) in classdex["Calem"] and GetStatRank(1) in classdex["Calem"]):
-    calem @happy "Although [first_name] and I actually had the same electives, as well."
+    calem @happy "[day_010405secondhomeroom_scene_text[324]][first_name][day_010405secondhomeroom_scene_text[325]]"
 elif (GetStatRank(0) in classdex["Brendan"] and GetStatRank(1) in classdex["Brendan"]):
-    brendan @surprised "Huh, what're the odds that Ethan, [first_name] and I all had the same electives?"
+    brendan @surprised "[day_010405secondhomeroom_scene_text[326]][first_name][day_010405secondhomeroom_scene_text[327]]"
 
-    calem @happy "Even lower."
+    calem @happy "[day_010405secondhomeroom_scene_text[328]]"
 
-red @talkingmouth "Well, how are you all feeling about classes?"
+red @talkingmouth "[day_010405secondhomeroom_scene_text[329]]"
 
-calem @closedbrow talking2mouth "It's been fairly uneventful thus far.{w=0.5} Not all that different from high school, to be honest."
-calem @happy "But a lot of people say change isn't always a good thing, so perhaps I should count my blessings."
+calem @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[330]]"
+calem @happy "[day_010405secondhomeroom_scene_text[331]]"
 
-brendan @sadbrow talking2mouth "Man, I just know that these classes are gonna kill me."
-brendan @closedbrow sweat talking2mouth "I've never felt so much academic pressure in my life!"
+brendan @sadbrow talking2mouth "[day_010405secondhomeroom_scene_text[332]]"
+brendan @closedbrow sweat talking2mouth "[day_010405secondhomeroom_scene_text[333]]"
 
-calem @sad "Truly? It {i}is{/i} only the first day of class.{w=0.5} Don't you think that it's a bit too early to decry the insurmountable wall?"
+calem @sad "[day_010405secondhomeroom_scene_text[334]]"
 
-brendan @sad "Hey man, I'm not the sharpest tool in the shed, so any class from this place is tough for me at this point, you know?"
+brendan @sad "[day_010405secondhomeroom_scene_text[335]]"
 
-ethan @confused "I basically feel... well, like nothing's actually started yet!"
-ethan @happy "I mean, the classes haven't had any tests, we haven't had any battles, we haven't had to catch any new Pokémon...! It's like we're still in the tutorial!"
+ethan @confused "[day_010405secondhomeroom_scene_text[336]]"
+ethan @happy "[day_010405secondhomeroom_scene_text[337]]"
 
-brendan frownmouth sadbrow @sad "Aw, man, I'm having trouble in the {i}tutorial{/i}? I'm doomed, man..."
+brendan frownmouth sadbrow @sad "[day_010405secondhomeroom_scene_text[338]]"
 
-narrator "You and your roommates spend a while assuring Brendan that he is not, in fact, doomed."
+narrator "[day_010405secondhomeroom_scene_text[339]]"
 
 show brendan -frownmouth -sadbrow with dis
 
-narrator "Eventually, the conversation wraps back around to your new Pokémon, and..."
+narrator "[day_010405secondhomeroom_scene_text[340]]"
 
 $ starter_name = pokedexlookup(starter_id, DexMacros.Name)
-red @happy "Come on out, [starter_name]!"
+red @happy "[day_010405secondhomeroom_scene_text[341]][starter_name][day_010405secondhomeroom_scene_text[342]]"
 
 $ PlaySound("Pokemon/Ball sound.ogg")
 
@@ -1026,35 +1028,35 @@ $ renpy.pause(0.5, hard=True)
 $ renpy.music.play("Audio/pokemon/cries/{}.mp3".format(starter_id), channel="altcry", loop=None)
 
 $ startercrop = starter_name[:3]
-starter @talkingmouth "[startercrop]!"
+starter @talkingmouth "[day_010405secondhomeroom_scene_text[343]][startercrop][day_010405secondhomeroom_scene_text[344]]"
 
-redmind "Hmm. Now that I think about it, should I give you a nickname?"
+redmind "[day_010405secondhomeroom_scene_text[345]]"
 
 label nicknamestarter:
 
-$ starter_name = renpy.input("{color=#e70000}Your starter's nickname? (Press Enter for the default){/color}", length=12, exclude="{}[[]%<>",)
+$ starter_name = renpy.input("[day_010405secondhomeroom_scene_text[346]]", length=12, exclude="{}[[]%<>",)
 $ starter_name = starter_name.strip()
 
 if starter_name == "" or starter_name == pokedexlookup(starter_id, DexMacros.Name).lower():
     $ starter_name = pokedexlookup(starter_id, DexMacros.Name)
 
-red @closedbrow talking2mouth "Hm... I think [starter_name] would suit you just fine."
+red @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[347]][starter_name][day_010405secondhomeroom_scene_text[348]]"
 
 menu:
-    "Yeah, that'll do, [starter_name].":
+    "[day_010405secondhomeroom_scene_text[349]][starter_name][day_010405secondhomeroom_scene_text[350]]":
         pass
 
-    "Wait, I've got a better idea.":
+    "[day_010405secondhomeroom_scene_text[351]]":
         jump nicknamestarter
 
 $ playerparty[0].Nickname = starter_name
 
-red @talkingmouth "Welcome to the team, [starter_name]!"
+red @talkingmouth "[day_010405secondhomeroom_scene_text[352]][starter_name][day_010405secondhomeroom_scene_text[353]]"
     
 $ renpy.music.play("Audio/pokemon/cries/{}.mp3".format(starter_id), channel="altcry", loop=None)
 
 $ species_name = pokedexlookup(starter_id, DexMacros.Name)
-starter @talkingmouth "[species_name]!"
+starter @talkingmouth "[day_010405secondhomeroom_scene_text[354]][species_name][day_010405secondhomeroom_scene_text[355]]"
 
 $ startergender = "he" 
 if (playerparty[0].GetGender() == Genders.Female):
@@ -1062,19 +1064,19 @@ if (playerparty[0].GetGender() == Genders.Female):
 elif (playerparty[0].GetGender() == Genders.Unknown):
     $ startergender = "it"
 
-brendan @happy "Wow! Look at that, [startergender] likes you already!"
-brendan @talking2mouth "It's not too often you find a Pokémon that gets chummy with its Trainer so soon after meetin' him."
+brendan @happy "[day_010405secondhomeroom_scene_text[356]][startergender][day_010405secondhomeroom_scene_text[357]]"
+brendan @talking2mouth "[day_010405secondhomeroom_scene_text[358]]"
 
-red @confused "Really?{w=0.5} Huh. I never noticed. [starter_name]'s acting basically the same as [pika_name] did all those years ago."
+red @confused "[day_010405secondhomeroom_scene_text[359]][starter_name][day_010405secondhomeroom_scene_text[360]][pika_name][day_010405secondhomeroom_scene_text[361]]"
 
-brendan @surprised "R-really? Huh...{w=0.5} Maybe my Pokémon just don't trust me, then?"
+brendan @surprised "[day_010405secondhomeroom_scene_text[362]]"
 
-calem @closedbrow talkingmouth "No, I don't think that's it. I was actually quite surprised when you let [starter_name] out in this room, [first_name]. I thought we'd have to duck for cover."
+calem @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[363]][starter_name][day_010405secondhomeroom_scene_text[364]][first_name][day_010405secondhomeroom_scene_text[365]]"
 
 $ startergendercap = startergender.capitalize()
-red @confused "What do you mean? [startergendercap]'s a baby Pokémon. [startergendercap] can't cause {i}that{/i} much damage."
+red @confused "[day_010405secondhomeroom_scene_text[366]][startergendercap][day_010405secondhomeroom_scene_text[367]][startergendercap][day_010405secondhomeroom_scene_text[368]]"
 
-calem @sad "True, but, more to the point... [startergender]'s not causing {i}any{/i} damage."
+calem @sad "[day_010405secondhomeroom_scene_text[369]][startergender][day_010405secondhomeroom_scene_text[370]]"
 
 $ startergenderpronoun = "him" 
 if (playerparty[0].GetGender() == Genders.Female):
@@ -1082,16 +1084,16 @@ if (playerparty[0].GetGender() == Genders.Female):
 elif (playerparty[0].GetGender() == Genders.Unknown):
     $ startergenderpronoun = "them"
 
-ethan @confused "Hold on, I'm confused, now. You guys are acting like you expected [first_name]'s buddy to just go berserk as soon as he let [startergenderpronoun] out."
+ethan @confused "[day_010405secondhomeroom_scene_text[371]][first_name][day_010405secondhomeroom_scene_text[372]][startergenderpronoun][day_010405secondhomeroom_scene_text[373]]"
 
-calem @surprised "Why, were you not? [startergendercap]'s a baby Pokémon, as you've said. [startergendercap] hasn't received even a modicum of training. But [startergender]'s just... {i}being{/i} there, patiently."
+calem @surprised "[day_010405secondhomeroom_scene_text[374]][startergendercap][day_010405secondhomeroom_scene_text[375]][startergendercap][day_010405secondhomeroom_scene_text[376]][startergender][day_010405secondhomeroom_scene_text[377]]"
 
-ethan @happy "Calem, you're pulling our leg, right? That's literally just how Pokémon are."
+ethan @happy "[day_010405secondhomeroom_scene_text[378]]"
 
-calem @angrybrow talking2mouth "I assure you, the numerous baby starter Pokémon Professor Sycamore foisted on me during my internship would beg to disagree."
+calem @angrybrow talking2mouth "[day_010405secondhomeroom_scene_text[379]]"
 
-brendan @closedbrow talkingmouth "Man, I dunno what to think now. Every Pokémon I've ever had took weeks to feel comfortable around me." 
-brendan frownmouth @sad "I thought that was normal, but with you two saying the opposite, maybe I'm just bad at Pokémon."
+brendan @closedbrow talkingmouth "[day_010405secondhomeroom_scene_text[380]]" 
+brendan frownmouth @sad "[day_010405secondhomeroom_scene_text[381]]"
 
 show brendan:
     xpos 0.8
@@ -1100,37 +1102,37 @@ show brendan:
 show hilbert at dissolvein:
     xpos 0.8
 
-hilbert @talkingmouth "You probably are."
+hilbert @talkingmouth "[day_010405secondhomeroom_scene_text[382]]"
 
-calem @angry "Hilbert!"
+calem @angry "[day_010405secondhomeroom_scene_text[383]]"
 
-hilbert @talkingmouth "Let me finish."
+hilbert @talkingmouth "[day_010405secondhomeroom_scene_text[384]]"
 
-hilbert @talkingmouth "Whether anyone here is good or bad at Pokémon, Ethan and [first_name]'s experience is not typical." 
-hilbert @talkingmouth "If we were to all let our new Pokémon out right now, this room would become a disaster."
-hilbert @talkingmouth "...So you are not one of the odd ones out here, Brendan."
+hilbert @talkingmouth "[day_010405secondhomeroom_scene_text[385]][first_name][day_010405secondhomeroom_scene_text[386]]" 
+hilbert @talkingmouth "[day_010405secondhomeroom_scene_text[387]]"
+hilbert @talkingmouth "[day_010405secondhomeroom_scene_text[388]]"
 
-brendan happy "Hah, sweet!"
+brendan happy "[day_010405secondhomeroom_scene_text[389]]"
 
 pause 1.0
 
-brendan -happy @closedbrow talking2mouth "Hey, wait, isn't being one of the odd ones out a good thing, here?"
+brendan -happy @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[390]]"
 
-red @confused "Maybe we can ask Professor Oak about it. I wanted to ask him some questions earlier, anyway."
+red @confused "[day_010405secondhomeroom_scene_text[391]]"
 
-red @surprised "Actually... Ethan, which homeroom do you have? Given we got the same starter and electives, I'm really surprised we don't have the same homeroom."
+red @surprised "[day_010405secondhomeroom_scene_text[392]]"
 
-ethan @surprised "Oh, yeah! I'm, uh... with Kr--{w=0.5} I mean,{w=0.25} uh,{w=0.25} Professor Cherry."
+ethan @surprised "[day_010405secondhomeroom_scene_text[393]]"
 
-red @closedbrow talking2mouth "Hm. I don't remember that name from the faculty page."
+red @closedbrow talking2mouth "[day_010405secondhomeroom_scene_text[394]]"
 
-ethan @happy "Yeah, she was a new hire. And she's... well, she's a lot."
+ethan @happy "[day_010405secondhomeroom_scene_text[395]]"
 
-red @talkingmouth "Anyway, I'll see if I can get to homeroom early tomorrow, and ask Old Man--{w=0.5} I mean,{w=0.25} Professor Oak,{w=0.25} about why our Pokémon are weird."
+red @talkingmouth "[day_010405secondhomeroom_scene_text[396]]"
 
-redmind @thinking "Or not weird, I guess."
+redmind @thinking "[day_010405secondhomeroom_scene_text[397]]"
 
-ethan @happy "Sounds like a plan! Now, I'm going to turn in. Night, all!"
+ethan @happy "[day_010405secondhomeroom_scene_text[398]]"
 
 hide hilbert
 hide brendan
@@ -1138,16 +1140,16 @@ hide calem
 hide ethan
 with dis
 
-red @talkingmouth "Sounds good.{w=0.5} What about you two? Ready for bed?"
+red @talkingmouth "[day_010405secondhomeroom_scene_text[399]]"
 
 $ renpy.music.play("Audio/Pokemon/pikachu_norm3.ogg", channel="altcry", loop=None)
 
-pikachu happy "Pika."
+pikachu happy "[day_010405secondhomeroom_scene_text[400]]"
 
 $ renpy.music.play("Audio/pokemon/cries/{}.mp3".format(starter_id), channel="altcry", loop=None)
 
 $ starter_fragment = pokedexlookup(starter_id, DexMacros.Name)[:3]
-starter @talkingmouth "[starter_fragment]!"
+starter @talkingmouth "[day_010405secondhomeroom_scene_text[401]][starter_fragment][day_010405secondhomeroom_scene_text[402]]"
 
 window hide
 
@@ -1166,7 +1168,7 @@ call clearscreens from _call_clearscreens_14
 
 show blank2 with transeye
 
-narrator "As you crawl into bed, you do not even have time to realize just how exhausted you are.{w=0.5} Not even a minute after your head hits the pillow, you fall into a deep sleep."
+narrator "[day_010405secondhomeroom_scene_text[403]]"
 
 window hide
 
@@ -1177,3 +1179,4 @@ hide dorm_empty_B
 hide blank2
 
 jump day010406
+
